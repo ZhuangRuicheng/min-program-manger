@@ -1,0 +1,54 @@
+<!--pages/template/miniBar/orderDetails/orderDetails.wxml-->
+<template name="orderDetails">
+  <view class='box'>
+    <view class='header'>
+      <view class='mun-title'>
+        <label>房间号：</label>
+        <text class='room-num'>{{roomNum}}</text>
+      </view>
+      <view class='title-img'>
+        <view class='container-img'>
+          <image src='{{img}}' class='sign-img'></image>
+        </view>
+        <view>{{title}}</view>
+      </view>
+    </view>
+    <view class='content'>
+      <scroll-view scroll-y='true' style="{{goodsList.length>6?'height:300rpx':''}}">
+        <view class='goods' wx:for='{{goodsList}}'>
+          <text class='storeName'>{{item.productName}}</text>
+          <text class='number'>×{{item.quantity}}</text>
+          <text class='money'>￥{{item.price}}</text>
+        </view>
+      </scroll-view>
+      <view class='count'>
+        <text class='storeName'>合计</text>
+        <text class='number countNumber'>{{totalQuantity}}</text>
+        <text class='money countMoney'>￥{{totalPrice}}</text>
+      </view>
+    </view>
+    <view class='hr'></view>
+    <!-- 信息输入框 -->
+    <!-- 表单头 -->
+
+    <form bindsubmit="formSubmit" report-submit='true'>
+      <view class='info'>
+        <view class='cludeInfo'>
+          <view class='name'>
+            <label class='star'>*</label>姓名/Name</view>
+          <view class='Tips'>(与前台登记名字相符)</view>
+        </view>
+        <input type='text' placeholder='请输入您的姓名' placeholder-class='input' bindinput='inputChange' id='name' value='{{name}}' adjust-position='{{adjust_position}}' cursor-spacing='30'></input>
+        <view class='cludeInfo '>
+          <view class='name Remarks'>备注/comments：</view>
+        </view>
+        <input type='text' placeholder='如有其它需要，请备注说明' placeholder-class='input' bindinput='inputChange' id='remarks' value='{{remarks}}' adjust-position='{{adjust_position}}' cursor-spacing='30'></input>
+      </view>
+      <view class='bottomCss'>
+        <text class='countText'>应付:</text>
+        <text class='countMoney bottomMoney'>￥{{totalPrice}}</text>
+        <button class='payBtn' form-type='submit'>去支付</button>
+      </view>
+    </form>
+  </view>
+</template>

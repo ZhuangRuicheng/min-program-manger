@@ -1,0 +1,36 @@
+/* pages/component/headerTabbar.wxss */
+.status-bar {
+  width: 100%;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+}
+.goBack{
+  position: absolute;
+  top: 15rpx;
+}
+.goBack image{
+  width: 22rpx;
+  height: 34rpx;
+  padding: 0rpx 20px 0 30rpx;
+}
+.tabar {
+  /* width: 100%; */
+  display: flex;
+  /* text-align: center;
+  justify-content: center; */
+  margin-left: 30rpx;
+}
+/* .tabar2{
+  background: transparent !important;
+}
+.tabar2 text{
+  color: #fff !important;
+  font-weight: lighter !important;
+} */
+.tabar text {
+  padding: 15rpx 30rpx 20rpx 30rpx;
+  font-size: 12pt;
+  letter-spacing: 3rpx;
+  font-family: Microsoft YaHei;
+}

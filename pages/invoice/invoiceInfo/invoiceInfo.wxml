@@ -1,0 +1,78 @@
+<!--pages/invoice/invoiceInfo/invoiceInfo.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+  <header-tabbar title='发票信息' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar>
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <!-- 表单头 -->
+  <view class='invoiceInfo'>
+    <view class='star'>*</view>
+    <view class='invoiceType'>发票类型</view>
+    <view class='he'>
+    <picker bindchange="bindPickerChangeType" value="{{typeIndex}}" range="{{typeArray}}">
+    <view class='sign-loction'>
+      <view class='border-picker' bindinput='inputChanged' id='invoiceType'>{{typeArray[typeIndex]}}</view>
+      <view class='lower-bg'>
+          <image src='../../img/lower.png' class='lower-img'></image>
+        </view>
+        </view>
+    </picker>
+    </view>
+
+  </view>
+   <view class='invoiceInfo'>
+    <view class='star'>*</view>
+    <view class='invoiceType'>发票项目</view>
+    <view class='he two'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class='sign-loction'>
+      <view class='border-pickers' bindinput='inputChanged' id='type'>{{array[index]}}</view>
+      <view class='lower-bg'>
+          <image src='../../img/lower.png' class='lower-img'></image>
+        </view>
+        </view>
+    </picker>
+    </view>
+     </view>
+  <!-- <view class='invoiceInfo'>
+    <view class='star'>*</view>
+    <view class='invoiceType'>发票项目</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        <view class='selectionText' bindinput='inputChanged' id='type'>{{array[index]}}</view>
+        <view class='img'>
+          <image src='../../img/lower.png' class='lower'></image>
+        </view>
+      </view>
+    </picker>
+  </view> -->
+  <view class='invoiceInfo'>
+    <view class='star'>*</view>
+    <view class='invoiceType'>发票抬头</view>
+    <input type='text' value='{{title}}' bindinput='inputChanged' id='title'></input>
+  </view>
+  <view class='invoiceInfo'>
+    <view class='star'>*</view>
+    <view class='invoiceType'>纳锐人识别号</view>
+    <input type='text' value='{{taxNumber}}' class='input' bindinput='inputChanged' id='taxNumber'></input>
+  </view>
+  <view class='invoiceInfo'>
+    <view class='invoiceType'>地址</view>
+    <input type='text' value='{{companyAddress}}' class='address' bindinput='inputChanged' id='companyAddress'></input>
+  </view>
+  <view class='invoiceInfo'>
+    <view class='invoiceType'>电话</view>
+    <input type='text' value='{{telephone}}' class='phone address' bindinput='inputChanged' id='telephone'></input>
+  </view>
+  <view class='invoiceInfo'>
+    <view class='invoiceType'>开户银行</view>
+    <input type='text' value='{{bankName}}' class='num' bindinput='inputChanged' id='bankName'></input>
+  </view>
+  <view class='invoiceInfo'>
+    <view class='invoiceType'>银行账号</view>
+    <input type='number' value='{{bankAccount}}' class='num' bindinput='inputChanged' id='bankAccount'></input>
+  </view>
+  <!-- 表单尾 -->
+  <button class='btn' bindtap='next'>下一步</button>
+</view>

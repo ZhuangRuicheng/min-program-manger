@@ -1,0 +1,29 @@
+<!--pages/template/cuestControl/windowCurtains/windowCurtains.wxml-->
+<template name="curtains">
+<view class='curtains-box' catchtouchmove="preventTouchMove">
+<view class='curtains-content'>
+ <view class='curtains-header'>
+ <icon type='clear' size='20' bindtap='cancelCurtains' color='#ffffff'></icon>
+   <view class='curtains-all'>
+   <view class='curtains-img'><image src='../img/windowCurtainsToast.png' class='window-curtains-toast'></image></view>
+   <view class='curtains-text'>窗帘</view>
+   </view>
+ </view>
+ <scroll-view scroll-y="true" class='curtains-view' scroll-top="200rpx;">
+ <view class='curtains-tr' wx:for="{{customList}}">
+ <view class='curtains-title'>{{item.deviceName}}</view>
+ <view class='curtains-tr2'>
+ <view class='open-curtains-img' bindtap='windowCurtains' id='0' hover-class='hover-curtains1' hover-stay-time='50' data-deviceid='{{item.deviceId}}'>
+ <view class='curtains-texts'>全开</view></view>
+ <view class='progress1' style="background-image:url({{item.deviceId == deviceId?hoverProgress1:'https://eimg.doorconn.com/hotel_assistant/images/progress-n.png'}})"></view>
+ <!-- 暂停 -->
+  <view class='open-curtains-img2' bindtap='windowCurtains' id='2' hover-class='hover-curtains2' hover-stay-time='50' data-deviceid='{{item.deviceId}}'><view class='curtains-texts'>暂停</view></view>
+<!-- 全关 -->
+ <view class='progress2' style="background-image:url({{item.deviceId == deviceId?hoverProgress2:'https://eimg.doorconn.com/hotel_assistant/images/progress-n.png'}})"></view>
+ <view class='open-curtains-img3' bindtap='windowCurtains' id='1' hover-class='hover-curtains3' hover-stay-time='50' data-deviceid='{{item.deviceId}}'><view class='curtains-texts'>全关</view></view>
+ </view>
+</view>
+   </scroll-view>
+</view>
+</view>
+</template>

@@ -1,0 +1,175 @@
+/* pages/template/cuestControl/noAuthority/noAuthority.wxss */
+.box-Thc{
+  padding-bottom: 100rpx;
+}
+.header-Thc{
+  margin: 30rpx 30rpx 0rpx 30rpx;
+  background-color: white;
+  border-radius: 12rpx;
+  box-shadow: 0px 3px 2px #ff660013;
+}
+.hotel-name-Thc{
+  font-size: 34rpx;
+  color: #333333;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 30rpx;
+  padding-bottom: 20rpx;
+}
+.room-number-Thc{
+  font-size: 36rpx;
+  color: #ea5415;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+.time-Thc{
+  width: 690rpx;
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  padding-bottom: 23rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+}
+.id{
+  color: #ea5415;
+  line-height: 44rpx;
+  border-radius: 6rpx;
+  border: 2rpx #ea5415 solid;
+  padding: 5rpx 10rpx 5rpx 10rpx;
+  margin-left: 15rpx;
+}
+.tips-Thc{
+  margin-top: 40rpx;
+}
+.tips-tr-Thc{
+  display: flex;
+  margin-left: 30rpx;
+}
+.tips-icon{
+  height: 40rpx;
+  width: 6rpx;
+  background-color: #ea5415; 
+  margin-right: 14rpx;
+}
+.tips-title-Thc{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.open-doors-imgs{
+  margin: 24rpx 0rpx 30rpx 0rpx;
+  width: 750rpx;
+  height: 320rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/tip-open-door.png);
+  background-size: 750rpx 320rpx;
+  background-repeat: no-repeat;
+}
+.open-scens-img{
+  margin-bottom: 30rpx;
+  width: 750rpx;
+  height: 320rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/tip-open-scens.png);
+  background-size: 750rpx 320rpx;
+  background-repeat: no-repeat;
+}
+.open-scens-tv{
+  margin-bottom: 30rpx;
+  width: 750rpx;
+  height: 320rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/tip-open-tv.png);
+  background-size: 750rpx 320rpx;
+  background-repeat: no-repeat;
+}
+.open-scens-air{
+  margin-bottom: 90rpx;
+  width: 750rpx;
+  height: 320rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/tip-open-air.png);
+  background-size: 750rpx 320rpx;
+  background-repeat: no-repeat;
+}
+/* 身份证弹出层 */
+.id-box{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 26, 0.7);
+  position: fixed;
+  top: 0rpx;
+  z-index: 999;
+}
+.input-id{
+  width: 640rpx;
+  height: 585rpx;
+  background-color: white;
+  border-radius: 12rpx;
+  margin: auto;
+  margin-top: 200rpx;
+}
+.img-id{
+  text-align: center;
+}
+.id-img{
+  width: 140rpx;
+  height: 140rpx;
+  margin-top: 30rpx;
+}
+.writeOff{
+  text-align: center;
+  font-size: 30rpx;
+  color: #ea5415;
+  font-weight: bold;
+}
+.id-info{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  margin-left: 30rpx;
+}
+.id-title{
+  font-size: 32rpx;
+  color: #333333;
+  border: 1rpx #cccccc solid;
+  height: 80rpx;
+  width: 130rpx;
+  margin-top: 40rpx;
+  text-align: center;
+}
+.id-content{
+  margin-top: 40rpx;
+}
+.id-shows{
+  width: 420rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  padding-left: 30rpx;
+  border-top: 1rpx #cccccc solid;
+  border-right: 1rpx #cccccc solid;
+  border-bottom: 1rpx #cccccc solid;
+}
+.id-tips{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 60rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+icon {
+  position: absolute;
+  right: 75rpx;
+  margin-top: 21rpx;
+}
+.btn{
+  margin-top: 56rpx;
+  text-align: center;
+}
+.save{
+  width: 360rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color:white;
+  background-color: #ea5415;
+  font-size: 32rpx;
+  border-radius: 16rpx;
+}

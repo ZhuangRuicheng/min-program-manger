@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header-tabbar": "../component/headerTabbar"
+  },
+  "navigationBarTitleText": "预约发票",
+  "enablePullDownRefresh": false
+}

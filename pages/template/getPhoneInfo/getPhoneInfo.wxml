@@ -1,0 +1,15 @@
+<!--pages/template/getPhoneInfo/getPhoneInfo.wxml-->
+<template name="getPhoneInfo">
+<view class="container-column" catchtouchmove='false' wx-if='{{getPhoneInfo}}'>
+<view class="container-column buydes-dialog-container" >
+ <view class="container-column buydes-dialog-container-bottom">
+   <view class='useInfo'>
+     <image src='{{getPhoneInfoImg}}' class='getUseInfo'></image>
+      <view class='useInfoBtn'>
+       <button class='useInfoBtns' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">好的</button>
+      </view>
+   </view>
+</view>
+</view>
+</view>
+</template>

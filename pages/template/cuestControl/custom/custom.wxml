@@ -1,0 +1,28 @@
+<!--pages/template/cuestControl/custom/custom.wxml-->
+<wxs module="queryMax" src="../../../../utils/query.wxs">
+</wxs>
+<template name="custom">
+<view class='custom-box' catchtouchmove="preventTouchMove">
+ <view class='custom-content'>
+ <view class='custom-header'>
+ <icon type='clear' size='20' bindtap='cancelCustom' color='#ffffff'></icon>
+ <view class='custom-tr1'>
+  <view class='custom-img'><image src='../img/custom-toast.png' class='custom-toast'></image></view>
+  <view class='coustom-text'>{{name}}</view>
+  </view>
+  </view>
+  <!-- <view class='custom-switch'>
+    <view class='switch-text'>开</view>
+    <view class='switch-title'>开关</view>
+  </view> -->
+  <view class='custom-tr2'>
+    <view wx:for="{{customDevices}}" class='small' bindtap='customAction' data-id='{{item.deviceId}}' data-code='{{item.actionCode}}' data-type='{{item.deviceType}}'>
+    <view wx:if="{{item.deviceName == name?true:false}}" class='custom-hh'>
+      <view class='cusotm-containr' hover-class='hover-custom' hover-stay-time='50'>{{queryMax.firstText(item.actionName)}}</view>
+      <view class='custom-contains-text'>{{item.actionName}}</view>
+    </view>
+    </view>
+  </view>
+ </view>
+</view>
+</template>

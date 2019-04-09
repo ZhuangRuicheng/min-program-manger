@@ -1,0 +1,44 @@
+<!--pages/template/cuestControl/tv/tv.wxml-->
+<template name="tv">
+<view class='tv-box' catchtouchmove="preventTouchMove">
+  <view class='tv-content'>
+    <view class='tv-header'>
+    <icon type='clear' size='20' bindtap='cancelTv' color='#ffffff'></icon>
+      <view class='tv-toast-img'><image src='../img/tv-toast.png' class='tv-toast'></image></view>
+      <view class='tv-text'>电视</view>
+    </view>
+    <!-- 机顶盒 -->
+      <view class='tv-bottom'>
+    <view class='bottom-menu' hover-class='bottom-menu-hover' hover-stay-time='50' data-code='14' bindtap='tvSwitch'>
+    <view class='top-tap'>机顶盒</view>
+    </view>
+   <!-- 机顶盒 -->
+      <view class='channel'>
+      <view class='channel-reduce' hover-class='channel-hover' hover-stay-time='50' data-code='2' bindtap='tvSwitch'></view>
+      <view class='channel-add' hover-class='channel-add-hover' hover-stay-time='50' data-code='1' bindtap='tvSwitch'></view>
+      </view>
+      <view class='home' hover-class='home-hover' hover-stay-time='50' data-code='0' bindtap='tvSwitch'><view class='top-tap'>电视</view></view>
+    </view>
+  
+    
+    <!-- 中间按钮 -->
+    <view class='tv-center'>
+      <view class='center-up' hover-class='center-up-hover' hover-stay-time='50' data-code='5' bindtap='tvSwitch'></view>
+      <view class='center-tr'>
+       <view class='center-left' hover-class='center-left-hover' hover-stay-time='50' data-code='7' bindtap='tvSwitch'></view>
+       <view class='center-ok' hover-class='center-ok-hover' hover-stay-time='50' data-code='9' bindtap='tvSwitch'></view>
+       <view class='center-right' hover-class='center-right-hover' hover-stay-time='50' data-code='8' bindtap='tvSwitch'></view>
+      </view>
+      <view class='center-down' hover-class='center-down-hover' hover-stay-time='50' data-code='6' bindtap='tvSwitch'></view>
+    </view>
+    <view class='tv-tr'>
+      <view class='switch' hover-class='switch-hovers' hover-stay-time='50' data-code='11' bindtap='tvSwitch'></view>
+     <view class='voice'>
+      <view class='voice-reduce' hover-class='voice-hover' hover-stay-time='50' data-code='4' bindtap='tvSwitch'></view>
+      <view class='voice-add' hover-class='voice-add-hover' hover-stay-time='50' data-code='3' bindtap='tvSwitch'></view>
+      </view>
+      <view class='return' hover-class='return-hover' hover-stay-time='50' data-code='10' bindtap='tvSwitch'></view>
+    </view>
+  </view>
+</view>
+</template>

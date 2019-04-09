@@ -1,0 +1,65 @@
+// 关键字查询
+var query = function (list, keyWord) {
+  for (var i = 0; i < list.length; i++) {
+    if (list[i] == keyWord) {
+      return true;
+    }
+  }
+  return false;
+}
+//判断数据是否为同一个
+var same = function (list, deviceType){
+  // if (deviceType == 7){
+  //   var name = list[0].deviceName;
+  //   var deviceNameList = [];
+  //   deviceNameList.push(list[0])
+  //   for (var i = 0; i < list.length; i++) {
+  //     if (name != list[i].deviceName) {
+  //       deviceNameList.push(list[i]);
+  //     }
+  //   }
+  //   return deviceNameList;
+  // }
+  if (deviceType === 7) {
+    var len = list.length;
+    for (var i = 0; i < len; i++) {
+      for (var j = i + 1; j < len; j++) {
+        if (list[i].deviceName == list[j].deviceName) {
+          list.splice(j, 1);
+          len--;
+          j--;
+        }
+      }
+    }
+    return list;
+  }
+  
+}
+//判断是否是同一类
+var sameName = function(list,name){
+  var deviceName = [];
+  for(var i = 0;i<list.length;i++){
+    if (name == list[i].deviceName){
+      deviceName.push(list[i])
+      return deviceName;
+    }
+  }
+  return deviceName;
+}
+//截取第一个字作为事件触发按钮名函数
+var firstText = function(text){
+  
+   return text.charAt(0);
+}
+//将手机号码中间的四位数用*表示
+var phone = function(phoneNumber){
+  var phoneNum = phoneNumber.substring(0, 3) + '****' + phoneNumber.substring(7);
+  return phoneNum
+}
+module.exports = {
+  query: query,
+  same: same,
+  firstText: firstText,
+  sameName: sameName,
+  phone: phone
+} 

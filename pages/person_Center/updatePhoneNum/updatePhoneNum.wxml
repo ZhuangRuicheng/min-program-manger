@@ -1,0 +1,24 @@
+<!--pages/person_Center/updatePhoneNum/updatePhoneNum.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='个人信息' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class='input'>
+    <input placeholder='请输入换绑手机号' class='input-num' type='number' bindinput='phone' id='phoneNum' value='{{phoneNum}}'></input>
+  </view>
+  <view class='out-code'>
+  <view class='in-code'>
+  <view class='code'>
+    <input class='code-num' placeholder='请输入验证码' type='number' bindinput='phone' id='code' value='{{code}}'></input>
+  </view>
+  <view class='btn'>
+    <button class='get-code' bindtap='getVerificationCode' disabled='{{disabled}}'>{{time}}</button>
+  </view>
+  </view>
+  </view>
+  <view class='submit'>
+    <button class='submit-btn' bindtap='submit'>提交</button>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/template/calendar/calendar.wxml-->
+<view class='calendar-out'>
+  <view class="container-fluid">
+    <view class="demo5">
+     <icon type='clear' size='20' bindtap='cancelCurtains' color="#ff3333"></icon>
+        <calendar        
+        cell-size="30" 
+        next="{{true}}" prev="{{true}}" show-more-days="{{true}}"
+        calendar-style="calendar" 
+        header-style="header" 
+        board-style="board" 
+        days-color="{{demo5_days_style}}" active-type="rounded" bindnextMonth="next"
+        binddateChange="dateChange" binddayClick="dayClick"
+        />
+    </view>
+</view>
+</view>

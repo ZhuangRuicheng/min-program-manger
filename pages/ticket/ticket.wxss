@@ -1,0 +1,128 @@
+/* pages/ticket/ticket.wxss */
+@import "../template/ticket/ticket.wxss";
+page{
+  background-color: #f7f7f7;
+}
+
+  /* 弹出层样式 */
+    .buydes-dialog-container{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(15, 15, 26, 0.7);
+    position: fixed;
+    z-index: 999;
+    top: 0rpx;
+}
+.popup{
+  position: fixed;
+  top: 300rpx;
+  left: 80rpx;
+  background-color: white;
+  overflow: hidden;
+  z-index: 9999;
+}
+.ticketShow{
+  height: 160rpx;
+  width: 600rpx;
+  border-bottom: 1rpx #dfdfdf dotted;
+}
+.hr{
+  display: flex;
+}
+.green{
+  color: green;
+  font-size: 28rpx;
+  padding: 20rpx 0rpx 28rpx 410rpx;
+}
+.green1{
+   color: #999999;
+  font-size: 28rpx;
+  padding: 20rpx 0rpx 28rpx 410rpx;
+}
+.red{
+  font-size: 30rpx;
+  padding: 20rpx 0rpx 28rpx 410rpx;
+}
+.cancel{
+  color: #ea5415;
+  font-size: 28rpx;
+  padding: 20rpx 0rpx 28rpx 16rpx;
+}
+.hotelName{
+  font-size: 22rpx;
+  margin-left: 56rpx;
+}
+.type{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+.bottomCss{
+  height: 440rpx;
+  width: 600rpx;
+  text-align: center;
+}
+.codeImg{
+  height: 250rpx;
+  width: 250rpx;
+  margin-top: 20rpx;
+}
+.codeNumber{
+  color: #ea5415;
+  font-size: 34rpx;
+  margin-top: -25rpx;
+}
+.codetips{
+  color: #999999;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.useBtn{
+   font-size: 28rpx;
+   width: 200rpx;
+   color: white;
+   background-color: #ea5415;
+   margin-top: 10rpx;
+}
+.useTicket{
+  height: 220rpx;
+  text-align: center;
+  padding-top: 50rpx;
+  background-color: white;
+  margin: 400rpx 90rpx 0rpx 90rpx;
+  font-size: 30rpx;
+}
+.confirmUse{
+  display: flex;
+ 
+}
+.NotUse{
+  width: 180rpx;
+  font-size: 30rpx;
+  height: 70rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  margin-left: 80rpx;
+  color: white;
+  background-color: #999999;
+}
+.canUse{
+  width: 180rpx;
+  font-size: 30rpx;
+  height: 70rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  margin-right: 80rpx;
+  color: white;
+  background-color: #ea5415;
+}
+.useText{
+  font-size: 28rpx;
+}
+.bottomData{
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  margin-top: 12rpx;
+}

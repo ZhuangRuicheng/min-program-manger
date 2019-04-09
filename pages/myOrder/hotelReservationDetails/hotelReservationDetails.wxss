@@ -1,0 +1,170 @@
+/* pages/myOrder/hotelReservationDetails/hotelReservationDetails.wxss */
+@import "../../template/reward/reward.wxss";
+@import "../../template/orderInfo/orderInfo.wxss";
+@import "../../template/progress/progress.wxss";
+.header{
+  height: 88rpx;
+  color: #333333;
+  border-bottom: 0.5rpx #cccccc solid;
+  background-color: white;
+}
+.hotelName{
+  font-size: 34rpx;
+  line-height: 88rpx;
+  padding-left: 30rpx;
+}
+.content{
+  border-bottom: 0.5rpx #cccccc solid;
+   background-color: white;
+   font-size: 30rpx;
+   padding-bottom: 50rpx;
+}
+.invoiceType{
+
+  padding: 30rpx 0rpx 0rpx 30rpx;
+}
+.invoiceItem{
+padding: 30rpx 0rpx 0rpx 30rpx;
+}
+.invoiceTitle{
+
+  padding: 30rpx 0rpx 0rpx 30rpx;
+}
+.invoiceAddress{
+padding: 30rpx 0rpx 0rpx 30rpx;
+}
+.invoicePhone{
+padding: 30rpx 0rpx 0rpx 30rpx;
+}
+.invoiceBank{
+padding: 30rpx 0rpx 0rpx 30rpx;
+}
+.invoiceBankNum{
+padding: 30rpx 0rpx 0rpx 30rpx;
+}
+.remarks{
+  padding: 44rpx 0rpx 0rpx 30rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+.img{
+  display: flex;
+  padding: 24rpx 140rpx 24rpx 160rpx;
+   background-color: white;
+}
+.order-cancel{
+  background-color: white;
+  padding-bottom: 70rpx;
+}
+.cancel-title{
+  
+  font-size: 30rpx;
+  color: #ff3333;
+  text-align: center;
+  padding-top: 50rpx;
+}
+.cancel-content{
+  padding-top: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.vip-show{
+  padding-left: 30rpx;
+}
+.vip-type{
+  padding-top: 30rpx;
+}
+.ID{
+  padding-top: 30rpx;
+}
+page{
+  background-color: #f7f7f7;
+}
+/* //随机打赏金额 */
+/* //弹出层样式 */
+   .buydes-dialog-container{
+     width: 100%;
+     height: 100%;
+    position: fixed;
+    z-index: 10000;
+    top: 0rpx;
+    justify-content: space-between;
+     background-color:rgba(15, 15, 26, 0.7);
+}
+.buydes-dialog-container-top{
+    flex-grow: 1;
+}
+ 
+.buydes-dialog-container-bottom{
+    display: flex;
+    flex-grow: 0;
+}
+.hiddenmodalput{
+  width: 610rpx;
+  height: 300rpx;
+  background-color: white;
+  position: absolute;
+  top: 350rpx;
+  left: 73rpx;
+    border-radius: 15rpx;
+}
+.rewardTitle{
+  font-size: 34rpx;
+  margin: 30rpx 0rpx 30rpx 165rpx;
+}
+input{
+  font-size: 30rpx;
+  border: 1rpx #999999 solid;
+  width: 350rpx;
+  margin-left: 120rpx;
+}
+.allBtn{
+  display: flex;
+  margin-top: 30rpx;
+}
+.btn1{
+  width: 170rpx;
+  font-size: 30rpx;
+  background-color: #ea5415;
+  color: white;
+  text-align: center;
+  line-height: 75rpx;
+  height: 75rpx;
+  margin-left: 120rpx;
+}
+.btn2{
+  width: 170rpx;
+  font-size: 30rpx;
+  background-color: #ea5415;
+  color: white;
+  text-align: center;
+  line-height: 75rpx;
+  height: 75rpx;
+  margin-left: -100rpx;
+}
+.OVERDUE{
+  font-size: 32rpx;
+  text-align: center;
+  padding-left: 330rpx;
+}
+.clearRewards{
+   height: 200rpx;
+  background-color: white;
+  font-size: 32rpx;
+  color: #333333;
+  padding-top: 30rpx;
+}
+.hideImg{
+  text-align: center;
+}
+.hide{
+  width: 80rpx;
+  height: 80rpx;
+}
+.hideTitle{
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}

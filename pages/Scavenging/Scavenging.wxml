@@ -1,0 +1,40 @@
+<!--pages/Scavenging/Scavenging.wxml-->
+<import src="../template/classify/classify.wxml"/>
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='客房助手' show_bol='{{true}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<view class='box'>
+   <view class='disable-img'><image src='../img/disable.png' class='img'></image></view>
+   <view class='scan-title'>扫码已过期！</view>
+   <view class='reset-scan'>
+   <view class='reset' bindtap='scanCode'>
+     <view class='scan'><image src='../img/scan.png' class='scan-img'></image></view>
+     <view class='title'>重新扫码</view>
+   </view>
+   </view>
+   <view class='recommend'>
+     <view class='recommend-img'><image src='../img/good.png' class='good'></image></view>
+     <view class='recommend-text'>推荐酒店</view>
+   </view>
+   <view class='hotel-info' wx:for='{{recommendHotels}}' bindtap='hotel_Introduction' data-id='{{item.hotelId}}' data-name='{{item.hotelName}}'>
+     <view class='hotel-img'><image src='{{item.imgUrl}}' class='hotel-imgs' mode='center'></image></view>
+     <view class='addgress-info'>
+     <view class='bg'></view>
+       <view class='addgress'>{{item.hasLive ? '最近住过' :'为您推荐'}}</view>
+       <view class='tips' wx:if="{{!item.distance?false:true}}">距您{{item.distance}}公里</view>
+     </view>
+     <view class='tr'>
+     <view class='location'>{{item.hotelName}}</view>
+      <view class='reservation'>
+         <label class='text'>酒店直销价 </label>
+         <label class='money'>￥{{item.price == null?'--':item.price}} </label>
+         <label class='text'>起</label>
+       </view>
+     </view>
+     <view class='distance'>
+       <view class='distance-text'>{{!item.address?'--':item.address}}</view>
+       <view class='btn'>预订</view>
+     </view>
+   </view>
+</view>
+<template is="classify" data="{{currentTab}}"></template>

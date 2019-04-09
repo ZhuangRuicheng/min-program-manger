@@ -1,0 +1,2 @@
+/* pages/meals/meals.wxss */
+@import "../template/miniBar/miniBar.wxss";

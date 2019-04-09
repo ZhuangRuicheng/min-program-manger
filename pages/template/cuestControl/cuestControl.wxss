@@ -1,0 +1,120 @@
+/* pages/template/cuestControl/cuestControl.wxss */
+
+.brightBox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 26, 0.7);
+  position: fixed;
+  top: 0rpx;
+  z-index: 999;
+}
+
+.bright-content {
+  width: 640rpx;
+  padding-bottom: 80rpx;
+  background-color: white;
+  margin: 290rpx auto 0rpx auto;
+  border-radius: 16rpx;
+}
+
+.bright-header {
+  background-color: #ea5415;
+  border-top-left-radius: 16rpx;
+  border-top-right-radius: 16rpx;
+}
+
+.bright-tr {
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  border-bottom: 1rpx #dcdcdc solid;
+}
+
+icon {
+  position: absolute;
+  right: 75rpx;
+  margin-top: 21rpx;
+}
+
+.bright-toast {
+  width: 46rpx;
+  height: 50rpx;
+  margin: 25rpx 16rpx 0rpx 32rpx;
+}
+
+.bright-text {
+  font-size: 32rpx;
+  color: #fff;
+}
+.all-shut{
+  display: flex;
+  margin-top: 25rpx;
+  padding-bottom: 24rpx;
+  height: 180rpx;
+}
+.shut1{
+  flex: 1;
+  margin-left: 72rpx;
+}
+.shut2{
+  flex: 1;
+  margin-left: 312rpx;
+}
+.shut {
+  height: 90rpx;
+  width: 90rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/shut_toast.png);
+  background-size: 90rpx;
+  background-repeat: no-repeat;
+}
+.hover1{
+  height: 90rpx;
+  width: 90rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/shut_toast_s.png);
+  background-size: 90rpx 90rpx;
+  background-repeat: no-repeat;
+}
+.hover2{
+  height: 90rpx;
+  width: 90rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/shut_toast_s.png);
+  background-size: 90rpx 90rpx;
+  background-repeat: no-repeat;
+}
+.shut-text{
+  font-size: 30rpx;
+  color: #ffffff;
+  margin-top: 14rpx;
+  margin-left: 16rpx;
+  font-weight: bold;
+}
+.shut-toast {
+  width: 90rpx;
+  height: 90rpx;
+}
+.bottom-css{
+  margin: 30rpx 0rpx 0rpx 32rpx;
+}
+.bright-hh {
+  word-break: keep-all;
+  word-wrap: break-word;
+  display: inline-block;
+  margin-bottom: 30rpx;
+}
+.birght-1{
+  width: 191rpx;
+  text-align: center;
+}
+.birghtSubclass_s {
+  width: 81rpx;
+  height: 81rpx;
+}
+.text{
+  font-size: 28rpx;
+  color: #333333;
+  margin-top: -10rpx
+}
+.bright-view{
+  height: 450rpx;
+  border: none;
+}

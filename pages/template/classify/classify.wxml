@@ -1,0 +1,28 @@
+<!--pages/template/classify/classify.wxml-->
+<template name='classify'>
+<view class='classify-box'>
+  <view class='open-door-tr2'>
+    <view class='open-service' data-current="0" bindtap="swichNav">
+      <view class='service-img'>
+        <image src="{{currentTab==0 ? '../img/server_Selection.png' : '../img/server_Normal.png'}}" class='service-img-icon'></image>
+      </view>
+      <view class="service-title {{currentTab==0 ? 'on' : ''}}">客房助手</view>
+    </view>
+</view>
+  <view class='open-door'>
+  <view class='open-door-tr' data-current="1" bindtap="swichNav">
+    <view class='open-door-img'><image src='../img/open.png' class='class-open'></image></view>
+    <view class="open-door-title {{currentTab==1 ? 'on' : ''}}">一键开门</view>
+  </view>
+  </view>
+  <view class='open-door-tr2' data-current="2" bindtap="swichNav">
+    <view class='open-service'>
+      <view class='service-img'>
+        <image src="{{currentTab==2 ? '../img/person_Selection.png' : '../img/person_Normal.png'}}" class='service-img-icon'></image>
+      </view>
+      <view class="service-title {{currentTab==2 ? 'on' : ''}}">个人中心</view>
+    </view>
+</view>
+  </view>
+ </template>
+

@@ -1,0 +1,47 @@
+<!--pages/myOrder/orderDetails/orderDetails.wxml-->
+<import src="../../template/reward/reward.wxml"/>
+<import src="../../template/orderInfo/orderInfo.wxml"/>
+<import src="../../template/progress/progress.wxml"/>
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='订单详情' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class='header'>
+    <text class='hotelName'>{{orderDetail.hotelName}}</text>
+    <text class='hotelNum'>{{orderDetail.roomNum}}房</text>
+  </view>
+  <view class='content'>
+    <text class='clearText'>清扫房间</text>
+    <view class='remarks'>备注：{{!orderDetail.remarks ?'--':orderDetail.remarks}}</view>
+  </view>
+  <view class='OVERDUE img' wx-if="{{orderDetail.status == 'OVERDUE' ? true :false}}">已过期</view>
+  <!-- 订单处理进度 -->
+   <template is="progress" data='{{color,acceptColor,finishColor}}'></template>
+   <!-- 订单处理进度 -->
+ 
+  <!-- <view class='hr'></view> -->
+<!-- 打赏 -->
+  <template is="reward" data="{{ladyImg,satisfiedShow,satisfiedImg,NotSatisfiedShow,NotSatisfiedImg,two,five,ten,twenty,fifty,finishUserInfo,ladyImg,aFewWordsInput,orderDetail,orderId}}"></template>
+  <!-- 打赏 -->
+  <!-- //随意打赏弹出层 -->
+<view class="container-column" catchtouchmove='false' wx:if="{{hiddenmodalput}}">
+<view class="container-column buydes-dialog-container" >
+        <view class="container-column buydes-dialog-container-bottom">
+  <view class='hiddenmodalput'>
+    <view class='rewardTitle'>多少都是您的心意</view>
+    <input type='text' placeholder='请输入打赏金额' value='{{text}}' bindinput='inputContent' maxlength='6' ></input>
+    <view class='allBtn'>
+   
+    <button class='btn1' bindtap='cancel'>取消</button>
+     <button class='btn2' bindtap='rewardCost' id='{{text}}'>确认</button>
+    </view>
+  </view>
+        </view>
+    </view>
+</view>
+ <!-- 订单信息 -->
+   <template is="orderInfo" data="{{orderDetail}}"></template>
+  <!-- 订单信息 -->
+</view>

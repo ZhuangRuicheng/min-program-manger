@@ -1,0 +1,63 @@
+<!--pages/store/storeOrder/storeOrder.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+  <header-tabbar title='订单详情' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar>
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class='Text'>
+    <text>服务订单:</text>
+  </view>
+  <view class='content'>
+    <scroll-view scroll-y='true' style="{{goodsList.list.length>6?'height:300rpx':''}}">
+      <view class='goods' wx:for='{{goodsList.list}}'>
+        <text class='storeName'>{{item.productName}}</text>
+        <text class='number'>×{{item.quantity}}</text>
+        <text class='money'>￥{{item.price}}</text>
+      </view>
+    </scroll-view>
+    <view class='count'>
+      <text class='storeName'>合计</text>
+      <text class='number countNumber'>{{goodsList.totalQuantity}}</text>
+      <text class='money countMoney'>￥{{goodsList.totalPrice}}</text>
+    </view>
+  </view>
+  <view class='hr'></view>
+  <!-- 信息输入框 -->
+  <!-- 表单头 -->
+
+  <form bindsubmit="formSubmit" report-submit='true'>
+    <view class='info'>
+      <view class='cludeInfo'>
+        <view class='name'>
+          <label class='star'>*</label>姓名/Name</view>
+        <view class='Tips'>(与前台登记名字相符)</view>
+      </view>
+      <input type='text' placeholder='请输入您的姓名' placeholder-class='input' bindinput='inputChange' id='name' value='{{name}}' adjust-position='{{adjust_position}}' cursor-spacing='30'></input>
+      <view class='cludeInfo '>
+        <view class='name Remarks'>备注/comments：</view>
+      </view>
+      <input type='text' placeholder='如有其它需要，请备注说明' placeholder-class='input' bindinput='inputChange' id='remarks' value='{{remarks}}' adjust-position='{{adjust_position}}' cursor-spacing='30'></input>
+    </view>
+    <view class='bottomCss'>
+      <text class='countText'>应付:</text>
+      <text class='countMoney bottomMoney'>￥{{goodsList.totalPrice}}</text>
+      <button class='payBtn' form-type='submit'>去支付</button>
+    </view>
+  </form>
+  <!-- 表单尾 -->
+  <!-- 弹出层生成二维码 -->
+  <view class="container-column">
+    <view animation="{{animationData}}" class="container-column buydes-dialog-container" wx:if="{{QrModalStatus}}">
+      <view class="container-column buydes-dialog-container-bottom">
+        <view class="popup">
+          <view class='ticketShow'>
+            <view class='text'> 支付成功！订单已提交！</view>
+            <view class='showContent'>预计3分钟内受理,请稍候</view>
+            <button class='showBtn' bindtap="QRhideModal">好的</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

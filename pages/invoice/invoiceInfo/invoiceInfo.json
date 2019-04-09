@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header-tabbar": "../../component/headerTabbar"
+  },
+  "navigationBarTitleText": "发票信息",
+  "enablePullDownRefresh": false
+}

@@ -1,0 +1,58 @@
+<!--pages/template/reward/reward.wxml-->
+<template name='reward'>
+<view class='satisfiedState' wx:if="{{!finishUserInfo.userName?false:true}}">
+    <view class='serviceTitle'>很荣幸为您提供本次服务，期待您的点评:</view>
+    <view class='l1'>
+     <image src="{{!finishUserInfo.personalImage?ladyImg:finishUserInfo.personalImage}}" class='lady'></image>
+     <view class='name'>{{finishUserInfo.userName}}</view>
+     <view class='position'>{{finishUserInfo.position}}</view>
+    </view>
+    <view class='l2'>
+    <view class='satisfieds'>满意度:</view>
+    <view class='percent'>{{finishUserInfo.satisfactionDegree}}%</view>
+    </view>
+     <view class='orderImgs' wx:if='{{satisfiedShow}}'>
+      <image src='{{satisfiedImg}}' class='satisfied' bindtap='satisfied'></image>
+    <view class='ladyText SatisfiedText'>满意</view>
+    </view>
+    <view class='orderImgs ss' wx:if='{{NotSatisfiedShow}}'>
+      <image src='{{NotSatisfiedImg}}' class='NotSatisfied' bindtap='NotSatisfied'></image>
+    <view class='ladyText NotSatisfiedText'>不满意</view>
+    </view>
+   
+  </view>
+ <view class='clearReward' wx:if="{{!orderDetail. rewardMoney?true:false}}">
+    <text class='clear'>服务生很辛苦，给TA点鼓励吧~</text>
+    <view class='tips'>*打赏金额将直接转给本次为您提供服务的服务生，平台不另外扣取任何费用</view>
+    <view class='rewardMoney'>
+      <view class='moneyCount'>
+        <button class='btn' bindtap='rewardCost' id='{{two}}'>￥{{two}}</button>
+        <button class='btn' bindtap='rewardCost' id='{{five}}'>￥{{five}}</button>
+        <button class='btn' bindtap='rewardCost' id='{{ten}}'>￥{{ten}}</button>
+      </view>
+      <view class='moneyCount moneyCount1'>
+        <button class='btn' bindtap='rewardCost' id='{{twenty}}'>￥{{twenty}}</button>
+        <button class='btn' bindtap='rewardCost' id='{{fifty}}'>￥{{fifty}}</button>
+        <button class='btn' bindtap='atWill'>随意</button>
+      </view>
+    </view>
+  </view>
+   
+   <view class='clearRewards' wx:if="{{!orderDetail.rewardMoney ?false:true}}">
+    <view class='hideImg'><image src='../../img/hide.png' class='hide'></image></view>
+    <view class='hideTitle'>已收到您的打赏￥{{orderDetail.rewardMoney}}，谢谢您的鼓励</view>
+  </view>
+    <view wx:if="{{!orderDetail.message ? true : false}}" class='feedback-content'>
+    <input type='text' class='feedback' placeholder='给TA捎句话吧' bindinput='aFewWordsInput' value='{{aFewWordsInput}}'></input>
+   
+      <button class='confir' bindtap='aFewWords'>确认提交</button>
+      </view>
+   <view class='message' wx:if="{{!orderDetail.message?false:true}}">
+       <view class='MessageImg'>
+        <image src='../../img/Message.png' class='Message'></image>
+          <view class='Message-title'>给TA的留言：</view>  
+      </view>
+      <view class='Message-content'>{{orderDetail.message}}</view>
+      </view>
+
+</template>

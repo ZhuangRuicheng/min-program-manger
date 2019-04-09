@@ -1,0 +1,133 @@
+/* pages/leaveRoom/leaveRoom.wxss */
+.Text{
+  font-size: 32rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 30rpx 0rpx 30rpx 30rpx;
+  background-color: white;
+}
+.checkboxs{
+  height: 200rpx;
+  font-size: 32rpx;
+  /* border-bottom: 20rpx #f7f7f7 solid; */
+  border-top: 1rpx #E6E6E6 solid;
+  background-color: white;
+}
+.checkboxSize{
+  transform: scale(0.8);
+  padding-top: 30rpx;
+  padding-left:40rpx; 
+}
+checkbox-group{
+   margin: 30rpx 0rpx 0rpx 40rpx; 
+}
+.tips{
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 30rpx;
+}
+.t{
+  font-size: 28rpx;
+  color: #666666;
+}
+.tt{
+  font-size: 30rpx;
+  color: #ea5415;
+}
+   /* 输入信息 */
+input{
+  height: 80rpx;
+  border: 1rpx #BEBEBE solid;
+  margin: 50rpx 30rpx 0rpx 30rpx;
+  font-size: 34rpx;
+}
+.info{
+
+  background-color: white;
+  padding-bottom: 40rpx;
+}
+.cludeInfo{
+  display: flex;
+}
+.name{
+  margin: 30rpx 0rpx -30rpx 50rpx;
+  font-size: 32rpx;
+  color:#666666;
+}
+.Tips{
+   margin: 30rpx 0rpx -38rpx 220rpx;
+  color: #999999;
+  font-size: 26rpx;
+}
+.star{
+  color: red;
+}
+.Remarks{
+  margin: 50rpx 0rpx -30rpx 50rpx;
+}
+.payBtn{
+  width: 350rpx;
+  height: 90rpx;
+  text-align: center;
+  border-radius: 16rpx;
+  background-color: #EA5415;
+  color: white;
+  letter-spacing:10rpx;
+  margin-top: 250rpx; 
+}
+page{
+  background-color: #f7f7f7;
+}
+/* 弹出层样式 */
+    .buydes-dialog-container{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    background-color:rgba(15, 15, 26, 0.7);
+    position: fixed;
+    z-index: 999;
+    /* position: absolute; */
+    top: 0rpx;
+}
+.buydes-dialog-container-top{
+    flex-grow: 1;
+}
+ 
+.buydes-dialog-container-bottom{
+    display: flex;
+    flex-grow: 0;
+}
+
+.popup{
+  margin: 300rpx 0rpx 80rpx 104rpx;
+  background-color: white;
+}
+.ticketShow{
+  height: 300rpx;
+  width: 540rpx;
+  border-bottom: 1rpx #dfdfdf dotted;
+}
+.text{
+  font-size: 36rpx;
+   width: 540rpx;
+   text-align: center;
+   margin-top: 60rpx;
+}
+.showContent{
+  font-size: 30rpx;
+   width: 540rpx;
+   text-align: center;
+   margin-top: 40rpx;
+   color: #ea5415;
+}
+
+.showBtn{
+  width: 200rpx;
+  height: 80rpx;
+  text-align: center;
+  background-color: #ea5415;
+  color: white;
+  font-size: 32rpx;
+   margin-top: 40rpx;
+  line-height: 80prx;
+}

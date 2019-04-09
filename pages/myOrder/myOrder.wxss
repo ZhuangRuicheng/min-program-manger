@@ -1,0 +1,190 @@
+/* pages/myOrder/myOrder.wxss */
+.clearRoom{
+  height: 350rpx;
+  border-top: 1rpx #e6e6e6 solid;
+  margin-bottom: 60rpx;
+}
+.Img{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx 0rpx 20rpx 23rpx;
+}
+
+.clearTitle{
+  display: flex;
+  background-color: white;
+}
+.text{
+  font-size: 33rpx;
+  margin: 24rpx 0rpx 24rpx 24rpx;
+  /* font-weight: bold; */
+}
+input{
+  width: 100rpx;
+}
+.state{
+  margin: 20rpx 0rpx 24rpx 0rpx;
+  color: red;
+  font-size: 30rpx;
+  position: absolute;
+  right: 30rpx;
+  /* font-weight: bold; */
+}
+.allContent{
+  height: 210rpx;
+  background-color: white;
+   border-top: 1rpx #e6e6e6 solid;
+  border-bottom: 1rpx #e6e6e6 solid;
+}
+.content{
+  height: 210rpx;
+  line-height: 210rpx;
+  padding-left: 90rpx;
+  font-size: 36rpx;
+  /* font-weight: bold; */
+}
+.time{
+  font-size: 26rpx;
+  margin: -58rpx 0rpx 0rpx 0rpx;
+  color: #999999;
+  position: absolute;
+  right: 30rpx;
+}
+.clearBottom{
+  display: flex;
+  font-size: 26rpx;
+  background-color: white;
+  color: #999999;
+  height: 80rpx;
+}
+.hotel{
+  margin-left: 30rpx;
+  padding: 26rpx 0rpx 14rpx 0rpx;
+}
+.room{
+  position: absolute;
+  right: 30rpx;
+  padding: 26rpx 0rpx 14rpx 0rpx;
+}
+.invoiceBottom{
+  display: flex;
+  font-size: 26rpx;
+  background-color: white;
+  height: 70rpx;
+  color: #999999;
+}
+.contentTwo{
+  height: 210rpx;
+  font-size: 32rpx;
+  border-top: 1rpx #e6e6e6 solid;
+  background-color: white;
+  border-bottom: 1rpx #e6e6e6 solid;
+}
+.type{
+  margin-top: 50rpx;
+  margin-left: 90rpx;
+  /* font-weight:bold; */
+}
+.add{
+  margin-top: 30rpx;
+  margin-left: 90rpx;
+  /* font-weight: bold; */
+}
+.feedback{
+  font-size: 32rpx;
+  height: 250rpx;
+  border-top: 1rpx #e6e6e6 solid;
+  border-bottom: 1rpx #e6e6e6 solid;
+  background-color: white;
+}
+.Manager{
+ padding-bottom: 30rpx;
+}
+page{
+  background-color: #f7f7f7;
+}
+.other{
+  margin-top: 15rpx;
+}
+.feedbackTime{
+  margin-top: -160rpx;
+}
+.invoice{
+  margin-top: 0rpx;
+}
+.id{
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+   padding-left: 60rpx;
+  font-size: 28rpx;
+  /* font-weight: bold; */
+}
+.invoiceContentTwo{
+  height: 235rpx;
+}
+.vipContent{
+  height: 265rpx;
+ 
+}
+.vip{
+  height: 430rpx;
+}
+.VIPTime{
+  margin-top: -20rpx;
+}
+.vipBottom{
+  height: 80rpx;
+}
+.live{
+  height: 40rpx;
+}
+.liveTime{
+  margin-top: 10rpx;
+}
+.feedbackContent{
+  margin-right: 46rpx;
+  overflow: hidden;
+  height: 230rpx;
+  padding-bottom: 30rpx;
+  text-overflow:ellipsis;
+  white-space:nowrap;  
+  margin-top: 100rpx;
+}
+.feedbackBottom{
+  height: 80rpx;
+}
+.online{
+  width: 40rpx;
+  height: 50rpx;
+  margin: 20rpx 0rpx 20rpx 23rpx;
+}
+.steyBottom{
+  height: 80rpx;
+}
+.selfContentTwo{
+  height: 230rpx;
+}
+.VIPBox{
+  margin-bottom: 30rpx;
+}
+.hotelContent{
+  border-top: 1rpx #e6e6e6 solid;
+  border-bottom: 1rpx #e6e6e6 solid;
+  background-color: white;
+  padding-bottom: 40rpx;
+}
+.bedType{
+  font-size: 32rpx;
+  padding: 30rpx 0rpx 30rpx 96rpx;
+}
+.inTime{
+  margin-left: 96rpx;
+  font-size: 26rpx;
+  color: #666666;
+}
+.textColor{
+  color: #ff3333;
+}
+.so-on{
+  padding-left: 50rpx;
+}

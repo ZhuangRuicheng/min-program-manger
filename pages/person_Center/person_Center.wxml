@@ -1,0 +1,57 @@
+ <!-- <import src="../template/tabBar/tabBar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/> -->
+<import src="../template/classify/classify.wxml"/>
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='个人中心' show_bol='{{true}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <!-- <view class="Title">
+    <text>个人中心</text>
+  </view> -->
+		 <view class="userinfo">
+			 <open-data type="userAvatarUrl" class="userinfo-avatar fl_l" wx:if='{{isLogin}}'></open-data>
+       <open-data type="userNickName" class="fl_l" wx:if='{{isLogin}}'></open-data>
+     </view>
+     <!-- <view class='hotelManagement'>
+      <image src='../../pages/img/direction.png' class='direction'></image>
+      <view class='hotelManagementText'>切换酒店管理模式</view>
+     </view> -->
+<view class='content'>
+<button class='userInfo' open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo" bindtap='untying'>
+<view class='Order'>
+   <view class='img'>
+       <image src='../img/info-img.png'></image>
+   </view>
+       <text class='text'>个人信息</text>
+       <view class='rightImg'>></view>
+   </view>
+    </button>
+   <view class='hr'></view>
+   <view class='Order' bindtap='myOrder'>
+   <view class='img'>
+       <image src='../img/order.png'></image>
+   </view>
+       <text class='text'>我的订单</text>
+       <view class='rightImg'>></view>
+   </view>
+   <view class='hr'></view>
+   <view class='Ticket Order' bindtap='ticket'>
+   <view class='img'>
+       <image src='../img/ticket.png' class='ticket'></image>
+   </view>
+       <text class='text'>我的票券</text>
+        <view class='rightImg'>></view>
+    </view>
+    <view class='hr'></view>
+   <view class='Feedback Order' bindtap='feedback'>
+   <view class='img'>
+       <image src='../img/feedback.png'></image>
+   </view>
+       <text class='text'>意见反馈</text>
+        <view class='rightImg'>></view>
+   </view>
+</view>
+</view>
+<template is="classify" data="{{currentTab}}"></template>

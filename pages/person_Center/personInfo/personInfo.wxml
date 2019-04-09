@@ -1,0 +1,61 @@
+<!--pages/person_Center/personInfo/personInfo.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='个人信息' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class='header-img'>
+    <view class='img-title'>头像</view>
+    <view class='img'>
+    <open-data type="userAvatarUrl" class="userinfo-avatar fl_l" wx:if='{{isLogin}}'></open-data>
+    </view>
+  </view>
+  <view class='hr'></view>
+  <view class='name-title' bindtap='clickInputName'>
+    <label>姓名</label>
+    <view class='name' wx:if="{{name == ''?false:true}}">{{name}}</view>
+    <view class='name'wx:if="{{name == ''?true:false}}"><text class='no'>暂无</text><text class='input' bindtap='clickInputName'>点击输入</text></view>
+  </view>
+  <view class='hr2'></view>
+   <view class='name-title'>
+    <label>手机号</label>
+    <view class='number' wx:if="{{phoneNum == '' ? false:true}}">{{phoneNum}}</view>
+    <button class='getPhone' wx:if="{{phoneNum != '' ? true:false}}" bindtap='upDatePhoneNum'>切换手机号</button>
+    <view class='number phone-num' wx:if="{{phoneNum == '' ? true:false}}"><text class='no'>暂无</text><button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class='getPhone'>点击获取</button>
+    </view>
+  </view>
+  <view class='hr2'></view>
+   <view class='name-title id-show'>
+    <label>身份证</label>
+    <view wx:if="{{id == ''? false:true}}" class="no-number">
+      <text class='number'>{{id}}</text>
+      <view class='id' bindtap='untying'>解绑</view>
+    </view>
+    <view class='number' wx:if="{{id == ''? true:false}}"><text class='no'>暂无绑定</text><text class='input' bindtap='clickInputId'>点击绑定</text></view>
+  </view>
+</view> 
+<!-- 输入名字弹出层 -->
+ <view class='name-box' catchtouchmove="preventTouchMove" wx:if="{{nameShow?true:false}}">
+  <view class='input-name'>
+  <icon type='clear' size='20' bindtap='cancelInputName'></icon>
+    <view class='input-name-label'>请输入您的姓名</view>
+    <input class='input-names' value='{{name}}' bindinput='getInput' id='name' placeholder='请输入您的名字'></input>
+    <view class='btn'><button class='save' bindtap='bindName'>保存</button></view>
+  </view>
+</view>
+<!-- 身份证弹出层 -->
+<view class='id-box' catchtouchmove="preventTouchMove" wx:if="{{idShow?true:false}}">
+  <view class='input-id'>
+  <icon type='clear' size='20' bindtap='cancelInputId'></icon>
+  <view class='img-id'><image src='../../img/id-img.png' class='id-img'></image></view>
+  <view class='writeOff'>身份验证</view>
+  <view class='id-info'>
+  <view class='id-title'>身份证</view>
+  <view class='id-content'><input class='id-shows' placeholder='请输入您的18位身份证号码' value='{{id}}' bindinput='getInput' id='id'></input></view>
+  </view>
+  <view class='id-tips'>为了及时准确的帮您匹配到酒店信息，请确认您的填写内容真实准确</view>
+  <view class='btn'><button class='save' bindtap='bindIdCard'>确认绑定</button></view>
+  </view>
+</view>
+

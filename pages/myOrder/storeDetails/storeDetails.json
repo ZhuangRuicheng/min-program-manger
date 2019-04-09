@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "header-tabbar": "../../component/headerTabbar"
+  },
+  "navigationBarTitleText": "商品详情"
+}

@@ -1,0 +1,50 @@
+/* pages/template/cuestControl/roomSwitch/roomSwitch.wxss */
+.out-bg{
+   width: 100%;
+    height: 100%;
+    background-color:rgba(15, 15, 26, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.box-switch{
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 560rpx;
+  background-color: white;
+}
+.switch-scroll{
+  height: 460rpx;
+}
+.switch-header{
+  /* background: gainsboro; */
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #666666;
+  border-top: 1rpx #efefef solid;
+  padding-left: 30rpx;
+}
+/* .switch-icons{
+  
+} */
+.icons-img{
+  position: absolute;
+  right: 30rpx;
+}
+.switch-hotel{
+  font-size: 32rpx;
+  color: #333333;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 1rpx #efefef solid;
+}
+.switch-room-num{
+  color: #ea5415;
+  font-size: 34rpx;
+  margin-left: 15rpx;
+  font-weight: bold;
+}

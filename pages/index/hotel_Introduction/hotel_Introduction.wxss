@@ -1,0 +1,173 @@
+/* pages/index/hotel_Introduction/hotel_Introduction.wxss */
+image{
+  width: 100%;
+  height: 360rpx;
+}
+.clickShare{
+  width: 44rpx;
+  height: 52rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 110rpx;
+}
+.shareTips{
+  width: 100%;
+  height: 100%;
+  /* background-color: lightgrey; */
+  justify-content: space-between;
+    background-color:rgba(15, 15, 26, 0.7);
+    position: fixed;
+    z-index: 999;
+    top: 0rpx;
+}
+.shareText{
+  font-size: 32rpx;
+  position: absolute;
+  top: 94rpx;
+  right: 60rpx;
+  color: white;
+}
+.shareBtn{
+  width: 140rpx;
+  height: 48rpx;
+  position: absolute;
+  top: 200rpx;
+  font-size: 24rpx;
+  color: white;
+  border: 1rpx #ffffff solid;
+  text-align: center;
+  line-height: 48rpx;
+  border-radius: 14rpx;
+  right: 300rpx;
+}
+swiper {
+    height: 422rpx;
+    margin-top: -29rpx;
+}
+
+swiper-item image {
+    width: 100%;
+    height: 100%;
+  
+}
+
+.swiper-container{
+  position: relative;
+}
+
+.swiper-container .swiper{
+  height: 368rpx;
+}
+
+.swiper-container .swiper .img{
+  width: 100%;
+  height: 100%;
+}
+.title{
+  margin-left: 30rpx;
+  color: #333333;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+.phone{
+  display: flex;
+  margin-top: 26rpx;
+  border-bottom: 1rpx #cccccc solid;
+  margin-left: 30rpx;
+  padding-bottom: 24rpx;
+}
+.htelphone{
+  width: 34rpx;
+  height: 30rpx;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+}
+.telphone{
+  margin-left: 15rpx;
+}
+.address{
+  width: 36rpx;
+  height: 36rpx;
+  margin: 30rpx 10rpx 0rpx 30rpx;
+}
+.hotelAddress{
+  display: flex;
+}
+.textAddress{
+  font-size: 26rpx;
+  margin-top: 30rpx;
+  width: 450rpx;
+  color: #999999;
+}
+.guide{
+  font-size: 30rpx;
+  color: #ea5415;
+  /* position: relative; */
+  /* left: 30rpx; */
+}
+.content{
+  width: 690rpx;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+  color: #666666;
+  font-size: 30rpx;
+  text-indent: 2em;
+}
+.map{
+  height: 100rpx;
+  width: 290rpx;
+
+}
+.hr{
+  height: 25rpx;
+  background-color: #f7f7f7;
+}
+.btn{
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #ea5415;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  font-size: 32rpx;
+}
+.facilities{
+  font-size: 32rpx;
+ margin-left: 16rpx;
+}
+.facilitiesImg{
+  width: 38rpx;
+  height: 44rpx;
+}
+.allCss{
+  display: flex;
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+}
+.note{
+  width: 31rpx;
+  height: 29rpx;
+}
+.facilityDisplay{
+
+  width: 650rpx;
+  word-break: keep-all;
+  word-wrap: break-word;
+  margin-left: 104rpx;
+  padding-bottom: 95rpx;
+}
+.facilityAll{
+  display: inline-flex;
+  margin-top: 60rpx;
+  margin-right: 120rpx;
+  /* width: 200rpx; */
+}
+.publicImgs{
+  margin: 0rpx 16rpx 0rpx 0rpx;
+}
+
+.facilityName{
+  font-size: 28rpx;
+}

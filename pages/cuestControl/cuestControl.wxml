@@ -1,0 +1,202 @@
+<!--pages/cuestControl/cuestControl.wxml-->
+<import src="../template/classify/classify.wxml" />
+<import src="../template/cuestControl/cuestControl.wxml" />
+<import src="../template/cuestControl/windowCurtains/windowCurtains.wxml" />
+<import src="../template/cuestControl/custom/custom.wxml" />
+<import src="../template/cuestControl/tv/tv.wxml" />
+<import src="../template/cuestControl/airConditioner/airConditioner.wxml" />
+<import src="../template/cuestControl/noDevices/noDevices.wxml" />
+<import src="../template/cuestControl/noAuthority/noAuthority.wxml" />
+<import src="../template/cuestControl/roomSwitch/roomSwitch.wxml" />
+<wxs module="queryMax" src="../../utils/query.wxs">
+</wxs>
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+  <header-tabbar title='智控客房' show_bol='{{true}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar>
+</view>
+<!-- 顶部导航栏end -->
+<!-- 酒店是否装有设备 -->
+<view wx:if="{{hasPermission?false:true}}">
+  <template is="installThc" data="{{hotelName,hasIdCard,idShow,openIhc}}"></template>
+</view>
+<!-- 酒店是否装有设备 -->
+<view class='box' wx:if="{{hasPermission?true:false}}">
+  <view class='header'>
+    <view class='hotel-name'>{{hotelName}}</view>
+    <view class='room-number'>{{roomNum}}</view>
+    <view class='time'>
+      <label class='title'>授权有效期至：{{expireTime}}</label>
+      <view class='switch-icon' wx:if="{{switchSign}}">
+        <image class='conversion' src='../img/conversion.png' bindtap='roomSwitchShow'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 门禁控制 -->
+  <!-- <view class='no-devices' wx:if="{{devices == '' ? true:false}}"><image src='../img/no_devices.png' class='no-devices-icon'></image></view> -->
+  <!-- 该房间没有装设备 -->
+  <view wx:if="{{noDevices  ? true:false}}">
+    <template is="noDevices" data="{{devices}}"></template>
+  </view>
+  <!-- 该房间没有装设备 -->
+  <view wx:if="{{noDevices ? false:true}}">
+    <view class='access-control' wx:if="{{accessControl?true:false}}">
+      <view class='felx'>
+        <view class='th'></view>
+        <view class='access-title'>门禁控制</view>
+      </view>
+      <view class='access-control-image'>
+        <view class='door-prohibit' hover-class='hover-door-prohibit' hover-stay-time='50' id='7' bindtap='openProhibit' data-id='{{accessControlList[0].deviceId}}' data-code='{{accessControlList[0].actionCode}}' data-type='{{accessControlList[0].deviceType}}'
+          wx:if="{{accessControlList != '' ?true:false}}"></view>
+        <view class='door' hover-class='hover-door' hover-stay-time='50' bindtap='openDoor' data-id="{{locktList[0].deviceId}}" wx:if="{{locktList != '' ?true:false}}"></view>
+        <view class='elevator' hover-class='hover-elevator' hover-stay-time='50' id='8' bindtap='openElevatar' data-id='{{elevatorList[0].deviceId}}' data-code='{{elevatorList[0].status}}' data-type='{{elevatorList[0].deviceType}}' wx:if="{{elevatorList != '' ?true:false}}"></view>
+      </view>
+    </view>
+    <!-- 情景模式 -->
+    <view class='scene' wx:if="{{situations == ''?false:true}}">
+      <view class='felx'>
+        <view class='th'></view>
+        <view class='access-title'>情景模式</view>
+      </view>
+      <view class='scene-image'>
+        <view wx:for="{{situations}}" class='scens-hh'>
+          <view class='hh' wx:if="{{queryMax.query(['一键总关','一键总开','总开'],item.showName)?true:false}}" bindtap='openScens' data-id='{{item.situationId}}'>
+            <view class='allShut' hover-class='hover-allShut' hover-stay-time='50'></view>
+            <view class='scens-title'>{{item.showName}}</view>
+          </view>
+          <view class='hh' wx:elif="{{queryMax.query(['浪漫模式','浪漫','温馨','温馨模式'],item.showName)?true:false}}" bindtap='openScens' data-id='{{item.situationId}}'>
+            <view class='scens' hover-class='hover-scens' hover-stay-time='50'></view>
+            <view class='scens-title'>{{item.showName}}</view>
+          </view>
+          <view class='hh' wx:elif="{{queryMax.query(['阅读模式','阅读','学习','学习模式'],item.showName)?true:false}}" bindtap='openScens' data-id='{{item.situationId}}'>
+            <view class='read' hover-class='hover-read' hover-stay-time='50'></view>
+            <view class='scens-title'>{{item.showName}}</view>
+          </view>
+          <view class='hh' wx:elif="{{queryMax.query(['明亮模式','明亮','光亮','光亮模式'],item.showName)?true:false}}" bindtap='openScens' data-id='{{item.situationId}}'>
+            <view class='bright' hover-class='hover-bright' hover-stay-time='50'></view>
+            <view class='scens-title'>{{item.showName}}</view>
+          </view>
+          <view class='hh' wx:elif="{{queryMax.query(['睡眠模式','睡眠','休息模式','休息'],item.showName)?true:false}}" bindtap='openScens' data-id='{{item.situationId}}'>
+            <view class='sleep' hover-class='hover-sleep' hover-stay-time='50'></view>
+            <view class='scens-title'>{{item.showName}}</view>
+          </view>
+          <view class='hh' wx:else bindtap='openScens' data-id='{{item.situationId}}'>
+            <view class='scens-custom' hover-class='hover-scens-custom' hover-stay-time='50'></view>
+            <view class='scens-title'>{{item.showName}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 房间控制 -->
+    <view class='room-control'>
+      <view class='felx' wx:if="{{roomControl?true:false}}">
+        <view class='th'></view>
+        <view class='access-title'>房间控制</view>
+        <!-- 倒计时完断电显示 -->
+        <view wx:if="{{drawPowerList == ''?false:true}}">
+          <!-- <view wx:if="{{countDownShow?false:true}}"> -->
+          <view wx:if="{{countDownNumShow?false:true}}">
+            <view class='power-failure'>
+              <view class='power-failure-img'>
+                <image class='failure-img' src="{{drawPowerStatus == 1?'../img/failure-img-n.png':'../img/failure-img.png'}}"></image>
+              </view>
+              <view class='power-failure-title'>
+                <label>{{drawPowerStatus == 1?'已断电':'已取电'}},</label>
+                <label class='colors' bindtap='power' data-status="{{drawPowerStatus == 1?'0':'1'}}" data-type='{{drawPowerList[0].deviceType}}' data-id='{{drawPowerList[0].deviceId}}' data-code="{{drawPowerStatus == 1?'0':'1'}}">
+                {{drawPowerStatus == 1?'点击取电':'点击断电'}}</label>
+              </view>
+            </view>
+            <!-- </view> -->
+          </view>
+          <!-- 倒计时显示 -->
+          <view class='power-failure' wx:if="{{countDownNumShow?true:false}}">
+            <view class='power-failure-img'>
+              <image class='failure-img' src="../img/failure-img.png"></image>
+            </view>
+            <view class='power-failure-title'>
+              <label>{{countDownNum}}s后断电,</label>
+              <label class='colors' bindtap='power' data-status='0' data-type='{{drawPowerList[0].deviceType}}' data-id='{{drawPowerList[0].deviceId}}' data-code='2'> 点击取电</label>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='living-room-image' wx:for="{{devices}}" wx:key="key" wx:for-item="installLocation">
+        <text class='living-room-title'>{{installLocation.installLocation}}</text>
+        <!-- 包裹点击view -->
+        <scroll-view scroll-x="true">
+          <!-- 横向显示 -->
+          <view class='hr-flex'>
+            <!-- 横向显示 -->
+            <view wx:for="{{installLocation.deviceTypeList}}" wx:key="key" wx:for-item="deviceTypeList" class='view-tr'>
+              <!-- <view class='view-tr'> -->
+              <!-- 第一行第一个view -->
+              <view class='living-tr' hover-class='css' hover-stay-time='70' wx:if="{{deviceTypeList.deviceType == 1 ? true : false}}" data-location="{{installLocation.installLocation}}" data-deviceid='{{deviceTypeList.deviceType}}' bindtap='openAllShut'>
+                <view class='bg-image'></view>
+                <view class='bg-title'>灯光</view>
+              </view>
+              <!-- 第一行第一个view -->
+              <!-- 第一行第二个view -->
+              <view class='living-tr' hover-class='css' hover-stay-time='70' wx:elif="{{deviceTypeList.deviceType == 2 ? true : false}}" bindtap='air' data-location="{{installLocation.installLocation}}" data-type='{{deviceTypeList.deviceType}}' data-id='{{deviceTypeList.deviceId}}'>
+                <view class='bg-image-air'></view>
+                <view class='bg-title'>空调</view>
+              </view>
+              <!-- 第一行第二个view -->
+              <!-- 第一行第三个view -->
+              <view class='living-tr' hover-class='css' hover-stay-time='70' wx:elif="{{deviceTypeList.deviceType == 4 ? true : false}}" bindtap='tv' data-location="{{installLocation.installLocation}}" data-type='{{deviceTypeList.deviceType}}'>
+                <view class='bg-image-tv'></view>
+                <view class='bg-title'>电视</view>
+              </view>
+              <!-- 第一行第三个view -->
+              <!-- 第一行第四个view -->
+              <view class='living-tr' hover-class='css' hover-stay-time='70' wx:elif="{{deviceTypeList.deviceType == 5 ? true : false}}" bindtap='curtains' data-location="{{installLocation.installLocation}}" data-type='{{deviceTypeList.deviceType}}'>
+                <view class='bg-image-curtains'></view>
+                <view class='bg-title'>窗帘</view>
+              </view>
+              <!-- </view> -->
+              <!-- 第一行第四个view -->
+              <!-- 第一行第五个view custom-->
+              <view class='living-tr-custom' hover-class='css' hover-stay-time='70' wx:el wx:for="{{queryMax.same(deviceTypeList.deviceList,deviceTypeList.deviceType)}}" wx:key="key" wx:for-item="deviceList" bindtap='custom' data-location="{{installLocation.installLocation}}"
+                data-type='{{deviceTypeList.deviceType}}' data-name='{{deviceList.deviceName}}'>
+                <view class='bg-image-custom'></view>
+                <view class='bg-title'>{{deviceList.deviceName}}</view>
+              </view>
+              <!-- 第一行第五个view -->
+              <!-- 包裹点击view -->
+            </view>
+            <!-- 包裹点击view -->
+            <!-- 横向显示 -->
+          </view>
+          <!-- 横向显示 -->
+        </scroll-view>
+      </view>
+      <!-- 最外层 -->
+    </view>
+    <!-- 房间弹窗 -->
+    <view wx:if="{{brightShow ? true:false}}">
+      <template is="bright" data="{{devices,installLocation,brightList}}"></template>
+    </view>
+    <!-- 房间弹窗 -->
+    <!-- 窗帘弹窗 -->
+    <view wx:if="{{curtainsShow ? true:false}}">
+      <template is="curtains" data="{{openCurtains,progress,stopCurtains,shutCurtains,hoverProgress1,hoverProgress2,hoverProgress3,customList,deviceId}}"></template>
+    </view>
+    <!-- 窗帘弹窗 -->
+    <!-- 自定义弹窗 -->
+    <view wx:if="{{customShow ? true:false}}">
+      <template is="custom" data="{{customDevices,name}}"></template>
+    </view>
+    <!-- 自定义弹窗 -->
+    <!-- 电视弹窗 -->
+    <view wx:if="{{tvShow ? true:false}}">
+      <template is="tv" data=""></template>
+    </view>
+    <!-- 电视弹窗 -->
+    <!-- 空调弹窗 -->
+    <view wx:if="{{airShow ? true:false}}">
+      <template is="airConditioner" data="{{devices,temperature,airStatus,isCold}}"></template>
+    </view>
+    <!-- 空调弹窗 -->
+  </view>
+</view>
+<template is="classify" data="{{currentTab}}"></template>
+
+<template is="roomSwitch" data="{{switchShow,switchRoomList}}"></template>

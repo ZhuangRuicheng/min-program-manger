@@ -1,0 +1,129 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.0",
+	"appid": "wxd1f4a4dff9de75c9",
+	"projectname": "客房助手",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 11,
+			"list": [
+				{
+					"id": 0,
+					"name": "https://wx.qq.com/test",
+					"pathName": "pages/index/index",
+					"query": "q=https://hotelassistant-test.doorconn.com/a?code=a51929c3b5daace766afc1389fe1b7b57d789ac3529f51e48ef75d7defe8c6ece4d6c5a28f039da38c63b90091944370",
+					"scene": "1011"
+				},
+				{
+					"id": 1,
+					"name": "扫描进入",
+					"pathName": "pages/index/index",
+					"query": "q=https%3A%2F%2F%2Fhotelassistant-test.doorconn.com%2Fa%2Fa%3Fcode%3Da51929c3b5daace766afc1389fe1b7b5da5ab9ff032156c200cca259a13fa7999654b73a1513183345243c2c4af3a10e",
+					"scene": "1011"
+				},
+				{
+					"id": 2,
+					"name": "扫描进入",
+					"pathName": "pages/index/index",
+					"query": "q=https%3A%2F%2F%2Fhotelassistant.doorconn.com%2Fa%2Fa%3Fcode%3Da51929c3b5daace766afc1389fe1b7b5112b8a6ae40ee077105dccdacaff49939654b73a1513183345243c2c4af3a10e",
+					"scene": "1011"
+				},
+				{
+					"id": 3,
+					"name": "场景值",
+					"pathName": "pages/Scavenging/Scavenging",
+					"query": "",
+					"scene": "1089"
+				},
+				{
+					"id": 4,
+					"name": "连接本地扫描进入",
+					"pathName": "pages/index/index",
+					"query": "q=http%3A%2F%2F192.168.0.18%3A8080%2Fa%3Fcode%3D1ad4b4c5e7397bcf391ab32950f4ec5d1449cfb4e9d847783bafabccbbda74c2c909fd7b6c6974f8aaadebfb01bfc53d",
+					"scene": "1011"
+				},
+				{
+					"id": 5,
+					"name": "分享进入",
+					"pathName": "pages/index/hotelReservation/hotelReservation",
+					"query": "q=https%3A%2F%2F%2Fhotelassistant-test.doorconn.com%2Fa%2Fa%3Fcode%3Da51929c3b5daace766afc1389fe1b7b5af97aff026a34b09a8e3e52af58c06b4e4d6c5a28f039da38c63b90091944370",
+					"scene": "1007"
+				},
+				{
+					"id": 6,
+					"name": "新本地扫码",
+					"pathName": "pages/index/index",
+					"query": "q=https%3A%2F%2F%2Fhotelassistant.doorconn.com%2Fa%2Fa%3Fcode%3D6bac7b32bbc9f0b5d3656c2ecd550aa33a91a51f2c789ea44c72c5dd65c51a10",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "场景值",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": "1006"
+				},
+				{
+					"id": -1,
+					"name": "扫描进入(设备）",
+					"pathName": "pages/index/index",
+					"query": "q=https%3A%2F%2F%2Fhotelassistant-test.doorconn.com%2Fa%2Fa%3Fcode%3D898a213a6b9db4a73944c3a157d37fbfbab2f87b246a9a6d57e78674b5f01f89",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "场景值2",
+					"pathName": "pages/Scavenging/Scavenging",
+					"query": "",
+					"scene": 1006
+				},
+				{
+					"id": 10,
+					"name": "扫描进入(设备2）",
+					"pathName": "pages/index/index",
+					"query": "q=https%3A%2F%2F%2Fhotelassistant-test.doorconn.com%2Fa%2Fa%3Fcode%3D898a213a6b9db4a73944c3a157d37fbf652a696cde3e53572a5be337ee33054f",
+					"scene": 1011
+				},
+				{
+					"id": 11,
+					"name": "小程序跳转小程序",
+					"pathName": "pages/singleControlPage/singleControlPage",
+					"query": "",
+					"scene": 1037,
+					"referrerInfo": {
+						"appId": "wxd1f4a4dff9de75c9",
+						"extraData": "{ \"userPhone\": \"13924595352\"}"
+					}
+				}
+			]
+		}
+	}
+}

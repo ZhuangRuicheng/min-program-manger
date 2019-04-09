@@ -1,0 +1,37 @@
+<!--pages/template/cuestControl/noAuthority/noAuthority.wxml-->
+<template name='installThc'>
+<view class='box-Thc'>
+  <view class='header' wx:if="{{openIhc?true:false}}">
+    <view class='hotel-name-Thc'>{{hotelName}}</view>
+    <view class='room-number-Thc'>暂未授权</view>
+    <view class='time-Thc'>
+     <label class='title-Thc'>体验智慧客房请联系酒店授权</label>
+     <text class='id' bindtap='clickInputId' wx:if="{{hasIdCard?false:true}}">验证身份</text>
+    </view>
+  </view>
+  <view class='tips-Thc'>
+  <view class='tips-tr-Thc'>
+    <view class='tips-icon'></view>
+    <view class='tips-title-Thc'>智能客控体验</view>
+  </view>
+  <view class='open-doors-imgs'></view>
+  <view class='open-scens-img'></view>
+  <view class='open-scens-tv'></view>
+  <view class='open-scens-air'></view>
+  </view>
+</view>
+<!-- 身份证弹出层 -->
+<view class='id-box' catchtouchmove="preventTouchMove" wx:if="{{idShow?true:false}}">
+  <view class='input-id'>
+  <icon type='clear' size='20' bindtap='cancelInputId'></icon>
+  <view class='img-id'><image src='../img/id-img.png' class='id-img'></image></view>
+  <view class='writeOff'>身份验证</view>
+  <view class='id-info'>
+  <view class='id-title'>身份证</view>
+  <view class='id-content'><input class='id-shows' placeholder='请输入您的18位身份证号码' value='{{id}}' bindinput='getInputId' id='id'></input></view>
+  </view>
+  <view class='id-tips'>为了及时准确的帮您匹配到酒店信息，请确认您的填写内容真实准确</view>
+  <view class='btn'><button class='save' bindtap='bindIdCard'>确认绑定</button></view>
+  </view>
+</view>
+</template>

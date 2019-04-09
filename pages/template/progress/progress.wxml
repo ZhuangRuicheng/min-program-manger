@@ -1,0 +1,32 @@
+<!--pages/template/progress/progress.wxml-->
+<template name='progress'>
+ <view class='progress'>
+ <view class='display'> 
+ <view class='flex1'>
+   <view class='order' style="background-color:{{color}};background-color:{{acceptColor}};background-color:{{finishColor}};"><image src='../../img/orders.png' class='ordersImg'></image></view>
+   <view class='orderText'>已下单</view>
+ </view>
+ <view class='tr' style="background-color:{{acceptColor}};background-color:{{finishColor}};"></view>
+ </view>
+  <view class='display'> 
+ <view class='flex1'>
+   <view class='order' style="background-color:{{acceptColor}};background-color:{{finishColor}};"><image src='../../img/state.png' class='ordersImg'></image></view>
+   <view class='orderText'>已受理</view>
+ </view>
+ <view class='tr' style="background-color:{{acceptColor}};background-color:{{finishColor}};"></view>
+ </view>
+  <view class='display'> 
+ <view class='flex1'>
+   <view class='order' style="background-color:{{acceptColor}};background-color:{{finishColor}};"><image src='../../img/orderHandle.png' class='ordersImg'></image></view>
+   <view class='orderText handleText'>安排处理</view>
+ </view>
+ <view class='tr tr1' style="background-color:{{finishColor}};"></view>
+ </view>
+  <view class='display'> 
+ <view class='flex1'>
+   <view class='order' style="background-color:{{finishColor}};"><image src='../../img/complete.png' class='ordersImg'></image></view>
+   <view class='orderText'>已完成</view>
+ </view>
+ </view>
+ </view>
+ </template>

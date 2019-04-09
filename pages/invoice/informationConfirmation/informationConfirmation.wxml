@@ -1,0 +1,65 @@
+<!--pages/invoice/informationConfirmation/informationConfirmation.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+  <header-tabbar title='发票信息确认' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar>
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+   <view class='Text'>
+    <text>服务订单:</text>
+  </view>
+  <!-- 表单头 -->
+ <form bindsubmit="formSubmit" report-submit='true'> 
+  <view class='allInvoiceInfo'>
+  <view class='invoiceInfo'>
+     <view class='star'>*</view>
+     <view class='invoiceType'>发票类型</view>
+     <input type='input' value='{{typeArray}}' disabled='disabled'></input>
+   </view>
+   <view class='invoiceInfo'>
+     <view class='star'>*</view>
+     <view class='invoiceType'>发票项目</view>
+     <input type='input' value='{{types}}' disabled='disabled'></input>
+   </view>
+   <view class='invoiceInfo'>
+     <view class='star'>*</view>
+     <view class='invoiceType'>发票抬头</view>
+     <input type='input' value='{{title}}' disabled='disabled'></input>
+   </view>
+   <view class='invoiceInfo taxNumber'>
+     <view class='star'>*</view>
+     <view class='invoiceType'>纳税人识别号</view>
+     <input type='input' value='{{taxNumber}}' class='input' disabled='disabled'></input>
+   </view>
+   </view>
+     <view class='hr'></view>
+      <view class='info'>
+  <view class='cludeInfo'>
+    <view class='name'><label class='star'>*</label>姓名/Name</view>
+    <view class='Tips'>(与前台登记名字相符)</view>
+  </view>
+    <input type='text' placeholder='请输入您的姓名' placeholder-class='placeholder' class='InputName' id='name' bindinput='inputChanged' value='{{name}}'></input>
+    <view class='cludeInfo '>
+    <view class='name Remarks'>备注/comments</view>
+  </view>
+    <input type='text' placeholder='如有其它需要，请备注说明' placeholder-class='placeholder' class='InputName' value='{{remarks}}' bindinput='inputChanged' id='remarks'></input>
+  </view>
+  <!-- 表单尾 -->
+   <button class='btn' form-type='submit'>提交</button>
+   </form>
+
+        <!-- 弹出层生成二维码 -->
+  <view class="container-column">
+<view animation="{{animationData}}" class="container-column buydes-dialog-container" wx:if="{{QrModalStatus}}">
+        <view class="container-column buydes-dialog-container-bottom">
+        <view class="popup">
+          <view class='ticketShow'>
+          <view class='text'> 服务订单已提交！</view>
+          <view class='showContent'>预计3分钟内受理,请稍候</view>
+       <button class='showBtn' bindtap="QRhideModal">好的</button>
+    </view>
+    </view>
+        </view>
+    </view>
+</view>
+</view>

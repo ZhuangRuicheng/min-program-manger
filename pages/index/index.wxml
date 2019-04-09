@@ -1,0 +1,206 @@
+<!--index.wxml-->
+<import src="../template/classify/classify.wxml"/>
+<import src="../template/getUseInfo/getUseInfo.wxml"/>
+<import src="../template/getPhoneInfo/getPhoneInfo.wxml"/>
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='{{tabbarTitle}}' show_bol='{{true}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<view class="{{showModalStatus?'box1':'box'}}">
+
+<view class="swiper-container">
+  <swiper autoplay="true" interval="2000" duration="1000" class="swiper" current="{{swiperCurrent}}" bindchange="swiperChange" circular='true'>
+    <block wx:for="{{imgUrls}}" wx:key='key' wx:if='{{imgUrls}}'>
+      <swiper-item>
+        <image src="{{item}}" class="img" bindtap="swipclick" wx:if='{{imgUrls}}' mode='aspectFill'/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+ <view class='window'>
+ 
+   <image src='../../pages/img/window.png' class='windowImg'></image>
+   <view class='all' bindtap='Hoteladdress'>
+   
+   <text class='hotelName'>{{hotelName}}</text>
+    <view class='hotelNum'>{{hotelNum}}</view>
+    
+    </view>
+    <view class='hr'></view>
+    <view class='classify'>
+      <view class='classify1' bindtap="{{VIP ?'vip':'NOvip'}}">
+        <view><image src='../img/classifyImg.png' class='classifyVip'></image></view>
+        <view>会员</view>
+      </view>
+      <view class='classify2' bindtap='discount'>
+       <view><image src='../img/discount.png' class='classifyDiscount'></image></view>
+       <view>优惠</view>
+      </view>
+      <view class='classify3' bindtap="{{FEEDBACK?'managerOnline':'NOmanagerOnline'}}">
+       <view><image src='../img/manager2.png' class='classifyMana'></image></view>
+       <view class='classifyManager'>经理在线</view>
+      </view>
+       <view class='classify4' bindtap="hotelReservation">
+       <view><image src='../img/indexReservation.png' class='classifyVip'></image></view>
+       <view class='classifyReservation'>酒店预订</view>
+      </view>
+    </view>
+ </view>
+<view class='WIFI_show' wx:if='{{orders}}'>
+ <view class='allDisplay'>
+  <view class='guideImg'>
+    <image src='{{CustomerServiceImg}}' class='lady'></image>
+  </view>
+  <view class='messageType' bindtap='orderDetails'>{{orderType}}</view>
+   <view class='rewardImg'>
+    <image src='../img/reward.png' class='reward' bindtap='reward'></image>
+  </view>
+ </view>
+ <view class='clear'></view>
+ <view class='butoomState'>
+   <view class='name'>客房经理</view>
+   <view class='state' bindtap='orderDetails'>{{orderStatus}}|{{orderContent}}</view>
+   <view class='guitSign' bindtap='orderDetails'> > </view>
+ </view>
+</view>
+<!-- 无下单状态栏 -->
+<view class='WIFI_show' wx:if='{{notState}}'>
+ <view class='allDisplay'>
+  <view class='guideImg'>
+    <image src='{{CustomerServiceImg}}' class='lady'></image>
+  </view>
+  <view class='messageType'>Hi,欢迎您~</view>
+   <view class='rewardImg'>
+    <image src='../img/reward.png' class='reward' bindtap='reward'></image>
+  </view>
+ </view>
+ <view class='clear'></view>
+ <view class='butoomState'>
+   <view class='name'>客房经理</view>
+   <view class='state'>我是您的专属客房管家，有任何需要都可以手机扫描桌台上二维码，随时召唤我哟！</view>
+   <!-- <view class='guitSign'> > </view> -->
+ </view>
+</view>
+<image src='{{vipImg}}' class='img' mode='widthFix' bindtap="{{VIP ?'vip':'NOvip'}}"></image>
+    <!-- 客房服务 -->
+
+  <view class='text'>
+     <text>
+         <text class='line'>|</text> 客房服务 
+     </text>
+  </view>
+  <view class='onLine' wx:if='{{WIFI}}'>
+    <view class='connctWIFI'>一键连WIFI</view>
+    <view class='onLineFlex'>
+    <label class='account'>账号：</label><view class='textColor'>{{account}}</view>
+    </view>
+    <view class='onLineFlex'>
+    <label class='password'>密码：</label><view class='textColor pwd'>{{password}}</view>
+    </view>
+    <view class='copypwd' bindtap='copypwd' hover-class='copyColor'>复制密码</view>
+  </view>
+       <!-- 客房服务模块 -->
+  <view class='houseServce'>
+  <view class='Breakfast' bindtap='breakfastTicket' wx:if='{{BREAKFAST_COUPON}}'>
+     <image src='../img/discount2.png' class='All_image serverImg'></image>
+    <view class='textComponent'><view class='blackText'>早餐券</view><view class='smallText'>唤起你满满的元气</view></view>
+  </view>
+    <view class='Breakfast' bindtap='SelfRenewal' wx:if='{{CONTINUE_STAY}}'>
+     <image src='../img/house.png' class='All_image serverImg'></image>
+    <view class='textComponent'><view class='blackText'>自助续住</view><view class='smallText'>在线快捷办理</view></view>
+  </view>
+  <view class='Breakfast' bindtap='clearRoom' wx:if='{{CLEAN_ROOM}}'>
+     <image src='../img/clear.png' class='All_image serverImg'></image>
+    <view class='textComponent'><view class='blackText'>清扫房间</view><view class='smallText'>焕然一新</view></view>
+  </view>
+  <view class='Breakfast' bindtap='Shopping' wx:if='{{MINI_BAR}}'>
+     <image src='../img/Snack.png' class='All_image serverImg'></image>
+    <view class='textComponent'><view class='blackText'>在线迷你吧</view><view class='smallText'>酒水、小零食</view></view>
+  </view>
+    <view class='Breakfast' bindtap='meals' wx:if='{{MINI_BAR}}'>
+     <image src='../img/Snack.png' class='All_image serverImg'></image>
+    <view class='textComponent'><view class='blackText'>客房送餐</view><view class='smallText sss'>在线下单,送至房间</view></view>
+  </view>
+   <view class='Breakfast' bindtap='invoice' wx:if='{{INVOICE}}'>
+     <image src='../img/print.png' class='All_image serverImg'></image>
+    <view class='textComponent'><view class='blackText'>预约发票</view><view class='smallText'>提前打印</view></view>
+  </view>
+   <view class='Breakfast' bindtap='leaveRoom' wx:if='{{CHECKOUT}}'>
+     <image src='../img/house_out.png' class='All_image serverImg'></image>
+    <view class='textComponent'><view class='blackText'>退房</view><view class='smallText'>免查房随时退</view></view>
+  </view> 
+</view>
+     <!-- 店长热线 -->
+<view class='ManagerPhoneImg' wx:if='{{MGR_PHONE_NUMBER}}'>
+   <image src='../img/manager3.png' class='manager3'></image>
+   <view class='managerHotLine'>店长热线:</view>
+   <view class='managerPhone'>{{phone}}</view>
+   <view class='CallphoneView'>
+   <image src='../img/Callphone.png' class='Callphone' bindtap='callPhone'></image>
+   </view>
+</view>
+  <!-- 特色福利 -->
+<view class='Welfare'>
+  <view class='text'>
+     <text class='line'>| </text><text>特色福利</text>
+  </view>
+    </view>
+      <!-- 第一行 -->
+  <view class='flex_row'>
+   <view class='Welfare1' bindtap='wait'>
+  <image src='../img/car.png' class='All_image' bindtap='wait'></image>
+    <view class='text1'>叫车服务</view>
+  </view>
+   <view class='Welfare1' bindtap='wait'>
+  <image src='../img/ElectricityCar.png' class='All_image food'></image>
+    <view class='text1'>外卖服务</view>
+  </view>
+   <view class='Welfare1' bindtap='wait'>
+  <image src='../img/plane.png' class='All_image'></image>
+    <view class='text1'>特价机票</view>
+  </view>
+</view>
+<view class='shareView'>
+<button open-type='share' class='shareBtn'>
+ <image src='{{shareImgs}}' mode='widthFix' class='share'></image>
+ </button>
+ </view>
+
+ <!-- 弹出层打赏 bindtap='Roomvoucher'-->
+  <view class="container-column" catchtouchmove='false' wx:if="{{showModalStatus}}">
+<view class="container-column buydes-dialog-container" >
+        <view class="container-column buydes-dialog-container-bottom">
+            <view class='clearReward' wx:if='{{clearRewardShow}}'>
+    <text class='clear'>服务生很辛苦，给TA点鼓励吧</text>
+    <text class='cancel' bindtap='cancelReward'>取消</text>
+  <view class='rewardMoney'>
+      <view class='moneyCount'>
+        <button class='btn' bindtap='rewardCost' id='{{two}}'>￥{{two}}</button>
+        <button class='btn' bindtap='rewardCost' id='{{five}}'>￥{{five}}</button>
+        <button class='btn' bindtap='rewardCost' id='{{ten}}'>￥{{ten}}</button>
+      </view>
+      <view class='moneyCount moneyCount1'>
+        <button class='btn' bindtap='rewardCost' id='{{twenty}}'>￥{{twenty}}</button>
+        <button class='btn' bindtap='rewardCost' id='{{fifty}}'>￥{{fifty}}</button>
+        <button class='btn' bindtap='atWill'>随意</button>
+      </view>
+    </view>
+  </view>
+  <view class='hiddenmodalput' wx:if='{{hiddenmodalput}}'>
+    <view class='rewardTitle'>多少都是您的心意</view>
+    <input type='text' placeholder='请输入打赏金额' value='{{text}}' bindinput='inputContent' maxlength='6' ></input>
+    <view class='allBtn'>
+   
+    <button class='btn1' bindtap='cancel'>取消</button>
+     <button class='btn2' bindtap='rewardCost' id='{{text}}'>确认</button>
+    </view>
+  </view>
+        </view>
+    </view>
+</view>
+
+<!-- 获取用户信息弹框 -->
+<template is="getUseInfo" data="{{getUseInfo,getUseInfoImg}}"></template>
+<!-- 获取手机号码弹框  -->
+<template is="getPhoneInfo" data="{{getPhoneInfo,getPhoneInfoImg}}"></template>
+</view>
+<template is="classify" data="{{currentTab}}"></template>

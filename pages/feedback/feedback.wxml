@@ -1,0 +1,31 @@
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='意见反馈' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class='content'>
+  <view class='text'>您有什么问题或建议想对我们说的？</view>
+     <form bindsubmit="formSubmit" report-submit='true'>
+       <textarea placeholder='我们一直都在倾听您的声音，有什么问题都可以反馈给我们！' class='textarea' bindinput='feedBackInput' value='{{feedBackContent}}' maxlength='-1'>
+       </textarea>
+       <button bindtap='Submit'>提交</button>
+    </form>
+  </view>
+  
+     <!-- 弹出层生成二维码 -->
+  <view class="container-column" catchtouchmove="preventTouchMove">
+<view animation="{{animationData}}" class="container-column buydes-dialog-container" wx:if="{{QrModalStatus}}" catchtouchmove="preventTouchMove">
+        <view class="container-column buydes-dialog-container-bottom">
+        <view class="popup">
+          <view class='ticketShow'>
+          <view class='texts'> 提交成功！</view>
+          <view class='showContent'>感谢您对客房助手的信任与支持</view>
+          <view class='showContent'>我们将尽快为您解决！</view>
+       <button class='showBtn' bindtap="QRhideModal">好的</button>
+    </view>
+    </view>
+        </view>
+    </view>
+</view>
+</view>

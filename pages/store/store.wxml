@@ -1,0 +1,89 @@
+<!--pages/store/store.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='在线迷你吧' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class="header {{scrollDown ? 'hidden' : '' }}">
+    <image src="{{img}}" class='logo'></image>
+    <!-- <view class="name ellipsis">简介：</view> -->
+		<view class="welcome ellipsis">{{introduce}}</view>
+  </view>
+  <view class='hr'></view>
+ <view class="content-container">
+ <!-- <view class='nbs'> -->
+		<scroll-view class="classify-container" scroll-y='true' scroll-with-animation='true'>
+			<view class="classify {{classifySeleted==classify.categoryId?'active':''}}" wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" data-id="{{classify.categoryId}}" bindtap="tapClassify">
+				<view class="name">{{classify.categoryName}}</view>
+			</view>
+		</scroll-view>
+    <!-- </view> -->
+    <view class='goodsPadding'>
+		<scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+    <view class='l1'>
+			<view wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" id="b{{classify.categoryId}}">
+				<view class="title">{{classify.categoryName}}</view>
+				<view class="goods" wx:for="{{classify.products}}" wx:for-item="id" wx:key="*this">
+					<image class="pic" src="{{id.imgUrl}}"></image>
+					<view class="name ellipsis">{{id.name}}</view>
+					<!-- <view class="sold">库存{{id.stock}}</view> -->
+					<view class="price">￥{{id.price}}</view>
+          <view wx:for='{{cart.list}}' wx:for-item="cart">
+          <view class="{{cart.productId == id.id ? 'addreduce':'addreduceHi'}}" bindtap="tapReduceCart" data-id="{{cart.productId}}">
+						<image src="../images/shopping/reduce.png"></image>
+					</view>
+          </view>
+          <view wx:for='{{cart.list}}' wx:for-item="cart">
+          <view class="{{cart.productId == id.id ? 'goodsQuantity':'addreduceHi'}}" >
+					   {{cart.quantity}}
+					</view>
+          </view>
+					<view class="addCart" bindtap="tapAddCart" data-price="{{id.price}}" data-idx='{{id.id}}'data-index='{{index}}'>
+						<image src="../images/shopping/plus.png" bindtap="tapAddCart"></image>
+					</view>
+				</view>
+			</view>
+      </view>
+
+		</scroll-view>
+    </view>
+</view>
+<view class="cart-detail" hidden="{{!showCartDetail||!cart.totalQuantity}}">
+		<view class="mask" bindtap="hideCartDetail"></view>
+		<view class="list">
+        <view class='cleanCart' >
+        <view class='class' bindtap='cleanCart'>
+        <image src='../img/clearCart.png' class='clearCarts'></image>
+        </view>
+         <text class='cleanText' bindtap='cleanCart'>清空购物车</text>
+        </view>
+    	<scroll-view scroll-y="true" style="{{cart.list.length>6?'height:600rpx;':''}}">
+			<view class="item" wx:for="{{cart.list}}" wx:for-index="id" wx:key="id">
+				<view class="name ellipsis">{{item.productName}}</view>
+				<view class="total totalPrice">￥{{item.price}}</view>
+				<view class="reduce" bindtap="tapReduceCart" data-id="{{item.productId}}">-</view>
+				<view class="num">{{item.quantity}}</view>
+				<view class="add" data-id="{{id}}" bindtap="InputTapAddCart" data-idx='{{item.productId}}'data-index='{{index}}'>+</view>
+			</view>
+          </scroll-view>
+		</view>
+	</view>
+
+	<view class="cart">
+		<view class="data" bindtap="showCartDetail">
+			<view class="icon">
+				<image src="../images/shopping/cart.png" class='goodsCartTwo'></image>
+				<view class="count">{{cart.totalQuantity}}</view>
+			</view>
+			<view class="total">合计：￥{{cart.totalPrice}}</view>
+      </view>
+		<form bindsubmit="submit" report-submit="true">
+			<button class="{{cart.count?'':'disabled'}}" formType="submit" disabled="{{!cart.totalQuantity}}">立即购买</button>
+		</form>
+	</view>
+    <!--小球的实现-->
+  <view class="good_box" hidden="{{hide_good_box}}"  style="left: {{bus_x}}px; top: {{bus_y}}px;">
+  </view>
+  <view style="height:86px;"></view>
+</view>

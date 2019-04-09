@@ -1,0 +1,13 @@
+<!--pages/Scavenging/openLocation/openLocation.wxml-->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='客房助手' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<view class='box' bindtouchend='End' bindtouchmove='End'>
+  <view class='locationImg'><image src='../../img/location.png' class='location'></image></view>
+  <view class='text'>未获取到你的定位</view>
+  <view class='text'>暂时无法为你提供服务</view>
+  <view class='tips'>你可以打开“使用我的地理位置”权限后继续使用</view>
+  <button open-type='openSetting' class='btn-location'>去设置</button>
+  <button bindtap='cancel'>取消</button>
+</view>
+

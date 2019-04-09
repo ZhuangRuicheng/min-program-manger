@@ -1,0 +1,91 @@
+<!--pages/self/self.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='自助续住' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+ <view class='box'>
+   <view class='Text'>
+    <text>服务订单:</text>
+  </view>
+       <!-- 表单头 -->
+      
+
+   <view class='allContent'>
+  <view class='live'>
+    <view class='liveTime'>
+     <text class='text'>续住</text>
+     <view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+       <label class='selection selectionTime'>{{array[index]}}晚
+       <image src='../img/lower.png'></image></label>
+    </view>
+  </picker>
+</view>
+    </view>
+  </view>
+      <!-- 离开时间 -->
+  <view class='live'>
+    <view class='liveTime'>
+     <text class='text'>预离时间</text>
+     <view class="section leaveTime">
+  <picker mode="date" value="{{date}}" start="2018-01-01" end="2090-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      <label class='selection'>{{date}}<image src='../img/lower.png'></image></label>
+    </view>
+  </picker>
+</view>
+  <picker mode="time" value="{{time}}" start="00:00" end="24:00" bindchange="bindTimeChange">
+    <view class="picker">
+      <label class='selection selectionTime'>{{time}}<image src='../img/lower.png'></image></label>
+    </view>
+  </picker>
+    </view>
+  </view>
+      <!-- 房费支付方式选择 -->
+  <!-- <view class='live'>
+    <view class='liveTime'>
+     <text class='text'>房费支付方式</text>
+     <view class="section payRoom">
+  <picker bindchange="bindPickerPay" value="{{pay}}" range="{{payMode}}">
+    <view class="picker">
+     <label class='selection'>{{payMode[pay]}}<image src='../images/shopping/Triangle.png'></image></label>
+    </view>
+  </picker>
+  </view>
+</view>
+    </view> -->
+  </view>
+  <view class='hr'></view>
+        <!-- 输入框组件 -->
+    <form bindsubmit='infoSubmit' report-submit='true'>
+  <view class='info'>
+  <view class='cludeInfo'>
+    <view class='name'><label class='star'>*</label>姓名/Name</view>
+    <view class='Tips'>(与前台登记名字相符)</view>
+  </view>
+    <input type='text' placeholder='请输入您的姓名' placeholder-class='input' bindinput='inputChange' id='name' value='{{name}}' onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" adjust-position='{{adjust_position}}' cursor-spacing='30'></input>
+    <view class='cludeInfo '>
+    <view class='name Remarks'>备注/comments</view>
+  </view>
+    <input type='text' placeholder='如有其它需要，请备注说明' placeholder-class='input' bindinput='inputChange' id='remarks' value='{{remarks}}' adjust-position='{{adjust_position}}' cursor-spacing='30'></input>
+  </view>
+    <button class='payBtn' form-type='submit'>提交</button>
+  </form>
+        <!-- 表单尾 -->
+     <!-- 弹出层生成二维码 -->
+  <view class="container-column">
+<view animation="{{animationData}}" class="container-column buydes-dialog-container" wx:if="{{QrModalStatus}}">
+        <view class="container-column buydes-dialog-container-bottom">
+        <view class="popup">
+          <view class='ticketShow'>
+          <view class='texts'> 服务订单已提交！</view>
+          <view class='showContent'>预计3分钟内受理,请稍候</view>
+       <button class='showBtn' bindtap="QRhideModal">好的</button>
+    </view>
+    </view>
+        </view>
+    </view>
+</view>
+ </view>

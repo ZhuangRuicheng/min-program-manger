@@ -1,0 +1,34 @@
+<!--pages/template/cuestControl/airConditioner/airConditioner.wxml-->
+<template name='airConditioner'>
+<view class='air-box' catchtouchmove="preventTouchMove">
+ <view class='air-content'>
+  <view class='air-header'>
+  <icon type='clear' size='20' bindtap='cancelAir' color='#ffffff'></icon>
+      <view class='air-tr'>
+      <view class='img_air'><image src='../img/air_toast.png' class='air-toast'></image></view>
+      <view class='air-text'>空调</view></view>
+  </view>
+  <view class='air-switch' hover-stay-time='50' hover-class='switch-hover' bindtap='airSwitch'></view>
+  <view class='center'>
+   <view class="{{airStatus ? 'out-circular-true' :'out-circular'}}">
+     <view class='in-circular'>
+       <view class='air-temperature'><view class='kk'><label>{{temperature}}</label><text class='c'>℃</text></view></view>
+       <!-- 制冷图标显示 -->
+       <view class='snowflake' wx:if="{{isCold?true:false}}"><image src="{{airStatus?'../img/snowflake-img-s.png':'../img/snowflake-img.png'}}" class='snowflake-img'></image></view>
+        <!-- 制热图标显示 -->
+     <view class='snowflake' wx:if="{{isCold?false:true}}"><image src="../img/warn-img.png" class='warn-img'></image></view>
+      <!-- 制热图标显示 -->
+     </view>
+   </view>
+  </view>
+  <view class='air-bottom-css'>
+    <view class='air-cold' hover-stay-time='50' hover-class='cold-hover' bindtap='refrigeration' id='COLD'></view>
+    <view class='temperature'>
+      <view class='temperature-reduce' hover-stay-time='50' hover-class='temperature-reduce-hover' bindtap='temperatureAdjust' id='reduce'></view>
+      <view class='temperature-add' hover-stay-time='50' hover-class='temperature-add-hover' bindtap='temperatureAdjust' id='add'></view>
+    </view>
+    <view class='air-warn' hover-stay-time='50' hover-class='warn-hover' bindtap='refrigeration' id='HOT'></view>
+  </view>
+ </view>
+</view>
+</template>

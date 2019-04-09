@@ -1,0 +1,105 @@
+/* pages/invoice/invoiceInfo/invoiceInfo.wxss */
+
+.invoiceInfo{
+  display: flex;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+.he{
+  position: absolute;
+ right: 100rpx;
+}
+.two{
+  position: absolute;
+  right: 150rpx;
+}
+.sign-loction{
+  display: flex;
+}
+.border-picker{
+  border: 1rpx #B2B2B2 solid;
+  width: 270rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin-top: -6rpx;
+}
+.border-pickers{
+   border: 1rpx #B2B2B2 solid;
+  width: 220rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin-top: -6rpx;
+}
+.lower-img{
+  width: 24rpx;
+  height: 11rpx;
+}
+.lower-bg{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: -6rpx;
+  text-align: center;
+  border-top: 1rpx #B2B2B2 solid;
+  border-right: 1rpx #B2B2B2 solid;
+  border-bottom: 1rpx #B2B2B2 solid;
+}
+
+.star{
+  color: red;
+}
+.imgType{
+  margin-left: 274rpx;
+  border: 1rpx #B2B2B2 solid;
+   width: 48rpx;
+  height: 50rpx;
+  margin-top: -52rpx;
+}
+.img{
+  margin-top: -52rpx;
+  border: 1rpx #B2B2B2 solid;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 200rpx;
+}
+.selectionTextType{
+ height: 50rpx;
+ line-height: 50rpx;
+ border-bottom: 1rpx #B2B2B2 solid;
+ border-top: 1rpx #B2B2B2 solid;
+ border-left: 1rpx #B2B2B2 solid;
+ text-align: center;
+ width: 300rpx;
+}
+.selectionText{
+  width: 200rpx;
+  height: 50rpx;
+  border-bottom: 1rpx #B2B2B2 solid;
+ border-top: 1rpx #B2B2B2 solid;
+ border-left: 1rpx #B2B2B2 solid;
+  line-height: 50rpx;
+  text-align: center;
+}
+input{
+  margin-left: 168rpx;
+   width: 400rpx;
+}
+.input{
+  margin-left: 106rpx;
+}
+.address{
+  margin-left: 238rpx;
+}
+.num{
+  margin-left: 184rpx;
+}
+.btn{
+  height: 80rpx;
+  margin: 198rpx 75rpx 0rpx 75rpx;
+  background-color: #EA5415;
+  color: white;
+  line-height: 80rpx;
+  
+}

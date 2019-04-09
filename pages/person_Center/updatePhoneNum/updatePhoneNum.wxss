@@ -1,0 +1,56 @@
+/* pages/person_Center/updatePhoneNum/updatePhoneNum.wxss */
+.input{
+  width: 100%;
+  margin-top: 150rpx;
+}
+.input-num{
+  margin: 0 auto;
+  border: 1rpx solid #dcdcdc;
+  font-size: 30rpx;
+  width: 460rpx;
+  height: 70rpx;
+  padding-left: 15rpx;
+}
+
+.in-code{
+  display: flex;
+  
+}
+.out-code{
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top: 50rpx;
+}
+.code-num{
+  border: 1rpx solid #dcdcdc;
+  font-size: 30rpx;
+  width: 200rpx;
+  height: 80rpx;
+  padding-left: 15rpx;
+  margin-right: 30rpx;
+}
+.get-code{
+  width: 230rpx;
+  height: 80rpx;
+  background-color: #ea5415;
+  font-size: 32rpx;
+  color: white;
+  line-height: 80rpx;
+  text-align: center;
+  
+}
+.submit{
+  margin-top: 100rpx;
+}
+.submit-btn{
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #ea5415;
+  color: white;
+  font-size: 32rpx;
+  text-align: center;
+  letter-spacing: 5rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header-tabbar": "../component/headerTabbar"
+  },
+  "navigationBarTitleText": "清扫房间",
+  "enablePullDownRefresh": false
+}

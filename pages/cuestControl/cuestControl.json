@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header-tabbar": "../component/headerTabbar"
+  },
+  "navigationBarTitleText": "智控客房",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header-tabbar": "../../component/headerTabbar"
+  },
+  "navigationBarTitleText": "酒店预订",
+  "enablePullDownRefresh": true
+}

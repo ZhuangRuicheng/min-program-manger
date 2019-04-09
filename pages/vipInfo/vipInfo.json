@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header-tabbar": "../component/headerTabbar"
+  },
+  "navigationBarTitleText": "会员资料提交",
+  "enablePullDownRefresh": false
+}

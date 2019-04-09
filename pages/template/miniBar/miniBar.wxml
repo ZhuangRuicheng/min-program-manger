@@ -1,0 +1,103 @@
+<!--pages/template/miniBar/miniBar.wxml-->
+<template name="meals">
+<view class='box'>
+  <view class="header">
+   <view class='header1'>
+    <image src='{{headerImg}}' class='store-img'></image>
+  </view>
+  <view  class='explain'>{{introduce}}</view>
+  </view>
+  <view class='hr'></view>
+ <view class="content-container">
+ <!-- <view class='nbs'> -->
+		<scroll-view class="classify-container" scroll-y scroll-with-animation='true'>
+    <view class='nbs'>
+			<view class="classify {{classifySeleted==classify.categoryId?'active':''}}" wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" data-id="{{classify.categoryId}}" bindtap="tapClassify">
+				<view class="name">{{classify.name}}</view>
+			</view>
+      </view>
+		</scroll-view>
+    <!-- </view> -->
+    <view class='goodsPadding'>
+		<scroll-view class="goods-container" scroll-y scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+    <view class='l1'>
+			<view wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" id="b{{classify.categoryId}}">
+				<view class="title">{{classify.name}}</view>
+				<view class="goods" wx:for="{{classify.products}}" wx:for-item="id" wx:key="*this">
+					<image class="pic" src="{{id.image}}" bindtap='showDetais' data-name='{{id.name}}' data-idx='{{id.id}}' data-description='{{id.description}}' data-image='{{id.image}}' data-price='{{id.price}}'></image>
+					<view class="name ellipsis" bindtap='showDetais' data-name='{{id.name}}' data-idx='{{id.id}}' data-description='{{id.description}}' data-image='{{id.image}}' data-price='{{id.price}}'>{{id.name}}</view>
+					<view class="sold" bindtap='showDetais' data-name='{{id.name}}' data-idx='{{id.id}}' data-description='{{id.description}}' data-image='{{id.image}}' data-price='{{id.price}}'>{{id.description}}</view>
+          <view class='price-img-aad'>
+					<view class="price" bindtap='showDetais' data-name='{{id.name}}' data-idx='{{id.id}}' data-description='{{id.description}}' data-image='{{id.image}}' data-price='{{id.price}}'><label>￥</label>{{id.price}}</view>
+          <view wx:for='{{cart.cartItems}}' wx:for-item="cart" wx:key="*this">
+          <view class="{{cart.productId == id.id ? 'addreduce':'addreduceHi'}}" bindtap="tapReduceCart" data-id="{{cart.productId}}">
+						<image src="{{reduceImg}}"></image>
+					</view>
+          </view>
+          <view wx:for='{{cart.cartItems}}' wx:for-item="cart" wx:key="*this">
+          <view class="{{cart.productId == id.id ? 'goodsQuantity':'addreduceHi'}}" >
+					   {{cart.quantity}}
+					</view>
+          </view>
+					<view class="addCart" bindtap="tapAddCart" data-price="{{id.price}}" data-idx='{{id.id}}' data-index='{{index}}'>
+						<image src="{{plusImg}}" bindtap="tapAddCart"></image>
+					</view>
+          </view>
+				</view>
+			</view>
+      </view>
+
+		</scroll-view>
+    </view>
+</view>
+<view class="cart-detail" hidden="{{!showCartDetail||!cart.totalQuantity}}">
+		<view class="mask" bindtap="hideCartDetail"></view>
+		<view class="list">
+        <view class='cleanCart' >
+        <view class='class' bindtap='cleanCart'>
+        <image src='{{clearImg}}' class='clearCarts'></image>
+        </view>
+         <text class='cleanText' bindtap='cleanCart'>清空购物车</text>
+        </view>
+    	<scroll-view scroll-y="true" style="{{cart.cartItems.length>6?'height:600rpx;':''}}">
+			<view class="item" wx:for="{{cart.cartItems}}" wx:for-index="id" wx:key="id">
+				<view class="name ellipsis">{{item.productName}}</view>
+				<view class="total totalPrice">￥{{item.price}}</view>
+				<view class="reduce" bindtap="tapReduceCart" data-id="{{item.productId}}">-</view>
+				<view class="num">{{item.quantity}}</view>
+				<view class="add" data-id="{{id}}" bindtap="tapAddCart" data-idx='{{item.productId}}'data-index='{{index}}'>+</view>
+			</view>
+          </scroll-view>
+		</view>
+	</view>
+
+	<view class="cart">
+		<view class="data" bindtap="showCartDetail">
+			<view class="icon">
+				<image src="{{cartImg}}" class='goodsCartTwo'></image>
+				<view class="count">{{cart.totalQuantity}}</view>
+			</view>
+			<view class="total"><text class='total-text'>合计：</text>￥{{cart.totalPrice}}</view>
+      </view>
+		<form bindsubmit="submit" report-submit="true">
+			<button class="{{cart.count?'':'disabled'}}" formType="submit" disabled="{{!cart.totalQuantity}}">立即购买</button>
+		</form>
+	</view>
+</view>
+<view class='model-toast' wx:if="{{storeDetails}}" catchtouchmove="preventTouchMove">
+<view class='model-close' bindtap="hideModal"><icon type="cancel" size="30"></icon></view>
+  <view class='model-container'>
+    <view class='model-header'><image src='{{image}}' class='model-img' mode='center'></image></view>
+    <view class='toast-name-img'>
+     <view class='toast-name'>{{name}}</view>
+     <view class='toast-img'><image src='{{plusImg}}' class='toast-add' bindtap="tapAddCart"  data-idx='{{productId}}'></image></view>
+    </view>
+    <view class='toast-price'>￥{{price}}</view>
+    <view class='toast-info'>
+     <scroll-view class='toast-scroll' scroll-y>
+     <view>{{description}}</view>
+     </scroll-view>
+    </view>
+  </view>
+</view>
+</template>

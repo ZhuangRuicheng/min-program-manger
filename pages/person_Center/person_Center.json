@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header-tabbar": "../component/headerTabbar"
+  },
+  "navigationBarTitleText": "个人中心",
+  "enablePullDownRefresh": false
+}

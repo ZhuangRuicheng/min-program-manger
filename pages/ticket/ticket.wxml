@@ -1,0 +1,77 @@
+<!--pages/ticket/ticket.wxml-->
+<import src="../template/ticket/ticket.wxml"/>
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='我的票券' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class="box">
+ <view wx:for="{{ticketList}}">
+   <template is="{{item.status==2?'use':''}}" data="{{item,showModalStatus}}"></template>
+   <template is="{{item.status==3?'invalid':''}}" data="{{item,showModalStatus}}"></template>
+   <template is="{{item.status==1?'normal':''}}" data="{{item,showModalStatus}}"></template>
+ </view>
+   
+  
+     <!-- 弹出层扫码票券 -->
+<view class="buydes-dialog-container" wx:if="{{showModalStatus}}" bindtap="hideModal" catchtouchmove="preventTouchMove">
+        <view class="popup">
+          <view class='ticketShow'>
+          <view class='hr'>
+            <view class='cancel' bindtap="hideModal">取消</view>
+             <view wx:if="{{status == 1 ? true : false}}">
+            <view class="green">可使用</view>
+            </view>
+             <view wx:if="{{status == 2 ? true : false}}">
+            <view class="green1">已使用</view>
+            </view>
+            <view wx:if="{{status == 3 ? true : false}}">
+            <view class="disable red">已失效</view>
+            </view>
+        </view>
+      <view class='type'>{{hotelName}}(早餐券)</view>
+    </view>
+    <view class='bottomCss'>
+      <image src='{{popupTicketqrCodeUrl}}' class='codeImg'></image>
+      <view class='codeNumber'>{{popupCode}}</view>
+      <view wx:if="{{isOpenCancel ? false : true}}">
+       <view wx:if="{{status == 1 ? true : false}}">
+      <button class='useBtn' bindtap='orUse'>立即使用</button>
+      <view class='bottomData'>有效期至:{{date}}</view>
+      </view>
+      </view>
+      <view wx:if="{{isOpenCancel ? false : true}}">
+       <view wx:if="{{status == 2 ? true : false}}">
+      <button class='useBtn' bindtap='orUse' disabled="disable">已使用</button>
+      <view class='bottomData'>有效期至:{{date}}</view>
+      </view>
+      </view>
+      <view wx:if="{{isOpenCancel ? false : true}}">
+       <view wx:if="{{status == 3 ? true : false}}">
+      <button class='useBtn' bindtap='orUse' disabled="disable">已失效</button>
+      <view class='bottomData'>有效期至:{{date}}</view>
+      </view>
+      </view>
+      <view wx:if="{{isOpenCancel ? true : false}}">
+      <view class='codetips'>请将此二维码出示给酒店服务员核销</view>
+      <view class='bottomData'>有效期至:{{date}}</view>
+      </view>
+    </view>
+    </view>
+        </view>
+
+<view class="container-column" wx-if='{{useBtnShow}}'>
+<view class="container-column buydes-dialog-container">
+     <view class='useTicket'>
+       <view> 确认使用此券享用酒店早餐吗？</view>
+       <view class='useText'>(每张券只限一人使用,确认后失效)</view>
+       <view class='confirmUse'>
+       <button class='NotUse' bindtap='NotUse'>暂不使用</button>
+       <button class='canUse' bindtap='confirmUse'>确认使用</button>
+       </view>
+     </view>
+  </view>
+</view>
+
+</view>
+

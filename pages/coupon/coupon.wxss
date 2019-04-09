@@ -1,0 +1,100 @@
+/* pages/coupon/coupon.wxss */
+page{
+  background-color: #b2b2b2;
+}
+
+.coupon{
+  width: 690rpx;
+  height: 660rpx;
+  margin-top: 255rpx;
+  margin-left: 30rpx;
+}
+.hotel-name{
+  font-size: 40rpx;
+  color: #fd7f2e;
+  text-align: center;
+  margin-top: -580rpx;
+}
+.hotel-name-mini{
+  font-size: 22rpx;
+  color: white;
+  position: absolute;
+  left: 80rpx;
+  top: 530rpx;
+}
+.flex{
+  display: flex;
+ margin-left: 136rpx;
+ margin-top: 160rpx;
+}
+.sign{
+  font-size: 27rpx;
+  color: white;
+  margin-top: 40rpx;
+  margin-left: 12rpx;
+}
+.money{
+  font-size: 64rpx;
+  color: white;
+  margin-right: 16rpx;
+  /* text-decoration: line-through; */
+}
+.line{
+  font-size: 64rpx;
+  color: white;
+  margin-right: 16rpx;
+  text-decoration: line-through;
+}
+.type{
+  font-size: 36rpx;
+  color: white;
+  margin-top: 30rpx;
+}
+.btn{
+  width: 120rpx;
+  height: 44rpx;
+  font-size: 22rpx;
+  color: #ea5415;
+  background-color: white;
+  border-radius: 25rpx;
+  text-align: center;
+  margin-top: 40rpx;
+  line-height: 44rpx;
+  position: absolute;
+  right: 77rpx;
+}
+.use-time{
+  font-size: 18rpx;
+  color: white;
+  position: absolute;
+  left: 136rpx;
+  margin-top: -10rpx;
+}
+.use{
+  font-size: 18rpx;
+  color: white;
+  position: absolute;
+  left: 136rpx;
+  margin-top: 20rpx;
+}
+.see_ticket{
+ width: 327rpx;
+ height: 68rpx;
+ margin-left: 212rpx;
+ margin-top: 148rpx;
+}
+.sign-img{
+  /* margin-top: -210rpx; */
+  z-index: 9999;
+  /* position: absolute;
+  right: 66rpx; */
+}
+.signs{
+  margin-top: -226rpx;
+  width: 70rpx;
+  height: 55rpx;
+  z-index: 9999;
+  position: absolute;
+  right: 66rpx;
+
+}

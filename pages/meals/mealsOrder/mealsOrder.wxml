@@ -1,0 +1,22 @@
+<!--pages/meals/mealsOrder/mealsOrder.wxml-->
+<import src="../../template/miniBar/orderDetails/orderDetails.wxml" />
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+  <header-tabbar title='订单详情' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar>
+</view>
+<!-- 顶部导航栏end -->
+<template is="orderDetails" data="{{title,img,goodsList,roomNum,totalPrice,totalQuantity}}"></template>
+<!-- 弹出层生成二维码 -->
+<view class="container-column">
+  <view animation="{{animationData}}" class="container-column buydes-dialog-container" wx:if="{{QrModalStatus}}">
+    <view class="container-column buydes-dialog-container-bottom">
+      <view class="popup">
+        <view class='ticketShow'>
+          <view class='text'> 支付成功！订单已提交！</view>
+          <view class='showContent'>预计3分钟内受理,请稍候</view>
+          <button class='showBtn' bindtap="QRhideModal">好的</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+<!--pages/vipInfo/vipInfo.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='会员资料提交' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class='Title'>诚挚欢迎您的加入</view>
+  <view class='tipsText'>请提交以下信息，我们将为您办理入会手续
+  <view>
+  <label class='star'>*</label>您的信息会严格保密
+  </view>
+  </view>
+    <!-- 表单头 -->
+    <view class='info'>
+  <form bindsubmit="formSubmit" report-submit='true'>
+  <view class='inputInfo'>
+  <text class='name' decode="true">姓&nbsp;&nbsp;&nbsp;名</text>
+  <input type='text' placeholder='请输入您的姓名' placeholder-class='input' bindinput='inputChange' id='name' value='{{name}}' onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"></input>
+  </view>
+  <view class='inputInfo'>
+  <label class='name'>身份证：</label><input type='text' placeholder='请输入您的身份证' placeholder-class='input' bindinput='inputChange' id='ID' bindblur='judgeID' value='{{ID}}'></input>
+  </view>
+  <view class='inputInfo'>
+  <label class='name'>手机号：</label><input type='text' placeholder='请输入您的手机号' placeholder-class='input' bindinput='inputChange' id='phoneNumber' value='{{phoneNumber}}'></input>
+  </view>
+  <view class='inputInfo'>
+  <label class='name'>验证码：</label>
+  <input type='text' placeholder='验证码' placeholder-class='input' class='phoneInfo' bindinput='inputChange'
+   id='verificationCode' value='{{verificationCode}}'></input>
+  <button class='btn' bindtap='getVerificationCode' disabled='{{disabled}}'>{{time}}</button>
+  </view>
+
+  <button class='subitBtn' form-type='submit'>提交</button>
+       <!-- 表单尾 -->
+  </form>
+  </view>
+       <!-- 弹出层生成二维码 -->
+  <view class="container-column">
+<view animation="{{animationData}}" class="container-column buydes-dialog-container" wx:if="{{QrModalStatus}}">
+        <view class="container-column buydes-dialog-container-bottom">
+        <view class="popup">
+          <view class='ticketShow'>
+          <view class='text'> 您的信息已提交！</view>
+          <view class='showContent'>稍后会有酒店服务人员与您核实信息</view>
+          <view class='showContent'>预计3分钟内受理,请稍候</view>
+       <button class='showBtn' bindtap="QRhideModal">好的</button>
+    </view>
+    </view>
+        </view>
+    </view>
+</view>
+</view>

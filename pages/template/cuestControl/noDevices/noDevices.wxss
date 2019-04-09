@@ -1,0 +1,9 @@
+/* pages/template/cuestControl/noDevices/noDevices.wxss */
+.no-devices{
+  text-align: center;
+  margin-top: 150rpx;
+}
+.no-devices-icon{
+  width:435rpx;
+  height: 285rpx; 
+}

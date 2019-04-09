@@ -1,0 +1,9 @@
+<!--pages/template/orderInfo/orderInfo.wxml-->
+<template name='orderInfo'>
+    <view class='orderinFormation'>
+     <view class='orderCode'>订单编号：{{orderDetail.orderNo}}</view>
+     <view class='time orderCode'>下单时间：{{orderDetail.createTime}}</view>
+     <view class='handleTime orderCode'>受理时间：{{orderDetail.acceptTime == null ? '--':orderDetail.acceptTime}}</view>
+     <view class='completeTime orderCode'> 完成时间：{{orderDetail.finishTime == null ? '--':orderDetail.finishTime}}</view>
+  </view>
+</template>

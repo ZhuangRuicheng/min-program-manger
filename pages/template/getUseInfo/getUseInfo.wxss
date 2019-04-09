@@ -1,0 +1,38 @@
+/* pages/template/getUseInfo/getUseInfo.wxss */
+.buydes-dialog-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10000;
+  top: 0rpx;
+  justify-content: space-between;
+  background-color: rgba(15, 15, 26, 0.7);
+}
+
+.buydes-dialog-container-top {
+  flex-grow: 1;
+}
+
+.buydes-dialog-container-bottom {
+  display: flex;
+  flex-grow: 0;
+}
+.getUseInfo {
+  height: 373rpx;
+  width: 600rpx;
+  margin-left: 75rpx;
+  margin-top: 200rpx;
+}
+
+.useInfoBtns {
+  width: 260rpx;
+  height: 60rpx;
+  background-color: #ea5415;
+  border-radius: 16rpx;
+  color: white;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  position: absolute;
+  top: 480rpx;
+  left: 240rpx;
+}

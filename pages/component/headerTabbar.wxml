@@ -1,0 +1,11 @@
+<!--pages/component/headerTabbar.wxml-->
+<view class='status-bar' style="background-color: {{tabbarColor}};color: {{titleColor}};">
+  <view class='goBack' bindtap='goBack' style="padding-top:{{bar_Height}}px;" hidden='{{show_bol}}'>
+    <!-- 返回按钮 -->
+    <image src='../img/returnSign.png'></image>
+  </view>
+  <view class="tabar" style="padding-top:{{bar_Height}}px;">
+  <!-- 标题 -->
+    <text class="red">{{title}}</text>
+  </view>
+</view>

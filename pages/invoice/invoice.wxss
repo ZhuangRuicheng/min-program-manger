@@ -1,0 +1,49 @@
+/* pages/invoice/invoice.wxss */
+/* .Text{
+  font-size: 32rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin: 30rpx 0rpx 30rpx 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx #8B8378 solid;
+}
+.text{
+  font-size: 32rpx;
+}
+.liveTime{
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 30rpx;
+  display: flex;
+}
+.section{
+  font-size: 32rpx;
+  margin-left: 230rpx;
+}
+.selection{
+  height: 40rpx;
+  width: 100rpx;
+ border: 1rpx #708090 solid;
+}
+image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.leaveTime{
+  margin-left: 160rpx;
+}
+.picker{
+  font-size: 32rpx;
+  margin-left: 150rpx;
+}
+.selectionTime{
+  margin-left: 20rpx;
+}
+.payRoom{
+  margin-left: 100rpx;
+} */
+.btn{
+  margin: 90rpx 30rpx 0rpx 30rpx;
+  background-color: #EA5415;
+  color: white;
+}

@@ -1,0 +1,65 @@
+<!--pages/template/hotelReservation/hotelReservation.wxml-->
+<template name="hotelReservation">
+   <view class='allContent'>
+  <view class='roomNum'>
+    <text class='roomNumber'>房间数：</text><text class='roomNums'>{{roomNum}}间</text>
+  </view>
+  <view class='hr'></view>
+  <view class='name'>
+    <text class='nameS'>姓名：</text>
+    <input placeholder='请输入姓名' class='inputName' bindinput='inputChange' id='name' value='{{inputName}}'></input>
+  </view>
+   <view class='hr1'></view>
+  <view class='phone'>
+    <text class='phoneNumber'>手机号码：</text>
+    <input placeholder='请输入号码' class='phoneNum' bindinput='inputChange' id='phoneNumber' value='{{phoneNumber}}'></input>
+  </view>
+   <view class='hr1'></view>
+  <view class='name ss'>
+    <text class='remark'>备注：</text>
+    <input placeholder='特殊说明请备注(15字以内)' class='remarks' bindinput='inputChange' id='remarks' maxlength='15'></input>
+  </view>
+  </view>
+  <!-- 会员显示与不显示 -->
+  <view class='vip' wx:if="{{hasOpenVip?true:false}}">
+   <view class='vip-text'><label>我是会员</label><checkbox checked="{{check}}" class='check' bindtap='checkboxChange'></checkbox></view>
+   <view wx:if="{{check?true:false}}">
+   <view class='hr1'></view>
+   <view class='vip-type'>
+    <label>会员类型</label>
+    <view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  <view class='hh'>
+    <view class="picker">{{array[index]}}</view>
+    <view class='picker-img'><image src='../../../img/lower.png' class='lower'></image></view>
+  </view> 
+  </picker>
+</view>
+   </view>
+   <view class='hr1'></view>
+      <view class='ID'><label>身份证号码</label><input class='input-id' placeholder='请输入您的身份证号'  bindinput='inputChange' id='ID' value='{{ID}}'></input></view>
+      <view class='hr1'></view>
+      <view class='vip-tips'>*会员提供个人身份证号码，免押金预订，酒店会根据您提供的信息核实会员资料，确认后受理订单，为您预留房间至18:00，您直接到店按会员价支付即可。</view>
+  </view>
+  </view>
+  <view class='useDiscount'><text class='useDiscounts'>使用优惠券</text>
+    <text class='discountTicket'>暂无可用</text>
+  </view>
+
+<view class='roomPrice'>
+  <text>房费</text>
+    <text class='money'>￥{{price}}</text>
+</view>
+  <view class='hr'></view>
+<view class='discount'><text>优惠券</text>
+    <text class='money'>-￥0</text>
+  </view>
+  <view class='tips'>
+    *订单提交后请等待酒店确认后办理
+  </view>
+  <view class='buttomCss'>
+    <text>订单金额：</text>
+    <text class='orderMoney'>￥{{check?'0(会员免押金)':price}}</text>
+    <button class='btn' form-type='submit'>{{check?'立即预定':'立即下单'}}</button>
+  </view>
+</template>

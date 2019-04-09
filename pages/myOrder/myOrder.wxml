@@ -1,0 +1,22 @@
+<!--pages/myOrder/myOrder.wxml-->
+<import src="../template/template.wxml"/>
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='服务订单' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view wx:for='{{orderList}}'>
+   <template is="{{item.orderType=='CHECKOUT'?'CHECKOUT':''}}" data="{{item}}" ></template>
+   <template is="{{item.orderType=='CLEAN_ROOM'?'CLEAN_ROOM':''}}" data="{{item}}" ></template>
+   <template is="{{item.orderType=='VIP'?'VIP':''}}" data="{{item}}" ></template>
+   <template is="{{item.orderType=='CONTINUE_STAY'?'CONTINUE_STAY':''}}" data="{{item}}" ></template>
+   <template is="{{item.orderType=='INVOICE'?'INVOICE':''}}" data="{{item}}" ></template>
+   <template is="{{item.orderType=='FEEDBACK'?'FEEDBACK':''}}" data="{{item}}" ></template>
+   <template is="{{item.orderType=='MINI_BAR'?'MINI_BAR':''}}" data="{{item}}" ></template>
+   <template is="{{item.orderType=='MEAL'?'MEAL':''}}" data="{{item}}" ></template>
+   <template is="{{item.orderType=='HOTEL_RESERVE'?'hotelReservation':''}}" data="{{item}}" ></template>
+    <!-- <view>{{JSON.parse(item)}}</view>  　 -->
+  </view>
+ 　　　
+</view>

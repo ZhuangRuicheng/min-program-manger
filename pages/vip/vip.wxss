@@ -1,0 +1,75 @@
+/* pages/vip/vip.wxss */
+.vip{
+  margin: 20rpx;
+  border-radius: 15rpx;
+  background-color: #efefef;
+  padding-bottom: 10rpx;
+}
+.moreVip{
+  padding-top: 15rpx;
+}
+.vipText{
+  margin: 50rpx 0rpx 30rpx 100rpx;
+  color: #333333;
+  font-size: 50rpx;
+}
+.money{
+  font-size: 56rpx;
+  color: #ff6666;
+  /* margin: 52rpx 20rpx 0rpx 110rpx; */
+  position: absolute;
+  right: 70rpx;
+  margin-top: 52rpx;
+
+}
+.css{
+    display: flex;
+}
+button{
+  width: 160rpx;
+  height: 55rpx;
+  font-size: 24rpx;
+  background-color: #ff7272;
+}
+.btn{
+  margin-right: 30rpx;
+  text-align: center;
+  margin-top: 28rpx;
+  line-height: 55rpx;
+  color: #fffefe;
+}
+.bottomText{
+  font-size: 28rpx;
+  padding-left: 34rpx;
+  margin-top: -50rpx;
+  width: 466rpx;
+  overflow: hidden;
+}
+.allBottomText{
+  margin-bottom: 9rpx;
+}
+.allBottomText{
+  font-size: 26rpx;
+  color: #999999;
+}
+.moreVipText{
+  margin-left: 156rpx;
+  padding-left: 50rpx;
+}
+image{
+  width: 26rpx;
+  height: 17rpx;
+  padding-right: 50rpx;
+}
+.takeUp{
+  margin-left: 50rpx;
+}
+
+.hidden{
+  display: none;
+}
+.box{
+  padding-bottom: 50rpx;
+}
+
+

@@ -1,0 +1,616 @@
+@import "../template/classify/classify.wxss";
+
+/* 轮播图设置 */
+
+.swiper {
+  /* height: 422rpx; */
+  margin-top: -29rpx;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-container .swiper {
+  height: 368rpx;
+}
+
+.swiper-container .swiper .img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 酒店名模块 */
+
+.window {
+  height: 152rpx;
+}
+
+.windowImg {
+  z-index: 222;
+  width: 710rpx;
+  height: 320rpx;
+  position: absolute;
+  margin-top: -40rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.all {
+  font-size: 26rpx;
+  z-index: 10000;
+  position: relative;
+  margin: 0rpx 0rpx 0rpx 48rpx;
+  width: 100%;
+}
+
+.hotelName {
+  display: block;
+  padding-left: 30rpx;
+  margin-top: -30rpx;
+}
+
+.hotelNum {
+  position: absolute;
+  right: 150rpx;
+  top: -8rpx;
+  color: #ff7210;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.hr {
+  z-index: 10000;
+  position: relative;
+  margin-left: 48rpx;
+  margin-top: 20rpx;
+  height: 2rpx;
+  width: 655rpx;
+  border-bottom: 1rpx #ccc dashed;
+}
+
+.classify {
+  position: absolute;
+  margin-top: 60rpx;
+  z-index: 10000;
+  font-size: 26rpx;
+  display: flex;
+  width: 100%;
+}
+
+.classify1 {
+  flex: 1;
+  position: absolute;
+  left: 100rpx;
+}
+
+.classify2 {
+  flex: 1;
+  position: absolute;
+  left: 250rpx;
+  padding-top: 6rpx;
+}
+
+.classify3 {
+  flex: 1;
+  position: absolute;
+  left: 410rpx;
+}
+
+.classify4 {
+  flex: 1;
+  position: absolute;
+  right: 100rpx;
+}
+
+.classifyVip {
+  width: 55rpx;
+  height: 45rpx;
+}
+
+.classifyDiscount {
+  width: 55rpx;
+  height: 40rpx;
+  /* margin-top: 10rpx; */
+}
+
+.classifyMana {
+  width: 42rpx;
+  height: 45rpx;
+}
+
+.classifyManager {
+  margin-left: -30rpx;
+}
+
+.classifyReservation {
+  margin-left: -20rpx;
+}
+
+/* 分类图样式 */
+
+.classifyImg1 {
+  position: absolute;
+  z-index: 10000;
+  top: 410rpx;
+}
+
+.classifyImg {
+  width: 55rpx;
+  height: 45rpx;
+  margin-left: 110rpx;
+}
+
+.discount {
+  width: 55rpx;
+  height: 40rpx;
+  margin-left: 170rpx;
+}
+
+.manager2 {
+  width: 42rpx;
+  height: 45rpx;
+  margin-left: 170rpx;
+}
+
+.classifyText {
+  font-size: 26rpx;
+  position: absolute;
+  z-index: 10000;
+  top: 470rpx;
+}
+
+.textVip {
+  margin-left: 95rpx;
+  padding: 25rpx 15rpx 15rpx 15rpx;
+}
+
+.textDiscount {
+  margin-left: 145rpx;
+  padding: 25rpx 15rpx 15rpx 15rpx;
+}
+
+.textManager {
+  margin-left: 115rpx;
+  padding: 25rpx 15rpx 15rpx 15rpx;
+}
+
+.WIFI_show {
+  width: 100%;
+  margin-top: 140rpx;
+  margin-bottom: 30rpx;
+  background-color: white;
+}
+
+.lady {
+  width: 83rpx;
+  height: 80rpx;
+  margin: 30rpx 62rpx 20rpx 66rpx;
+}
+
+.allDisplay {
+  display: flex;
+}
+
+.reward {
+  width: 83rpx;
+  height: 80rpx;
+}
+
+.messageType {
+  font-size: 34rpx;
+  font-weight: bold;
+  padding-top: 60rpx;
+}
+
+.reward {
+  margin-top: 42rpx;
+  position: absolute;
+  right: 100rpx;
+}
+
+.butoomState {
+  display: flex;
+  font-size: 24rpx;
+  padding-bottom: 28rpx;
+}
+
+.name {
+  margin: -7rpx 54rpx 0rpx 54rpx;
+  color: #666;
+}
+
+.state {
+  padding: -7rpx 0rpx 0rpx 0rpx;
+  color: #ea5415;
+  width: 460rpx;
+}
+
+.guitSign {
+  padding: -20rpx 0rpx 0rpx 15rpx;
+  font-size: 40rpx;
+  color: #ccc;
+}
+
+.guide {
+  height: 190rpx;
+  width: 100%;
+  margin-top: 110rpx;
+}
+
+.img {
+  height: 168rpx;
+  width: 100%;
+}
+
+/* 客房服务样式 */
+
+.serverImg {
+  padding-left: 10rpx;
+  padding-top: 60rpx;
+}
+
+.blackText {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.smallText {
+  font-size: 24rpx;
+  color: #999;
+}
+.sss{
+  font-size: 22rpx;
+}
+
+.houseServce {
+  width: 730rpx;
+}
+
+/* 早餐券模块样式 */
+
+.Breakfast {
+  /* display: flex; */
+  width: 310rpx;
+  height: 180rpx;
+  margin-left: 30rpx;
+  padding-left: 25rpx;
+  background-color: #fff;
+  box-shadow: 0px 3px 2px #ff660013;
+  border-radius: 16rpx;
+  margin-top: 30rpx;
+  word-break: keep-all;
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.textComponent {
+  margin: -70rpx 0rpx 0rpx 90rpx;
+}
+
+.text {
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+
+.line {
+  color: #ff7210;
+}
+
+.onLine {
+  height: 224rpx;
+  background-color: white;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+  font-size: 30rpx;
+  border-radius: 16rpx;
+}
+
+.connctWIFI {
+  padding: 32rpx 0rpx 0rpx 32rpx;
+  font-weight: bold;
+}
+
+.account {
+  padding: 26rpx 0rpx 0rpx 32rpx;
+  font-size: 26rpx;
+  color: #999;
+  font-weight: bold;
+}
+
+.password {
+  padding: 30rpx 0rpx 20rpx 32rpx;
+  font-size: 26rpx;
+  color: #999;
+  font-weight: bold;
+}
+
+.pwd {
+  margin-top: 4rpx;
+}
+
+.textColor {
+  color: #ff7210;
+  padding-top: 23rpx;
+  font-size: 30rpx;
+}
+
+.onLineFlex {
+  display: flex;
+}
+
+.copypwd {
+  color: #ff7210;
+  border: 1rpx #ff7210 solid;
+  border-radius: 25rpx;
+  width: 140rpx;
+  height: 44rpx;
+  text-align: center;
+  margin: -65rpx 0rpx 0rpx 500rpx;
+}
+
+.copyColor {
+  background-color: wheat;
+}
+
+/* 店长联系模块 */
+
+.ManagerPhoneImg {
+  height: 180rpx;
+  border-radius: 16rpx;
+  background-color: white;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+}
+
+.ManagerPhone {
+  margin-left: 30rpx;
+}
+
+.manager3 {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 15rpx 20rpx 0rpx 20rpx;
+}
+
+.managerHotLine {
+  font-size: 30rpx;
+  margin-left: 200rpx;
+  margin-top: -150rpx;
+  font-weight: bold;
+}
+
+.managerPhone {
+  font-size: 36rpx;
+  margin: 20rpx 15rpx 0rpx 200rpx;
+  color: #ea5415;
+  font-weight: bold;
+}
+
+.CallphoneView {
+  margin: -80rpx 0rpx 0rpx 500rpx;
+}
+
+.Callphone {
+  width: 150rpx;
+  height: 45rpx;
+  margin-top: -8rpx;
+}
+
+/* 自主续住模块样式 */
+
+.Tops1 {
+  /* display: flex; */
+  height: 180rpx;
+  margin: 30rpx 41rpx 30rpx 10rpx;
+}
+
+/* 特色福利样式 */
+
+.Welfare {
+  margin: 40rpx 0rpx 30rpx 0rpx;
+}
+
+.flex_row {
+  display: flex;
+  background-color: white;
+}
+
+.Welfare1 {
+  flex: 1;
+  height: 140rpx;
+  margin-top: 40rpx;
+  text-align: center;
+}
+
+.text1 {
+  font-size: 26rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.All_image {
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.share {
+  width: 100%;
+}
+
+.box {
+  background-color: #f7f7f7;
+  padding-bottom: 80rpx;
+}
+
+.SnackImg {
+  height: 46rpx;
+  width: 36rpx;
+}
+
+.food {
+  width: 60rpx;
+}
+
+/* 弹出层样式 */
+
+.buydes-dialog-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10000;
+  top: 0rpx;
+  justify-content: space-between;
+  background-color: rgba(15, 15, 26, 0.7);
+}
+
+.buydes-dialog-container-top {
+  flex-grow: 1;
+}
+
+.buydes-dialog-container-bottom {
+  display: flex;
+  flex-grow: 0;
+}
+
+.clearReward {
+  height: 250rpx;
+  width: 580rpx;
+  background-color: white;
+  font-size: 32rpx;
+  color: #333;
+  padding: 30rpx 0rpx 0rpx 30rpx;
+  margin-top: 350rpx;
+  margin-left: 70rpx;
+  border-radius: 14rpx;
+}
+
+.clear {
+  font-size: 30rpx;
+  margin-left: 50rpx;
+}
+
+.cancel {
+  font-size: 26rpx;
+  color: red;
+  padding-left: 50rpx;
+}
+
+.moneyCount {
+  display: flex;
+  margin: 30rpx 90rpx 0rpx 25rpx;
+}
+
+.btn {
+  border: 1rpx #fb0404 solid;
+  background-color: white;
+  font-size: 32rpx;
+  width: 140rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fb0404;
+  border-radius: 15rpx;
+  margin-left: 30rpx;
+}
+
+.moneyCount1 {
+  margin-top: 24rpx;
+}
+
+.box1 {
+  position: fixed;
+}
+
+.hiddenmodalput {
+  width: 610rpx;
+  height: 300rpx;
+  background-color: white;
+  position: absolute;
+  top: 350rpx;
+  left: 73rpx;
+  border-radius: 15rpx;
+}
+
+.rewardTitle {
+  font-size: 34rpx;
+  margin: 30rpx 0rpx 30rpx 165rpx;
+}
+
+input {
+  font-size: 30rpx;
+  border: 1rpx #999 solid;
+  width: 350rpx;
+  margin-left: 120rpx;
+}
+
+.allBtn {
+  display: flex;
+  margin-top: 30rpx;
+}
+
+.btn1 {
+  width: 170rpx;
+  font-size: 30rpx;
+  background-color: #ea5415;
+  color: white;
+  text-align: center;
+  line-height: 75rpx;
+  height: 75rpx;
+  margin-left: 120rpx;
+}
+
+.btn2 {
+  width: 170rpx;
+  font-size: 30rpx;
+  background-color: #ea5415;
+  color: white;
+  text-align: center;
+  line-height: 75rpx;
+  height: 75rpx;
+  margin-left: -100rpx;
+}
+
+.getUseInfo {
+  height: 373rpx;
+  width: 600rpx;
+  margin-left: 75rpx;
+  margin-top: 200rpx;
+}
+
+.useInfoBtns {
+  width: 260rpx;
+  height: 60rpx;
+  background-color: #ea5415;
+  border-radius: 16rpx;
+  color: white;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  position: absolute;
+  top: 480rpx;
+  left: 240rpx;
+}
+
+.shareView {
+  margin-top: 30rpx;
+  margin-bottom: 80rpx;
+}
+
+.shareBtn {
+  height: 172rpx;
+  padding: 0;
+  margin: 0;
+  background-color: none;
+  border: 0.5rpx #f7f7f7 solid;
+  border-radius: none;
+}
+
+.shareBtn::after {
+  border: none;
+  border-radius: 0;
+}

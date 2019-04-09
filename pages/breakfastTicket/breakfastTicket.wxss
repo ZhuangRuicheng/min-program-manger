@@ -1,0 +1,177 @@
+/* pages/breakfastTicket/breakfastTicket.wxss */
+.content{
+  height: 100%;
+  overflow: hidden;
+}
+.side{
+  padding-bottom: 80rpx;
+}
+.description{
+  font-size: 30rpx;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+}
+.l1{
+  margin: 20rpx 30rpx 40rpx 30rpx;
+  
+   width: 690rpx;
+}
+.text{
+  font-size: 28rpx;
+  margin: 0rpx 30rpx 0rpx 30rpx;
+}
+.line{
+  text-decoration: line-through;
+}
+.bottomCss{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+  font-size: 36rpx;
+  color: #ffffff;
+  background-color: #ea5415;
+  bottom: 0rpx;
+}
+.bottomTextTitle{
+  line-height: 120rpx;
+  margin-left: 70rpx;
+}
+.bottomTextContent{
+  line-height: 120rpx;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+.btn{
+  width: 200rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  color: #ea5415;
+  border-radius: 50rpx;
+  margin-right: 30rpx;
+  font-weight: bold;
+}
+/* 支付隐藏底部样式 */
+.payBottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+.close{
+  width: 22rpx;
+  height: 22rpx;
+  margin: 20rpx 0rpx 20rpx 30rpx;
+  padding-top: 5rpx;
+}
+.closeTitle{
+  height: 62rpx;
+  /* background-color: rebeccapurple; */
+  border-bottom: #cccccc 1rpx solid;
+  margin-top: -10rpx;
+}
+.type{
+  height: 52rpx;
+  color: #333333;
+  font-size: 26rpx;
+  border-bottom: #cccccc 1rpx solid;
+  /* background-color: royalblue; */
+  padding: 20rpx 0rpx 10rpx 30rpx;
+}
+.pay{
+  display: flex;
+  height: 82rpx;
+  border-bottom: #cccccc 1rpx solid;
+  /* background-color: gainsboro; */
+  font-size: 36rpx;
+}
+.payImg{
+  width: 46rpx;
+  height: 42rpx;
+  padding: 20rpx 0rpx 20rpx 40rpx; 
+}
+.payText{
+  padding: 18rpx 0rpx 20rpx 30rpx; 
+}
+.right{
+  width: 32rpx;
+  height: 26rpx;
+  padding: 25rpx 0rpx 20rpx 400rpx;
+}
+.tip{
+  padding: 24rpx 0rpx 24rpx 50rpx;
+  font-size: 34rpx;
+}
+.tipContent{
+  font-size: 28rpx;
+  color: red;
+  margin: 10rpx 0rpx 20rpx 50rpx;
+}
+.Btn{
+  width: 620rpx;
+  height: 80rpx;
+  margin: 0rpx 65rpx 18rpx 65rpx;
+  background-color: #ea5415;
+  color: white;
+  line-height: 80rpx;
+
+}
+/* 弹出层样式 */
+    .buydes-dialog-container{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    background-color:rgba(15, 15, 26, 0.7);
+    position: fixed;
+    z-index: 999;
+    /* position: absolute; */
+    top: 0rpx;
+}
+.buydes-dialog-container-top{
+    flex-grow: 1;
+}
+ 
+.buydes-dialog-container-bottom{
+    display: flex;
+    flex-grow: 0;
+}
+
+.popup{
+  margin: 300rpx 0rpx 80rpx 104rpx;
+  background-color: white;
+}
+.ticketShow{
+  height: 400rpx;
+  width: 540rpx;
+  border-bottom: 1rpx #dfdfdf dotted;
+}
+.text{
+  font-size: 36rpx;
+  margin: 50rpx 0rpx 50rpx 146rpx
+}
+.showContent{
+  font-size: 30rpx;
+  margin: 0rpx 0rpx 20rpx 74rpx;
+  color: #999999;
+}
+.showContent2{
+  font-size: 30rpx;
+   margin: 0rpx 0rpx 20rpx 170rpx;
+   color: #999999;
+}
+.showBtn{
+  width: 200rpx;
+  height: 80rpx;
+  text-align: center;
+  background-color: #ea5415;
+  color: white;
+  font-size: 32rpx;
+  margin: 80rpx 140rpx 0rpx 170rpx;
+  line-height: 80prx;
+}
+icon{
+  position: absolute;
+  right: 150rpx;
+  top: 330rpx;
+}

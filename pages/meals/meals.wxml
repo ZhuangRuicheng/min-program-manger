@@ -1,0 +1,11 @@
+<!--pages/meals/meals.wxml-->
+<import src="../template/miniBar/miniBar.wxml"/>
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='客房送餐' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<!-- <view> -->
+<template is="meals" data="{{headerImg,reduceImg,plusImg,clearImg,cartImg,introduce,img,cart,order,cartList,showCartDetail,products,classifySeleted,goodsList,classifyViewed,scrollDown,storeDetails,name,price,image,description,productId}}" ></template>
+<!-- </view> -->
+

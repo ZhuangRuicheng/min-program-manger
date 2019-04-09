@@ -1,0 +1,44 @@
+<!--pages/index/hotel_Introduction/hotel_Introduction.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='酒店介绍' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class="swiper-container">
+  <swiper autoplay="true" interval="2000" duration="1000" class="swiper" current="{{swiperCurrent}}" bindchange="swiperChange" indicator-dots='true' circular='true'>
+    <block wx:for="{{imgUrls}}" wx:key='key' wx:if='{{imgUrls}}'>
+      <swiper-item>
+        <image src="{{item}}" class="img" bindtap="swipclick" wx:if='{{imgUrls}}' mode='aspectFill'/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+  <view class='title'>{{hotelName}}</view>
+  <view class='phone' bindtap='callPhone'>
+  <view>
+  <image class='htelphone' src='../../img/telphone.png'></image>
+  </view>
+  <view class='telphone'>{{telphone}}</view>
+  </view>
+  <view class='hotelAddress'>
+    <image class='address' src='../../img/haddress.png'></image>
+    <view class='textAddress'>{{textAddress}}</view>
+    <image src='../../img/map.png' class='map' bindtap='map'></image>
+    <!-- <view class='guide' >导航 ></view> -->
+  </view>
+   
+   <view class='hr'></view>
+  <view class='content'>{{content}}</view>
+  <view class='allCss'>
+  <view class='facilitiesImgs'><image src='../../img/facilitiesImg.png' class='facilitiesImg'></image></view>
+  <view class='facilities'>酒店设施</view>
+  </view>
+  <view class='facilityDisplay'>
+    <view class='facilityAll' wx:for='{{facilities}}'>
+      <view class='publicImgs'><image src='../../img/note.png' class='note'></image></view>
+      <view class='facilityName'>{{item}}</view>
+    </view>
+    </view>
+  <view class='btn' bindtap='hotelReservation'>查看房型</view>
+</view>

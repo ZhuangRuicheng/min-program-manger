@@ -1,0 +1,163 @@
+/* pages/self/self.wxss */
+.Text{
+  font-size: 32rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 30rpx 0rpx 30rpx 30rpx;
+  color: #666666;
+  background-color: white;
+}
+.text{
+  font-size: 32rpx;
+}
+.live{
+  background-color: white;
+}
+.allContent{
+  border-bottom: 1rpx #cccccc solid;
+}
+.liveTime{
+  height: 88rpx;
+  line-height: 88rpx;
+  border-top: 1rpx #cccccc solid;
+  padding-left: 60rpx;
+  display: flex;
+}
+.section{
+  font-size: 32rpx;
+  margin-left: 460rpx;
+}
+.selection{
+ display: inline;
+ padding: 5rpx 15rpx 5rpx 15rpx;
+ border: 1rpx #cccccc solid;
+ color: #333333;
+}
+.lower{
+  display: inline;
+  position: absolute;
+  top: 84rpx;
+  right: 50rpx;
+}
+image{
+  width: 24rpx;
+  height: 11rpx;
+}
+.leaveTime{
+  margin-left: 160rpx;
+}
+.picker{
+  font-size: 32rpx;
+
+}
+.selectionTime{
+  margin-left: 20rpx;
+}
+.payRoom{
+  margin-left: 280rpx;
+}
+.hr{
+  width: 100%;
+  height: 20rpx;
+  background-color: #f7f7f7;
+}
+    /* 输入信息框样式 */
+input{
+  height: 88rpx;
+  border: 1rpx #BEBEBE solid;
+  margin: 50rpx 30rpx 0rpx 30rpx;
+}
+.info{
+  height: 386rpx;
+  background-color: white;
+  padding-bottom: 28rpx;
+}
+.input{
+  font-size: 28rpx;
+}
+.cludeInfo{
+  display: flex;
+}
+.name{
+  margin: 30rpx 0rpx -30rpx 50rpx;
+  font-size: 32rpx;
+  color:#666666;
+}
+.Tips{
+   margin: 30rpx 0rpx -38rpx 220rpx;
+  color: #999999;
+  font-size: 26rpx;
+}
+.star{
+  color: red;
+}
+.Remarks{
+  margin: 50rpx 0rpx -30rpx 50rpx;
+}
+.payBtn{
+  width: 350rpx;
+  height: 90rpx;
+  text-align: center;
+  border-radius: 16rpx;
+  background-color: #EA5415;
+  color: white;
+  letter-spacing:10rpx;
+  margin-top: 250rpx; 
+}
+page{
+  background-color: #f7f7f7;
+}
+/* 弹出层样式 */
+    .buydes-dialog-container{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    background-color:rgba(15, 15, 26, 0.5);
+    position: fixed;
+    z-index: 999;
+    /* position: absolute; */
+    top: 0rpx;
+}
+.buydes-dialog-container-top{
+    flex-grow: 1;
+}
+ 
+.buydes-dialog-container-bottom{
+    display: flex;
+    flex-grow: 0;
+}
+
+.popup{
+  margin: 300rpx 0rpx 80rpx 104rpx;
+  background-color: white;
+}
+.ticketShow{
+  height: 300rpx;
+  width: 540rpx;
+  border-bottom: 1rpx #dfdfdf dotted;
+}
+.texts{
+  font-size: 36rpx;
+   width: 540rpx;
+   text-align: center;
+   margin-top: 60rpx;
+}
+.showContent{
+  font-size: 30rpx;
+   width: 540rpx;
+   text-align: center;
+   margin-top: 40rpx;
+   color: #ea5415;
+}
+
+.showBtn{
+  width: 200rpx;
+  height: 80rpx;
+  text-align: center;
+  background-color: #ea5415;
+  color: white;
+  font-size: 32rpx;
+   margin-top: 40rpx;
+  line-height: 80prx;
+}
+

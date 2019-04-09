@@ -1,0 +1,15 @@
+<!--pages/template/getUseInfo/getUseInfo.wxml-->
+<template name='getUseInfo'>
+<view class="container-column" catchtouchmove='false' wx-if='{{getUseInfo}}'>
+<view class="container-column buydes-dialog-container" >
+ <view class="container-column buydes-dialog-container-bottom">
+   <view class='useInfo'>
+     <image src='{{getUseInfoImg}}' class='getUseInfo'></image>
+      <view class='useInfoBtn'>
+       <button class='useInfoBtns' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">好的</button>
+      </view>
+   </view>
+</view>
+</view>
+</view>
+</template>

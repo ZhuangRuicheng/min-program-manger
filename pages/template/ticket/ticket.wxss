@@ -1,0 +1,142 @@
+/* pages/template/ticket/ticket.wxss */
+.state1{
+  position: absolute;
+  right: 47rpx;
+  width: 130rpx;
+  height: 46rpx;
+  text-align: center;
+  line-height: 46rpx;
+  font-size: 24rpx;
+  color: #ea5415;
+  background-color: white;
+  border-radius: 24rpx;
+  margin-top: 30rpx;
+}
+.state2{
+  width: 130rpx;
+  height: 46rpx;
+  text-align: center;
+  line-height: 46rpx;
+  font-size: 24rpx;
+  border-radius: 24rpx;
+  margin-top: 30rpx;
+  position: absolute;
+ right: 47rpx;
+  background-color: #cccccc;
+  color: white;
+}
+.state3{
+  width: 130rpx;
+  height: 46rpx;
+  text-align: center;
+  line-height: 46rpx;
+  font-size: 24rpx;
+  border-radius: 24rpx;
+  margin-top: 30rpx;
+  position: absolute;
+  right: 47rpx;
+  color: #999999;
+  background-color: #cccccc;
+}
+.text-color{
+  color: #cccccc;
+  position: absolute;
+  left: 50rpx;
+  margin-top: -213rpx;
+  font-size: 24rpx;
+}
+.color{
+  color: #cccccc;
+}
+.braekfast-ticket{
+  margin-bottom: 25rpx;
+  width: 690rpx;
+  height: 220rpx;
+   margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.effectiveTicket{
+  width: 690rpx;
+  height: 220rpx;
+ 
+  margin-top: 30rpx;
+}
+.hotel-name{
+ font-size: 24rpx;
+  color: white;
+  position: absolute;
+  left: 50rpx;
+  margin-top: -213rpx;
+}
+.tr1{
+  display: flex;
+  color: white;
+  margin-left: 112rpx;
+  margin-top: -180rpx;
+}
+.money{
+  font-size: 69rpx;
+  font-weight: bold;
+}
+.icon{
+  font-weight: normal;
+  font-size: 30rpx;
+}
+.type-name{
+  font-size: 36rpx;
+  margin-left: 15rpx;
+  margin-top: 30rpx;
+}
+.btn{
+  width: 130rpx;
+  height: 46rpx;
+  text-align: center;
+  line-height: 46rpx;
+  font-size: 24rpx;
+  color: #ea5415;
+  background-color: white;
+  border-radius: 24rpx;
+  margin-top: 30rpx;
+  position: absolute;
+  right: 47rpx;
+}
+.effective-data{
+  font-size: 20rpx;
+  color: white;
+  margin-left: 112rpx;
+}
+.use{
+  font-size: 20rpx;
+  color: white;
+  margin-left: 112rpx;
+}
+.use-btn{
+  width: 130rpx;
+  height: 46rpx;
+  text-align: center;
+  line-height: 46rpx;
+  font-size: 24rpx;
+  border-radius: 24rpx;
+  margin-top: 30rpx;
+  position: absolute;
+  right: 47rpx;
+  background-color: #cccccc;
+  color: white;
+}
+
+.data-color{
+  color: #cccccc;
+}
+.invalid-Btn{
+  width: 130rpx;
+  height: 46rpx;
+  text-align: center;
+  line-height: 46rpx;
+  font-size: 24rpx;
+  border-radius: 24rpx;
+  margin-top: 30rpx;
+  position: absolute;
+  right: 47rpx;
+  background-color: #cccccc;
+  color: #999999;
+}

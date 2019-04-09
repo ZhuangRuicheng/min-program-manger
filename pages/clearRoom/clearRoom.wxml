@@ -1,0 +1,51 @@
+<!--pages/clearRoom/clearRoom.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='清扫房间' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class='Text'>
+    <text>服务订单:</text>
+  </view>
+     <!-- 表单头 -->
+  <form bindsubmit="formSubmit" report-submit='true'>
+  <view class='checkBoxs'>
+    <!-- <radio-group class="radio-group" bindchange="radioChange"> -->
+  <!-- <radio class="radio" wx:for="{{items}}" wx:key='key'> -->
+    <radio  checked="{{checked}}" bindtap='Bindtapchecked'/>{{value}}
+  <!-- </radio> -->
+<!-- </radio-group> -->
+  </view>
+
+       <!-- 输入框组件 -->
+  <view class='info'>
+  <view class='cludeInfo'>
+    <view class='name'><label class='star'>*</label>姓名/Name</view>
+    <view class='Tips'>(与前台登记名字相符)</view>
+  </view>
+    <input type='text' placeholder='请输入您的姓名' placeholder-class='input' bindinput='inputChange' id='name' value='{{name}}' adjust-position='{{adjust_position}}' cursor-spacing='30'></input>
+    <view class='cludeInfo '>
+    <view class='name Remarks'>备注/comments</view>
+  </view>
+    <input type='text' placeholder='如有其它需要，请备注说明 ' placeholder-class='input' bindinput='inputChange' id='remarks' value='{{remarks}}' adjust-position='{{adjust_position}}' cursor-spacing='30'></input>
+  </view>
+   <button class='payBtn' form-type='submit'>提交</button>
+  </form>
+    <!-- 表单尾 -->
+
+      <!-- 弹出层生成二维码 -->
+  <view class="container-column">
+<view animation="{{animationData}}" class="container-column buydes-dialog-container" wx:if="{{QrModalStatus}}">
+        <view class="container-column buydes-dialog-container-bottom">
+        <view class="popup">
+          <view class='ticketShow'>
+          <view class='text'> 服务订单已提交！</view>
+          <view class='showContent'>预计3分钟内受理,请稍候</view>
+       <button class='showBtn' bindtap="QRhideModal">好的</button>
+    </view>
+    </view>
+        </view>
+    </view>
+</view>
+</view>

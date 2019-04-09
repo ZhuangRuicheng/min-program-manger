@@ -1,0 +1,49 @@
+/* pages/template/classify/classify.wxss */
+.classify-box{
+  height: 118rpx;
+  background-color: white;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  display: flex;
+  border-top: 1rpx #dcdcdc solid;
+}
+
+.open-service{
+  width: 210rpx;
+  text-align: center;
+  margin: 0rpx 110rpx 0rpx 0rpx;
+}
+.service-title{
+  margin-top: -10rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.open-door{
+  margin-top: -60rpx;
+  text-align: center;
+  margin-right: 120rpx;
+}
+.open-door-tr{
+  text-align: center;
+}
+.class-open{
+  width: 120rpx;
+  height: 120rpx;
+}
+.open-door-title{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 5rpx;
+}
+
+.service-img-icon{
+  width: 66rpx;
+  height: 66rpx;
+}
+.service-img{
+  margin-top: 8rpx;
+}
+.on{ 
+    color: #ea5415;  
+    } 

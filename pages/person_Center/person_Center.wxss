@@ -1,0 +1,115 @@
+/* pages/person_Center/person_Center.wxss */
+@import "../template/classify/classify.wxss";
+.userinfo{
+  position: relative;
+  height: 380rpx;
+  background: #EA5415;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2rpx white solid;
+  z-index: -1;
+}
+.userinfo-avatar {
+  overflow: hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  border:2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 14px;
+}
+.hotelManagement{
+  width: 600rpx;
+  height: 120rpx;
+  display: flex;
+  background-color: white;
+  margin: -50rpx 75rpx 0rpx 75rpx;
+  border-top-left-radius: 16rpx;
+  border-top-right-radius: 16rpx;
+}
+.direction{
+  width: 42rpx;
+  height: 30rpx;
+  margin: 42rpx 0rpx 0rpx 142rpx;
+}
+.hotelManagementText{
+  margin: 37rpx 144rpx 0rpx 30rpx;
+  font-size: 30rpx;
+}
+image{
+  width: 32rpx;
+  height: 34rpx;
+}
+.ticket{
+  width: 37rpx;
+  height: 27rpx;
+}
+.img{
+  margin-top:2rpx; 
+  }
+
+.text{
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  text-align: center;
+}
+.rightImg{
+  position: absolute;
+  right: 50rpx;
+  color: #cccccc;
+}
+.content{
+  margin-top: 40rpx;
+  border-top: 2rpx #cccccc solid;
+  border-bottom: 2rpx #cccccc solid;
+}
+.Order{
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 10rpx 48rpx 10rpx 40rpx;
+  background-color: white;
+
+}
+.userInfo{
+  height: 120rpx;
+  padding: 0rpx;
+  margin: 0rpx;
+  border: none;
+}
+.userInfo::before{
+ border: none;
+ border-radius: 0;
+}
+.userInfo::after{
+border: none;
+border-radius: 0;
+}
+.hr{
+  height: 2rpx;
+  margin: 0rpx 30rpx 0rpx 30rpx;
+  background-color: #cccccc;
+}
+page{
+  background-color: #f7f7f7;
+}
+
+/* .btn{
+  width: 300rpx;
+  height: 80rpx;
+  color: white;
+  text-align: center;
+  margin: 100rpx 224rpx 0rpx 224rpx;
+  background-color: #EA5115;
+  border-radius: 16rpx;
+  font-size: 32rpx;
+} */

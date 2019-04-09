@@ -1,0 +1,38 @@
+<!--pages/vip/vip.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='会员升级' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+
+<block wx:for="{{vipData}}">
+  <view class='vip'>
+  <view class='css'>
+    <view class='vipText'>{{item.name}}</view>
+    <view class='money'>￥{{item.price}}</view>
+  </view>
+     <button class='btn' bindtap='commonViv' data-idx='{{item.id}}'>立即购买</button>
+    <view class='allBottomText'>
+     <!-- <view class='bottomText'>{{item.privilege}}</view> -->
+    
+
+     <view class='bottomText moreContent' style="{{uhide==item.id?'height:100%':'height:80rpx'}}">{{item.privilege}}</view>
+       <!-- 更多权限图片 -->
+       <!-- <view> -->
+
+
+     <view class='moreVip' wx:if='{{uhide==item.id?"":"state"}}' bindtap='changeImg' data-id='{{item.id}}'>
+       <text class='moreVipText'>更多权益</text>
+       <image src='../img/lower.png'></image>
+     </view>
+      <!-- 显示更多福利 -->
+     <view class='takeUp' wx:if='{{hide==item.id?"takeUpState":""}}' bindtap='takeUpchangeImg' data-id='{{item.id}}'>
+       <text class='moreVipText' bindtap='takeUpchangeImg' data-id='{{item.id}}'>收起</text>
+       <image src='../img/takeUp.png' bindtap='takeUpchangeImg' data-id='{{item.id}}'></image>
+     </view>
+
+    </view>
+  </view>
+</block>
+</view>

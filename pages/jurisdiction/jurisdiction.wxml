@@ -1,0 +1,14 @@
+<!--pages/jurisdiction/jurisdiction.wxml-->
+<view class='box'>
+  <view class='content'>
+    <view class='welcome'>欢迎入住</view>
+    <view class='hotel-name'>深圳李静酒店</view>
+    <view class='tips'>您当前暂未授权，请提交个人登记信息。我们将会在2分钟处理您的申请，并以短信的形式告知</view>
+    <form bindsubmit="formSubmit" report-submit='true'>
+    <view class='room-num'><label class='room-title'>房间号</label><input class='number' type='text' placeholder='请输入您的房间号'></input></view>
+    <view class='custom-name'><label class='name-title'>姓名</label><input class='name' type='text' placeholder='请输入您在前台登记的姓名'></input></view>
+    <view class='phone-num custom-name'><label class='phone-title'>手机号</label><input class='phone' type='number' placeholder='请输入您的手机号码'></input></view>
+    <view class='btn'><button class='submit-btn' form-type='submit'>提交</button></view>
+    </form>
+  </view>
+</view>

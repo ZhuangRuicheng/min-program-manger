@@ -1,0 +1,4 @@
+<!--pages/template/cuestControl/noDevices/noDevices.wxml-->
+<template name="noDevices">
+  <view class='no-devices' wx:if="{{devices == '' ? true:false}}"><image src='../img/no_devices.png' class='no-devices-icon'></image></view>
+  </template>

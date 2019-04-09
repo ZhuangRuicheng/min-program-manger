@@ -1,0 +1,367 @@
+/* pages/store/store.wxss */
+
+page {
+ 
+  height: 100%;
+  overflow: hidden;
+  
+}
+
+.box {
+   height: 100%;
+   overflow: hidden; 
+}
+.header {
+  /* background-color: #58401f;
+  border: 1px solid #3f2706; */
+  padding: 20rpx 40rpx;
+   /* -webkit-transition: all 0.6s ease-in-out; */
+   padding-bottom: 48rpx;
+   height: 206rpx;
+}
+/* .header.hidden { */
+	/* -webkit-transform: translate3d(0,-290rpx,0); */
+	/* margin-top: -300rpx;
+} */
+.header .logo {
+	float: left;
+	width: 120rpx;
+	height: 120rpx;
+	border: 2rpx solid #fff;
+	border-radius: 50%;
+	margin: 40rpx 40rpx 0rpx 36rpx;
+}
+.header .name {
+	padding-top: 20rpx;
+	font-size: 36rpx;
+	line-height: 60rpx;
+  color: white
+}
+.header .welcome {
+	font-size: 26rpx;
+	/* line-height: 70rpx; */
+  /* color: white; */
+  margin-top: 40rpx;
+  font-weight: bold;
+}
+
+.header .line {
+	clear: both;
+	width: 100%;
+	height: 1px;
+	border-bottom: 1px dashed #000;
+	padding-top: 20rpx;
+}
+.header .desc {
+	font-size: 30rpx;
+	line-height: 40rpx;
+	padding-top: 20rpx;
+  color: white
+}
+.content-container {
+  height: 100%;
+  display: flex;
+}
+.hr{
+  height: 46rpx;
+  background-color: #f7f7f7;
+}
+/* .nbs{
+  padding-bottom: 300rpx;
+} */
+.classify-container {
+  width: 280rpx;
+  background-color: #f7f7f7;
+  height: 100%;
+  /* padding-bottom: 200rpx; */
+  /* margin-bottom: 100rpx; */
+}
+
+.classify-container .classify {
+  height: 100rpx;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #e2e2e2;
+}
+.classify-container .classify.active {
+  background: white;
+ 
+}
+.classify-container .classify.active .name{
+   color: #ea5415;
+}
+.classify-container .classify .name {
+  display: inline-block;
+  font-size: 30rpx;
+  color: #666666;
+  line-height: 1.2;
+  text-align: left;
+  pointer-events: none;
+}
+
+.goods-container {
+  /* -webkit-flex: 1; */
+  background: #fff;
+  height: 100%;
+  /* padding-bottom: 100rpx; */
+  /* margin-bottom: 200rpx; */
+  
+}
+
+.goods-container .title {
+  padding: 20rpx 30rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  background:white;
+  color: #000;
+  font-weight: bold;
+}
+.goodsPadding{
+  width: 100%;
+  margin-bottom: 300rpx;
+}
+.goods-container .goods {
+  position: relative;
+  padding: 20rpx 30rpx;
+  font-size: 36rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #f7f7f7;
+}
+
+.goods-container .goods .pic {
+  float: left;
+  width: 130rpx;
+  height: 130rpx;
+  margin-right: 20rpx;
+}
+
+.goods-container .goods .name {
+  color: #333333;
+  font-size: 32rpx;
+  line-height: 46rpx;
+}
+
+.goods-container .goods .sold {
+  color: #989898;
+  font-size: 26rpx;
+  line-height: 46rpx;
+}
+
+.goods-container .goods .price {
+  color: #f45044;
+  font-size: 36rpx;
+  line-height: 46rpx;
+  padding-top: 30rpx;
+}
+
+.goods-container .goods .addCart {
+  position: absolute;
+  right: 30rpx;
+  bottom: 30rpx;
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+}
+
+.goods-container .goods .addCart image {
+  pointer-events: none;
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.cart-detail, .cart-detail .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cart-detail .mask {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.cart-detail .list {
+  position: fixed;
+  left: 0;
+  bottom: 100rpx;
+  width: 100%;
+  background: #f7f7f7;
+  padding-bottom: 30rpx;
+}
+
+.cart-detail .list .item {
+  display: -webkit-flex;
+  color: #333;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  padding: 20rpx 40rpx;
+}
+
+.cart-detail .list .item .name {
+  -webkit-flex: 1;
+}
+.total{
+  margin-left: 0rpx;
+}
+.cart-detail .list .item .total{
+  width: 120rpx;
+}
+
+.cart-detail .list .item .reduce, .cart-detail .list .item .add {
+  font-size: 50rpx;
+  background:  #ea5415;
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+}
+
+.cart-detail .list .item .num {
+  width: 50rpx;
+  text-align: center;
+  margin: 0 5rpx;
+}
+
+.cart {
+  display: -webkit-flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+}
+
+.cart .data {
+  -webkit-flex: 1;
+  /*border-top: 1rpx solid #e7e7e7;*/
+}
+
+.cart .data .icon {
+  position: absolute;
+  left: 40rpx;
+  top: -20rpx;
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.cart .data .icon image {
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.cart .data .icon .count {
+  position: absolute;
+  left: 65rpx;
+  top: 0rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  padding: 0 12rpx;
+  color: #fff;
+  background: #f45044;
+  border-radius: 50%;
+}
+
+.cart .data .total {
+  color: #f45044;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  padding-left: 160rpx;
+   background-color: #f7f7f7;
+}
+
+.cart button {
+  width: 200rpx;
+  height: 100%;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  background: #ea5415;
+  color: white;
+  border-radius: none;
+  /* -webkit-appearance: none; */
+}
+button{
+  border-radius: 0rpx;
+}
+.l1{
+  padding-bottom: 150rpx;
+}
+.showreduce{
+  font-size: 50rpx;
+  background:  #FF3030;
+  display: inline-block;
+  /* padding-left: 4rpx;
+  padding-right: 4rpx; */
+  text-align: center;
+  /* border-radius: 50%; */
+  color: white;
+}
+.addreduce image{
+  position: absolute;
+  bottom: 25rpx;
+  right: 160rpx;
+  width: 50rpx;
+  height: 50rpx;
+  color: #ea5415;
+}
+.goodsQuantity{
+  position: absolute;
+  bottom: 20rpx;
+  right: 110rpx;
+  color: #989898;
+}
+.totalPrice{
+  position: absolute;
+  left: 360rpx;
+}
+.addreduceHi{
+  display:none; 
+}
+.cleanCart{
+  font-size: 26rpx;
+  height: 60rpx;
+  /* line-height: 60rpx; */
+  background-color: f4f4f4;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1rpx #cccccc solid;
+}
+.cleanText{
+  position: absolute;
+  right: 45rpx;
+  color: #999999;
+}
+.clearCarts{
+  width: 28rpx;
+  height: 32rpx;
+  position: absolute;
+  right: 185rpx;
+
+}
+.class{
+  padding-top: 15rpx;
+}
+
+
+/*抛物线动画*/
+.good_box{
+  width: 18px;
+  height: 18px;
+  position: fixed;
+  border-radius: 50%;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  z-index: +99;
+  background:#ea5415;
+}

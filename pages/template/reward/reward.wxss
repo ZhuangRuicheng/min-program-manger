@@ -1,0 +1,191 @@
+/* pages/template/reward/reward.wxss */
+.satisfiedState{
+  height: 228rpx;
+  background-color: white;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.serviceTitle{
+  font-size: 30rpx;
+  color: #333333;
+  padding-left: 50rpx;
+  padding-top: 36rpx;
+}
+.l1{
+  display: flex;
+
+}
+.lady{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 60rpx 0rpx 50rpx;
+}
+.name{
+  font-size: 30rpx;
+  color: #333333;
+  padding-top: 44rpx;
+  margin-left: -30rpx;
+  padding-right: 12rpx;
+}
+.position{
+  font-size: 24rpx;
+  color: #666666;
+  padding-top: 50rpx;
+}
+.satisfieds{
+  font-size: 24rpx;
+  color: #999999;
+
+}
+.percent{
+  color: #ff3333;
+  font-size: 26rpx;
+}
+.l2{
+  display: flex;
+  margin-left: 173rpx;
+  margin-top: -25rpx;
+}
+.orderImgs{
+  margin-left: 330rpx;
+  margin-top: -130rpx;
+}
+.satisfied{
+  width: 55rpx;
+  height: 55rpx;
+   margin: 36rpx 0rpx 0rpx 114rpx;
+}
+.ss{
+  margin-left: 500rpx;
+}
+.NotSatisfied{
+  width: 55rpx;
+  height: 55rpx;
+  margin: 26rpx 0rpx 0rpx 60rpx;
+}
+.ladyText{
+  font-size: 26rpx;
+  color: #666666;
+  margin-left: 115rpx;
+}
+.NotSatisfiedText{
+  font-size: 26rpx;
+  margin-top: 0rpx;
+  margin-left: 50rpx;
+
+}
+.clearReward{
+  padding-bottom: 30rpx;
+  background-color: white;
+  font-size: 32rpx;
+  color: #333333;
+  padding-top: 30rpx;
+
+}
+.lady{
+  border-radius: 50%;
+}
+.clear{
+  padding-left: 162rpx;
+}
+.feedback{
+  font-size: 30rpx;
+  height: 80rpx;
+  width: 630rpx;
+  margin-left: 61rpx;
+  margin-right: 54rpx;
+  border: 1rpx #cccccc solid;
+}
+.tips{
+  font-size: 24rpx;
+  color: #999999;
+  padding-left: 51rpx;
+ padding-right: 54rpx;
+ margin-top: 18rpx;
+ margin-bottom: 40rpx;
+}
+.confir{
+  font-size: 32rpx;
+  color: white;
+  width: 240rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #ea5415;
+  border-radius: 16rpx;
+  margin-top: 30rpx;
+}
+.moneyCount{
+  display: flex;
+  margin: 40rpx 24rpx 0rpx 21rpx;
+}
+.btn{
+  border: 2rpx #fb0404 solid;
+  background-color: white;
+  font-size: 32rpx;
+  width: 160rpx;
+  height: 70rpx;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 70rpx;
+  color: #fb0404;
+  border-radius: 15rpx;
+}
+.btn::after{
+  border: none;
+  border-radius: 0rpx;
+}
+.moneyCount1{
+  margin-top: 34rpx;
+}
+.message{
+  padding-bottom: 35rpx;
+  padding-left: 56rpx;
+  padding-top: 30rpx;
+  padding-right: 50rpx;
+  background-color: white;
+}
+.MessageImg{
+  display: flex;
+}
+.Message{
+  width: 29rpx;
+  height: 26rpx;
+  padding-right: 10rpx;
+  padding-top: 8rpx;
+}
+.Message-title{
+  font-size: 26rpx;
+  color: #666666;
+}
+.Message-content{
+  font-size: 34rpx;
+  color: #333333;
+  padding-top: 10rpx;
+
+}
+.clearRewards{
+   height: 200rpx;
+  background-color: white;
+  font-size: 32rpx;
+  color: #333333;
+  padding-top: 30rpx;
+  border-bottom: 1rpx #cccccc solid;
+}
+.hideImg{
+  text-align: center;
+}
+.hide{
+  width: 80rpx;
+  height: 80rpx;
+}
+.hideTitle{
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.feedback-content{
+  background-color: white;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+}

@@ -1,0 +1,387 @@
+/* pages/cuestControl/cuestControl.wxss */
+@import "../template/cuestControl/cuestControl.wxss";
+@import "../template/cuestControl/windowCurtains/windowCurtains.wxss";
+@import "../template/cuestControl/custom/custom.wxss";
+@import "../template/cuestControl/tv/tv.wxss";
+@import "../template/cuestControl/airConditioner/airConditioner.wxss";
+@import "../template/cuestControl/noDevices/noDevices.wxss";
+@import "../template/cuestControl/noAuthority/noAuthority.wxss";
+@import "../template/cuestControl/roomSwitch/roomSwitch.wxss";
+.returns{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #999999;
+  vertical-align: middle;
+  display: flex;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+.return-lab{
+  height: 60rpx;
+  vertical-align: middle;
+  margin-left: 12rpx;
+}
+.return-img{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 3px;
+}
+.box{
+  padding-bottom: 168rpx;
+}
+page{
+  background-color: #f7f7f7;
+}
+.no-devices{
+  text-align: center;
+  margin-top: 150rpx;
+}
+.no-devices-icon{
+  width:435rpx;
+  height: 285rpx; 
+}
+.header{
+  margin: 30rpx 30rpx 40rpx 30rpx;
+  background-color: white;
+  border-radius: 12rpx;
+  box-shadow: 0px 3px 2px #ff660013;
+}
+.hotel-name{
+  font-size: 34rpx;
+  color: #333333;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 30rpx;
+  padding-bottom: 20rpx;
+}
+.room-number{
+  font-size: 60rpx;
+  color: #ea5415;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+.time{
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  padding-bottom: 23rpx;
+  display: flex;
+}
+.title{
+  margin: auto;
+}
+.conversion{
+  width: 43rpx;
+  height: 43rpx;
+}
+.switch-icon{
+  position: absolute;
+  right: 60rpx;
+}
+.th{
+  height: 28rpx;
+  width: 4rpx;
+  background-color: #ea5415;
+  margin-top: 10rpx;
+}
+.felx{
+  display: flex;
+  margin-left: 30rpx;
+}
+.power-failure{
+  position: absolute;
+  right: 30rpx;
+  display: flex;
+}
+.failure-img{
+  width: 29rpx;
+  height: 42rpx;
+}
+.power-failure-title{
+  margin-left: 14rpx;
+  margin-top: 15rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.colors{
+  color: #ea5415
+}
+.access-title{
+  font-size: 32rpx;
+  color: #333333;
+  padding-left: 10rpx;
+  font-weight: bold;
+}
+.access-control-image{
+  display: flex;
+  margin: 24rpx 54rpx 40rpx 54rpx;
+}
+.door-prohibit{
+  width: 175rpx;
+  height: 160rpx;
+  margin-right: 58rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/doorProhibit-n.png);
+  background-size: 175rpx 160rpx;
+  background-repeat: no-repeat;
+}
+.hover-door-prohibit{
+  width: 175rpx;
+  height: 160rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/doorProhibit.png);
+  background-size: 175rpx 160rpx;
+  background-repeat: no-repeat;
+}
+.door{
+  width: 175rpx;
+  height: 160rpx;
+  margin-right: 58rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/door-n.png);
+  background-size: 175rpx 160rpx;
+  background-repeat: no-repeat;
+}
+.hover-door{
+  width: 175rpx;
+  height: 160rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/door.png);
+  background-size: 175rpx 160rpx;
+  background-repeat: no-repeat;
+}
+.elevator{
+  width: 175rpx;
+  height: 160rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/elevator-n.png);
+  background-size: 175rpx 160rpx;
+  background-repeat: no-repeat;
+}
+.hover-elevator{
+  width: 175rpx;
+  height: 160rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/elevator.png);
+  background-size: 175rpx 160rpx;
+  background-repeat: no-repeat;
+}
+.scene-image{
+  background-color: white;
+  margin: 24rpx 30rpx 40rpx 30rpx;
+  padding: 18rpx 0rpx 26rpx 36rpx;
+  box-shadow: 0px 3px 2px #ff660013;
+  border-radius: 12rpx;
+}
+.scens-hh{
+  word-break: keep-all;
+  word-wrap: break-word;
+  display: inline-block;
+  width: 210rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.allShut{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/openAllShut-n.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat;
+}
+.hover-allShut{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/openAllShut.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat; 
+}
+.scens{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/scens-n.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat;
+}
+.hover-scens{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/scens.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat; 
+}
+.read{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/read-n.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat;
+}
+.hover-read{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/read.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat; 
+}
+.bright{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/bright-n.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat;
+}
+.hover-bright{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/bright.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat; 
+}
+.sleep{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/sleep-n.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat;
+}
+.hover-sleep{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/sleep.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat; 
+}
+.scens-custom{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/curtom-n.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat;
+}
+.hover-scens-custom{
+  margin: auto;  
+  width: 88rpx;
+  height: 88rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/curtom.png);
+  background-size: 88rpx 88rpx;
+  background-repeat: no-repeat; 
+}
+.scens-title{
+  font-size: 30rpx;
+  color: #333333;
+  padding-top: 12rpx;
+}
+
+.living-room-image{
+  background-color: white;
+  padding-top: 20rpx;
+  padding-bottom: 26rpx;
+  margin: 24rpx 30rpx 30rpx 30rpx;
+  box-shadow: 0px 3px 2px #ff660013;
+  border-radius: 12rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.living-room-title{
+  height: 44rpx;
+  border-radius: 22rpx;
+  font-size: 28rpx;
+  color: #333333;
+  border: 2rpx #ea5415 solid;
+  text-align: center;
+  line-height: 44rpx;
+  margin-left: 15rpx;
+  margin-bottom: 25rpx;
+  padding: 0rpx 10rpx 0rpx 10rpx;
+}
+.bg-image{
+  margin: auto;
+  width: 59rpx;
+  height: 64rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/lighting.png);
+  background-size: 59rpx 64rpx;
+  background-repeat: no-repeat; 
+  margin-bottom: 15rpx;
+}
+.bg-title{
+  font-size: 28rpx;
+  color: #333333;
+}
+.living-tr{
+  width: 135rpx;
+  text-align: center;
+  word-break: keep-all;
+  word-wrap: break-word;
+  display: inline-block;
+  margin-bottom: 30rpx;
+}
+.living-tr-custom{
+   width: 150rpx;
+  text-align: center;
+  word-break: keep-all;
+  word-wrap: break-word;
+  display: inline-block;
+}
+.bg-image-air{
+  margin: auto;
+  width: 64rpx;
+  height: 57rpx;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/air.png);
+  background-size: 64rpx 57rpx;
+  background-repeat: no-repeat;
+  margin-bottom: 16rpx;
+}
+.bg-image-tv{
+  width: 64rpx;
+  height: 50rpx;
+  margin: auto;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/tv.png);
+  background-size: 64rpx 50rpx;
+  background-repeat: no-repeat;
+  margin-bottom: 24rpx;
+}
+.bg-image-curtains{
+  width: 60rpx;
+  height: 59rpx;
+  margin: auto;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/windowCurtains.png);
+  background-size: 60rpx 59rpx;
+  background-repeat: no-repeat;
+  margin-bottom: 17rpx;
+}
+.bg-image-custom{
+  width: 59rpx;
+  height: 64rpx;
+  margin: auto;
+  background-image: url(https://eimg.doorconn.com/hotel_assistant/images/custom.png);
+  background-size: 59rpx 64rpx;
+  background-repeat: no-repeat;
+  margin-bottom: 15rpx;
+}
+.css{
+  background-color: #dcdcdc;
+}
+.view-tr{
+  word-break: keep-all;
+  word-wrap: break-word;
+  /* display: inline-block; */
+  display: flex;
+}
+.hr-flex{
+  padding-top: 30rpx;
+  display: flex;
+}
+scroll-view{
+  border: 1rpx #eeeeee solid;
+  border-radius: 6rpx;
+  margin-top: 5rpx;
+  height: 170rpx;
+}
+

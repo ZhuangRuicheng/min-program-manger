@@ -1,0 +1,158 @@
+/* pages/Scavenging/Scavenging.wxss */
+@import "../template/classify/classify.wxss";
+page{
+  background-color: #f7f7f7;
+}
+.box{
+  padding-bottom: 100rpx;
+}
+.disable-img{
+  text-align: center;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+  background-color: white;
+}
+.img{
+  width: 84rpx;
+  height: 75rpx;
+}
+.scan-title{
+  font-size: 28rpx;
+  color: #999999;
+  text-align: center;
+  padding-bottom: 20rpx;
+  background-color: white;
+}
+.reset-scan{
+  padding-bottom: 24rpx;
+  background-color: white;
+}
+.reset{
+  background-color: #ea5415;
+  width: 240rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  display: flex;
+  margin: 0rpx auto;
+}
+.title{
+  font-size: 32rpx;
+  color: white;
+  padding-left: 8rpx;
+}
+.scan-img{
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 35rpx;
+}
+.recommend{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #f7f7f7;
+  display: flex;
+}
+.recommend-img{
+  margin-top: 4rpx;
+}
+.good{
+  width: 31rpx;
+  height: 31rpx;
+  padding-left: 30rpx;
+  padding-right: 12rpx;
+}
+.recommend-text{
+  font-size: 32rpx;
+  color: #ea5415;
+  font-weight: bold;
+}
+.hotel-info{
+  padding: 20rpx 30rpx 20rpx 30rpx;
+  background-color: white;
+  margin-bottom: 30rpx;
+}
+.hotel-imgs{
+  width: 690rpx;
+  height: 280rpx;
+  border-radius: 16rpx;
+}
+.addgress-info{
+  display: flex;
+}
+.bg{
+  
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #000000;
+  opacity: 0.35;
+  position: absolute;
+  margin-top: -70rpx;
+  border-bottom-right-radius: 16rpx;
+   border-bottom-left-radius: 16rpx;
+  width: 690rpx;
+}
+.addgress{
+  width: 90rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  background-color: #ea5415;
+  border-radius: 5rpx;
+  position: absolute;
+  margin-top: -52rpx;
+  font-size: 20rpx;
+  color: white;
+  margin-left: 16rpx;
+}
+.tips{
+  margin-top: -54rpx;
+  font-size: 26rpx;
+  border-radius: 16rpx;
+  position: absolute;
+  margin-left: 118rpx;
+  color: white;
+}
+.location{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.distance-text{
+  width: 450rpx;
+  padding-top: 8rpx;
+}
+.tr{
+  display: flex;
+  height: 58rpx;
+  line-height: 58rpx;
+}
+.distance{
+  display: flex;
+  font-size: 24rpx;
+  color: #999999;
+}
+.reservation{
+  position: absolute;
+  right: 30rpx;
+}
+.text{
+  font-size: 20rpx;
+}
+.money{
+  font-size: 30rpx;
+  color: #ff3333;
+  font-weight: bold;
+}
+.btn{
+  border-radius: 6rpx;
+  background-color: #ea5415;
+  font-size: 26rpx;
+  width: 120rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  color: white;
+  position: absolute;
+  right: 47rpx;
+}

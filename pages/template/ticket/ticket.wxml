@@ -1,0 +1,43 @@
+<!--pages/template/ticket/ticket.wxml-->
+<template name='normal'>
+<view class='braekfast-ticket' bindtap="showModal" bindload="imageLoad" data-idx='{{item.voucherId}}' data-hotelid='{{item.hotelId}}'>
+  <view class='ticket-img'><image src='../img/effectiveTicket.png' class='effectiveTicket'></image></view>
+  <view class='hotel-name'>{{item.hotelName}}</view>
+  <view class='tr1'>
+    <view class='money'><text class='icon'>￥</text>{{item.price}}</view>
+    <view class='type-name'>早餐券</view>
+    <view class="{{showModalStatus ? 'state1':'btn'}}">立即使用</view>
+  </view>
+  <view class='effective-data'>有效期至:{{item.expiryTime}}</view>
+  <view class='use'>使用条件:仅限酒店早餐用餐时间使用</view>
+</view>
+</template>
+<!-- 已使用 -->
+<template name='use'>
+<view class='braekfast-ticket' bindtap="showModal" bindload="imageLoad" data-idx='{{item.voucherId}}' data-hotelid='{{item.hotelId}}'>
+  <view class='ticket-img'><image src='../img/invalidTicket.png' class='effectiveTicket'></image></view>
+  <view class='text-color'>{{item.hotelName}}</view>
+  <view class='tr1'>
+    <view class='money color'><text class='icon'>￥</text>{{item.price}}</view>
+    <view class='type-name color'>早餐券</view>
+    <view class="{{showModalStatus ? 'state2':'use-btn'}}">已使用</view>
+  </view>
+  <view class='effective-data data-color'>有效期至:{{item.expiryTime}}</view>
+  <view class='use data-color'>使用条件:仅限酒店早餐用餐时间使用</view>
+</view>
+</template>
+<!-- 已失效 -->
+<template name='invalid'>
+<view class='braekfast-ticket' bindtap="showModal" bindload="imageLoad" data-idx='{{item.voucherId}}' data-hotelid='{{item.hotelId}}'>
+  <view class='ticket-img'><image src='../img/invalidTicket.png' class='effectiveTicket'></image></view>
+  <view class='hotel-name data-color'>{{item.hotelName}}</view>
+  <view class='tr1'>
+    <view class='money data-color'><text class='icon'>￥</text>{{item.price}}</view>
+    <view class='type-name data-color'>早餐券</view>
+    <view class="{{showModalStatus ? 'state3':'invalid-Btn'}}">已失效</view>
+  </view>
+  <view class='effective-data data-color'>有效期至:{{item.expiryTime}}</view>
+  <view class='use data-color'>使用条件:仅限酒店早餐用餐时间使用</view>
+</view>
+</template>
+

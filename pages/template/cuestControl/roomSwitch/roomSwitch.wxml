@@ -1,0 +1,18 @@
+<!--pages/template/cuestControl/roomSwitch/roomSwitch.wxml-->
+<template name="roomSwitch">
+<view class='out-bg' catchtouchmove="preventTouchMove"  wx:if="{{switchShow}}">
+<view class='box-switch'>
+    <view class='switch-header'>
+      <view class='switch-titles'>请选择切换房间</view>
+      <view class='switch-icons'>
+        <icon type="clear" size="20" bindtap='closeSwitch' class='icons-img'/>
+      </view>
+    </view>
+     <scroll-view class='switch-scroll' scroll-y>
+     <!-- <view> -->
+    <view class='switch-hotel' wx:for="{{switchRoomList}}" wx:key="key" bindtap='selectRoom' data-ihc_no='{{item.ihcNo}}' data-room_num='{{item.roomNum}}'><label>{{item.hotelName}}</label><label class='switch-room-num'>{{item.roomNum}}</label></view>
+    <!-- </view> -->
+  </scroll-view>
+</view>
+</view>
+</template>

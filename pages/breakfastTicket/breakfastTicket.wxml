@@ -1,0 +1,62 @@
+<!--pages/breakfastTicket/breakfastTicket.wxml-->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='早餐券' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<view class='box'>
+<view class='side'>
+<view class='description'>{{description}}</view>
+  <view class='content' wx:for='{{url}}'>
+  <image src="{{item}}" class='l1' mode='widthFix' wx:if="{{item =='' ? false : true}}"/>
+  </view>
+</view>
+  <view class='bottomCss'>
+    <view class='bottomTextTitle'>早餐券</view>
+    <view class="bottomTextContent {{isOpenPay ? '':'line'}}">￥{{price}}/位</view>
+    <button class='btn' bindtap="{{isOpenPay ?'pay':'free'}}">{{isOpenPay ?'立即购买':'免费领取'}}</button>
+  </view>
+    <!-- 支付显示或隐藏部分 -->
+  <view class='payBottom' wx:if='{{payShow}}'>
+  <view class='closeTitle'>
+    <image src='../img/close.png' class='close' bindtap='closePay'></image>
+  </view>
+  <view class='type'>支付方式：</view> 
+  <view class='pay'>
+    <image src='../img/pay.png' class='payImg'></image>
+    <text class='payText'>微信支付</text>
+    <image src='../img/right.png' class='right'></image>
+  </view>
+  <view class='bottomContent'>
+    <text class='tip'>温馨提示：</text>
+    <view class='tipContent'>
+    <view class='tipText'>
+      早餐券需在购买后的24小时内使用，
+    </view>
+    <view>
+      购买后不支持退换，
+    </view>
+    <view>
+      请谨慎购买，避免浪费
+    </view>
+    </view>
+    <button class='Btn' bindtap='payMoney'>立即支付￥{{price}}</button>
+  </view>
+    </view>
+
+
+     <!-- 弹出层生成二维码 -->
+  <view class="container-column" wx:if="{{QrModalStatus}}">
+<view animation="{{animationData}}" class="container-column buydes-dialog-container" >
+        <view class="container-column buydes-dialog-container-bottom">
+        <view class="popup">
+          <view class='ticketShow'>
+          <icon type='clear' size='20' bindtap='cancel'></icon>
+          <view class='text'> 早餐券已兑换</view>
+          <view class='showContent'>用餐时请出示您的电子早餐券,</view>
+          <view class='showContent2'>即可享用早餐~</view>
+       <button class='showBtn' bindtap="QRhideModal">使用</button>
+    </view>
+    </view>
+        </view>
+    </view>
+</view>
+</view>

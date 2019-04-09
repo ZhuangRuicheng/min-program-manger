@@ -1,0 +1,198 @@
+<!--pages/index/hotelReservation/hotelReservation.wxml-->
+<import src="../../template/getUseInfo/getUseInfo.wxml"/>
+<import src="../../template/getPhoneInfo/getPhoneInfo.wxml"/>
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='酒店预订' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<button class='shareImg' open-type='share'>
+  <image src='../../img/share.png' class='share'></image>
+</button>
+<view class="box">
+  <view class="swiper-container">
+  <swiper autoplay="true" interval="2000" duration="1000" class="swiper" current="{{swiperCurrent}}" bindchange="swiperChange" indicator-dots='true' circular='true'>
+    <block wx:for="{{imgUrls}}" wx:key='key' wx:if='{{imgUrls}}'>
+      <swiper-item>
+        <image src="{{item}}" class="img" bindtap="swipclick" wx:if='{{imgUrls}}' mode='aspectFill'/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+  <view class='header'>
+    <view class='hotelName'>{{hotelName}}</view>
+  </view>
+  <view class='hotel-facilities-tr'  bindtap='hotelIntroduction'>
+  <view class='hotel-facilities'><label>酒店设施：</label><text class='facilities' wx:for="{{facilities}}">{{item}} | </text><text class='facilities'>...</text></view>
+  <view class='details'><label>详情</label> / <label>电话</label>
+   <view class='details-rightSigns'><image src='../../img/orange-right.png' class='rightSign'></image></view>
+  </view>
+  </view>
+  <view class='header2' bindtap='map'>
+  <view class='address'><label class='address-title'>地址：</label>{{address}}</view>
+  <view class='navigation'>
+    <label>地图导航</label>
+    <view class='rightSigns'><image src='../../img/orange-right.png' class='rightSign'></image></view>
+  </view>
+  </view>
+  <view class='hr'></view>
+  <view class='header4'>
+  <view class='checkInAll'>
+    <view class='checkIn'>入住</view>
+     <picker value="{{checkInStartTime}}" start="2018-10-01" end="3017-09-01" bindchange="checkInDateChange" mode="date">
+    <view class='checkInTime'>{{checkInStartTime}}</view>
+     </picker>
+  </view>
+  <view class='day'>{{liveDate}}晚</view>
+   <view class='checkInAll'>
+    <view class='checkIn'>离开</view>
+    <picker value="{{checkOutStartTime}}" start="2018-10-01" end="3017-09-01" bindchange="checkOutDateChange" mode="date">
+    <view class='checkInTime'>{{checkOutStartTime}}</view>
+    </picker>
+  </view>
+  </view>
+ <view class='header3'>
+    <view class='content' wx:for="{{DAY_ROOM}}">
+      <view class='roomImgs'><image src="{{!item.imgUrl?'../../img/useType.png':item.imgUrl}}" class='roomImg' bindtap='detailsShow' data-idx='{{item.roomTypeId}}' data-isopenbook='{{item.isOpenBook}}' data-roomcount='{{item.roomCount}}'></image>
+      </view>
+      <view bindtap='detailsShow' data-idx='{{item.roomTypeId}}' data-isopenbook='{{item.isOpenBook}}' data-roomcount='{{item.roomCount}}'>
+      <view class='title'>{{item.typeName}}</view>
+      <view class='money'>￥{{item.price}}</view>
+       <view class='money mark-price'>￥{{!item.marketPrice?'0':item.marketPrice}}</view>
+      <text class='area'>{{item.area}}</text>
+      <view class='type'>{{item.bedType}}</view>
+      <text class='type window'>{{item.window}}</text>
+      </view>
+      <view class='sign-title'>
+        <view class='comfir'>闪电确认</view>
+        <view class='hotel-sell'>酒店直销</view>
+        <view class='limit'>房量有限</view>
+      </view>
+      <view wx:if="{{item.isOpenBook?true:false}}">
+      <button class='open' bindtap="{{item.roomCount >0?'orderFilling':''}}" data-names='{{item.typeName}}' data-idx='{{item.roomTypeId}}' data-prices='{{item.price}}' disabled="{{item.roomCount >0?'':'disable'}}">{{item.roomCount>0?'立即预订':'已售罄'}}</button>
+      </view>
+      <button class='open'  wx:if="{{!item.isOpenBook?true:false}}" data-names='{{item.typeName}}' data-idx='{{item.roomTypeId}}' data-prices='{{item.price}}' disabled="disable">已满房</button>
+    </view>
+  </view>
+      <!-- <view class='originalPrice'>原价:￥450</view> -->
+      <!-- <input class="{{item.isOpenBook?'btn':'btn1'}}" bindtap="{{item.isOpenBook?'orderFilling':''}}" value="{{item.isOpenBook?'立即预定':'已满房'}}" disabled='disabled' data-names='{{item.typeName}}' data-idx='{{item.id}}' data-prices='{{item.price}}'></input> -->
+      <!-- <image src='../../img/book.png' class='bookImg' wx:if="{{item.isOpenBook?true:false}}" bindtap='orderFilling' data-names='{{item.typeName}}' data-idx='{{item.id}}' data-prices='{{item.price}}'></image>
+      <image src='../../img/no_book.png' class='noBook' wx:if="{{item.isOpenBook?false:true}}"></image>
+    </view> -->
+  <view class='header5' wx:if="{{CLOCK_ROOM == ''?false:true}}">
+   <view class='hourRoomTitle'>
+    <view class='noticeImgs'><image src='../../img/hourRoom.png' class='hourRoom'></image></view>
+    <view class='NoticeText'>钟点房</view>
+    </view>
+      <view class='content' wx:for='{{CLOCK_ROOM}}'>
+      <view class='roomImgs'><image src="{{!item.imgUrl?'../../img/useType.png':item.imgUrl}}" class='roomImg' bindtap='detailsShow' data-idx='{{item.roomTypeId}}' data-isopenbook='{{item.isOpenBook}}' data-roomcount='{{item.roomCount}}'></image>
+      </view>
+      <view bindtap='detailsShow' data-idx='{{item.roomTypeId}}' data-isopenbook='{{item.isOpenBook}}' data-roomcount='{{item.roomCount}}'>
+      <view class='title'>{{item.typeName}}</view>
+      <view class='money'>￥{{item.price}}</view>
+       <view class='money mark-price'>￥{{!item.marketPrice?'0':item.marketPrice}}</view>
+      <text class='area'>{{item.area}}</text>
+      <view class='type'>{{item.bedType}}</view>
+      <text class='type window'>{{item.window}}</text>
+      </view>
+      <view class='sign-title'>
+        <view class='comfir'>闪电确认</view>
+        <view class='hotel-sell'>酒店直销</view>
+        <view class='limit'>房量有限</view>
+      </view>
+        <view wx:if="{{item.isOpenBook?true:false}}">
+      <button class='open' bindtap="{{item.roomCount >0?'clockOrderFilling':''}}" data-names='{{item.typeName}}' data-idx='{{item.roomTypeId}}' data-prices='{{item.price}}' disabled="{{item.roomCount >0?'':'disable'}}">{{item.roomCount>0?'立即预订':'已售罄'}}</button>
+      </view>
+      <button class='open'  wx:if="{{!item.isOpenBook?true:false}}" data-names='{{item.typeName}}' data-idx='{{item.roomTypeId}}' data-prices='{{item.price}}' disabled="disable">已满房</button>
+  </view>
+  </view>
+  <!-- 半日房 -->
+   <view class='header5' wx:if="{{HALF_DAY_ROOM == ''?false:true}}">
+   <view class='hourRoomTitle'>
+    <view class='noticeImgs'><image src='../../img/hourRoom.png' class='hourRoom'></image></view>
+    <view class='NoticeText'>半日房</view>
+    </view>
+   <view class='content' wx:for='{{HALF_DAY_ROOM}}'>
+      <view class='roomImgs'><image src="{{!item.imgUrl?'../../img/useType.png':item.imgUrl}}" class='roomImg' bindtap='detailsShow' data-idx='{{item.roomTypeId}}' data-isopenbook='{{item.isOpenBook}}' data-roomcount='{{item.roomCount}}'></image>
+      </view>
+      <view bindtap='detailsShow' data-idx='{{item.roomTypeId}}'  data-isopenbook='{{item.isOpenBook}}' data-roomcount='{{item.roomCount}}'>
+      <view class='title'>{{item.typeName}}</view>
+      <view class='money'>￥{{item.price}}</view>
+       <view class='money mark-price'>￥{{!item.marketPrice?'0':item.marketPrice}}</view>
+      <text class='area'>{{item.area}}</text>
+      <view class='type'>{{item.bedType}}</view>
+      <text class='type window'>{{item.window}}</text>
+      </view>
+      <view class='sign-title'>
+        <view class='comfir'>闪电确认</view>
+        <view class='hotel-sell'>酒店直销</view>
+        <view class='limit'>房量有限</view>
+      </view>
+        <view wx:if="{{item.isOpenBook?true:false}}">
+      <button class='open' bindtap="{{item.roomCount >0?'halfDayFilling':''}}" data-names='{{item.typeName}}' data-idx='{{item.roomTypeId}}' data-prices='{{item.price}}' disabled="{{item.roomCount >0?'':'disable'}}">{{item.roomCount>0?'立即预订':'已售罄'}}</button>
+      </view>
+      <button class='open'  wx:if="{{!item.isOpenBook?true:false}}" data-names='{{item.typeName}}' data-idx='{{item.roomTypeId}}' data-prices='{{item.price}}' disabled="disable">已满房</button>
+  </view>
+  </view>
+  <view class='bottomCss'>
+  <view class='notice'>
+    <view class='noticeImgs'><image src='../../img/notice.png' class='noticeImg'></image></view>
+    <view class='NoticeText'>入住须知</view>
+  </view>
+  <view class='noticeContent'>
+    <view class='noticeContent1'>
+    {{notification}}
+    </view>
+  </view>
+  </view>
+  <!-- 酒店详情弹出框 -->
+  <view class="container-column" wx:if="{{ModalStatus}}" catchtouchmove="preventTouchMove">
+<view class="container-column buydes-dialog-container" >
+      <view class="container-column buydes-dialog-container-bottom">
+        <view class="popup">
+         <view class='cancel' bindtap='hideStatus'>取消</view>
+         <view class='bedType'>{{name}}</view>
+         <view class='bedImgs'><image src="{{imgUrl == ''?'../../img/useType.png':imgUrl}}" class='bedImg'></image></view>
+         <view class='bed'>床型：<text class='types'>{{bed}}</text></view>
+         <view class='bed'>面积：<text class='types'>{{area}}</text></view>
+         <view class='bed'>可住：<text class='types'>{{stay}}</text></view>
+         <view class='bed'>窗户：<text class='types'>{{window}}</text></view>
+          <view class='bed'>楼层：<text class='types'>{{floor}}</text></view>
+          <view class='bed'>加床：<text class='types'>{{Addbed}}</text></view>
+          <view class='roomDescribe'>房型描述：</view>
+          <view class='describe'>{{description}}</view>
+          <view class='flex'>
+          <view class='roomTypeMoney'>￥{{price}}</view>
+          <!-- 日租房 -->
+          <view wx:if="{{useType == 'DAY_ROOM'?true:false}}">
+          <view wx:if="{{isOpenBook?true:false}}">
+          <input class="{{roomCount>0?'roomTypeBtn':'roomTypeBtn1'}}" bindtap="{{roomCount>0?'orderFilling':''}}" value="{{roomCount>0?'立即预订':'已售罄'}}" disabled="{{item.roomCount >0?'':'disable'}}" data-names='{{name}}' data-idx='{{id}}' data-prices='{{price}}'></input>
+          </view>
+            <input class="{{!isOpenBook?'roomTypeBtn1':'roomTypeBtn'}}" value="已满房" disabled="disable" data-names='{{name}}' data-idx='{{id}}' data-prices='{{price}}' wx:if="{{!isOpenBook?true:false}}"></input>
+            </view>
+            <!-- 钟点房 -->
+              <view wx:if="{{useType == 'CLOCK_ROOM'?true:false}}">
+          <view wx:if="{{isOpenBook?true:false}}">
+          <input class="{{roomCount>0?'roomTypeBtn':'roomTypeBtn1'}}" bindtap="{{roomCount>0?'clockOrderFilling':''}}" value="{{roomCount>0?'立即预订':'已售罄'}}" disabled="{{item.roomCount >0?'':'disable'}}" data-names='{{name}}' data-idx='{{id}}' data-prices='{{price}}'></input>
+          </view>
+            <input class="{{!isOpenBook?'roomTypeBtn1':'roomTypeBtn'}}" value="已满房" disabled="disable" data-names='{{name}}' data-idx='{{id}}' data-prices='{{price}}' wx:if="{{!isOpenBook?true:false}}"></input>
+                 </view>   
+            <!-- 半日房 -->
+              <view wx:if="{{useType == 'HALF_DAY_ROOM'?true:false}}">
+          <view wx:if="{{isOpenBook?true:false}}">
+          <input class="{{roomCount>0?'roomTypeBtn':'roomTypeBtn1'}}" bindtap="{{roomCount>0?'halfDayFilling':''}}" value="{{roomCount>0?'立即预订':'已售罄'}}" disabled="{{item.roomCount >0?'':'disable'}}" data-names='{{name}}' data-idx='{{id}}' data-prices='{{price}}'></input>
+          </view>
+            <input class="{{!isOpenBook?'roomTypeBtn1':'roomTypeBtn'}}" value="已满房" disabled="disable" data-names='{{name}}' data-idx='{{id}}' data-prices='{{price}}' wx:if="{{!isOpenBook?true:false}}"></input>
+            </view>            
+          <!-- <input class="{{isOpenBook?'roomTypeBtn':'roomTypeBtn1'}}" bindtap="{{isOpenBook?'orderFilling':''}}" value="{{isOpenBook?'立即预订':'已满房'}}" disabled='disabled' data-names='{{name}}' data-idx='{{id}}' data-prices='{{price}}' wx:if="{{useType == 'DAY_ROOM'?true:false}}"></input>
+          <input class="{{isOpenBook?'roomTypeBtn':'roomTypeBtn1'}}" bindtap="{{isOpenBook?'halfDayFilling':''}}" value="{{isOpenBook?'立即预订':'已满房'}}" disabled='disabled' data-names='{{name}}' data-idx='{{id}}' data-prices='{{price}}' wx:if="{{useType == 'HALF_DAY_ROOM'?true:false}}"></input> -->
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+<!-- 获取用户信息弹框 -->
+<template is="getUseInfo" data="{{getUseInfo,getUseInfoImg}}"></template>
+<!-- 获取手机号码弹框  -->
+<template is="getPhoneInfo" data="{{getPhoneInfo,getPhoneInfoImg}}"></template>
+</view>

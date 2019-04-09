@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/meals/meals",
+    
+    "pages/myOrder/mealsDatails/mealsDatails",
+    
+    "pages/meals/mealsOrder/mealsOrder",
+    "pages/template/miniBar/orderDetails/orderDetails",
+    
+    "pages/singleControlPage/singleControlPage",
+    "pages/cuestControl/cuestControl",
+    "pages/managerOnline/managerOnline",
+    "pages/template/getUseInfo/getUseInfo",
+    "pages/template/miniBar/miniBar",
+    "pages/person_Center/updatePhoneNum/updatePhoneNum",
+    "pages/person_Center/personInfo/personInfo",
+    "pages/person_Center/untying/untying",
+    "pages/Scavenging/Scavenging",
+    "pages/jurisdiction/jurisdiction",
+    "pages/template/calendar/calendar",
+    "pages/template/cuestControl/airConditioner/airConditioner",
+    "pages/template/cuestControl/tv/tv",
+    "pages/index/hotelReservation/hotelReservation",
+    "pages/template/cuestControl/custom/custom",
+    "pages/template/cuestControl/windowCurtains/windowCurtains",
+    "pages/template/cuestControl/cuestControl",
+    "pages/coupon/coupon",
+    "pages/myOrder/hotelReservationDetails/hotelReservationDetails",
+    "pages/index/hotelReservation/clockOrderFilling/clockOrderFilling",
+    "pages/index/hotelReservation/orderFilling/orderFilling",
+    "pages/Scavenging/openLocation/openLocation",
+    "pages/template/ticket/ticket",
+    "pages/template/progress/progress",
+    "pages/template/reward/reward",
+    "pages/myOrder/checkOutDetails/checkOutDetails",
+    "pages/myOrder/storeDetails/storeDetails",
+    "pages/ticket/ticket",
+    "pages/myOrder/myOrder",
+    "pages/store/store",
+    "pages/index/hotel_Introduction/hotel_Introduction",
+    "pages/clearRoom/clearRoom",
+    "pages/myOrder/feedbackDetails/feedbackDetails",
+    "pages/myOrder/invoiceDetails/invoiceDetails",
+    "pages/vipInfo/vipInfo",
+    "pages/vip/vip",
+    "pages/invoice/invoiceInfo/invoiceInfo",
+    "pages/myOrder/continueSteyDetails/continueSteyDetails",
+    "pages/myOrder/vipDetails/vipDetails",
+    "pages/myOrder/orderDetails/orderDetails",
+    "pages/breakfastTicket/breakfastTicket",
+    "pages/invoice/informationConfirmation/informationConfirmation",
+    "pages/self/self",
+    "pages/leaveRoom/leaveRoom",
+    "pages/store/storeOrder/storeOrder",
+    "pages/feedback/feedback",
+    "pages/invoice/invoice",
+    "pages/person_Center/person_Center",
+    "pages/logs/logs",
+    "pages/template/template",
+    "pages/template/tabBar/tabBar",
+    "pages/template/orderInfo/orderInfo",
+    "pages/index/hotelReservation/halfDayFilling/halfDayFilling",
+    "pages/template/hotelReservation/hotelReservation",
+    "pages/template/cuestControl/noDevices/noDevices",
+    "pages/template/cuestControl/noAuthority/noAuthority",
+    "pages/template/getPhoneInfo/getPhoneInfo",
+    "pages/template/cuestControl/roomSwitch/roomSwitch"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#EA5415",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "客房助手",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom"
+  },
+  "debug": true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取您所在酒店位置提供精准服务信息"
+    }
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  }
+}

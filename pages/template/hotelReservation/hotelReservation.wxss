@@ -1,0 +1,223 @@
+/* pages/template/hotelReservation/hotelReservation.wxss */
+.roomNum{
+  font-size: 30rpx;
+  line-height: 88rpx;
+  height: 88rpx;
+}
+.roomNumber{
+  position: absolute;
+  left: 60rpx;
+}
+.roomNums{
+  padding-left: 190rpx;
+}
+.nameS{
+  position: absolute;
+  left: 60rpx;
+}
+.inputName{
+  margin-left: 188rpx;
+}
+.name{
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  display: flex;
+}
+.ss{
+  border: none;
+}
+input{
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-left: 111rpx;
+}
+.allContent{
+  background-color: white;
+  margin: -30rpx 30rpx 0rpx 30rpx;
+  border-radius: 8rpx;
+}
+.phoneNumber{
+  position: absolute;
+  left: 60rpx;
+}
+.phone{
+  font-size: 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 30rpx;
+  display: flex;
+}
+.phoneNum{
+  margin-left: 160rpx;
+}
+.remark{
+  position: absolute;
+  left: 60rpx;
+}
+.remarks{
+  width: 550rpx;
+  margin-left: 190rpx;
+}
+.vip{
+  background-color: white;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+  border-radius: 8rpx;
+}
+.vip-text{
+  font-size: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+}
+.check{
+  transform: scale(0.7);
+  position: absolute;
+  right: 60rpx;
+}
+.hr{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  background-color: #dcdcdc;
+  height: 1rpx;
+}
+.hr1{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  background-color: #dcdcdc;
+  height: 2rpx;
+}
+.vip-type{
+  color: #333333;
+  font-size: 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 54rpx;
+  display: flex;
+}
+.checkbox-group{
+  display: flex;
+}
+.section{
+  border: 2rpx #dcdcdc solid;
+  padding-left: 22rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  display: flex;
+  margin-top: 20rpx;
+  position: absolute;
+  right: 60rpx;
+}
+.hh{
+  display: flex;
+}
+.picker-img{
+  margin-top: -5rpx;
+}
+.lower{
+  padding-left: 22rpx;
+  width: 17rpx;
+  height: 8rpx;
+  padding-right: 10rpx;
+}
+.ID{
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: #333333;
+  padding-left: 54rpx;
+  display: flex;
+}
+.input-id{
+  width: 300rpx;
+  height: 44rpx;
+  position: absolute;
+  right: 60rpx;
+  border-radius: 5rpx;
+  border: 2rpx #b2b2b2 solid;
+  font-size: 26rpx;
+}
+.vip-tips{
+  padding-left: 20rpx;
+  padding-top: 22rpx;
+  font-size: 24rpx;
+  color: #ff3333;
+  padding-bottom: 22rpx;
+  padding-right: 10rpx;
+}
+.useDiscounts{
+  position: absolute;
+  left: 60rpx;
+  border-radius: 8rpx;
+}
+.useDiscount{
+  font-size: 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  background-color: white;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+  }
+.discountTicket{
+  position: absolute;
+  right: 60rpx;
+  color: #999999;
+}
+.roomPrice{
+  margin: 30rpx 30rpx 0rpx 30rpx;
+  font-size: 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 30rpx;
+  display: flex;
+  background-color: white;
+  border-radius: 8rpx;
+}
+.discount{
+  font-size: 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 30rpx;
+  margin: 0rpx 30rpx 0rpx 30rpx;
+  display: flex;
+  background-color: white;
+  border-radius: 8rpx;
+}
+.money{
+   position: absolute;
+  right: 60rpx;
+  color: #ff3333;
+}
+.tips{
+  font-size: 24rpx;
+  color: #666666;
+  margin-top: 24rpx;
+  margin-left: 30rpx;
+}
+.buttomCss{
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: white;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  font-size: 30rpx;
+  display: flex;
+  padding-left: 30rpx;
+}
+.orderMoney{
+  font-size: 32rpx;
+  color: #ff3333;
+}
+.btn{
+  background-color: #ea5415;
+  color: white;
+  height: 88rpx;
+  line-height: 88rpx;
+  position: absolute;
+  right: 30rpx;
+  border-radius: 0%;
+}
+page{
+  background-color: #f7f7f7;
+}

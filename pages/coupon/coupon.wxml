@@ -1,0 +1,24 @@
+<!--pages/coupon/coupon.wxml-->
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='早餐券' show_bol='{{true}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class='couponImg'><image src='../img/couponImg.png' class='coupon'></image></view>
+  <view class='hotel-name'>{{hotelName}}</view>
+  <view class='hotel-name-mini'>{{hotelName}}</view>
+  <view class='flex'>
+    <view class='sign'>￥</view>
+    <view class="{{hasPay == 'false' ? 'line' : 'money'}}">{{price}}</view>
+    <view class='type'>早餐券</view>
+    <view class='btn' bindtap="pay" wx:if="{{hasPay == 'true' ? true : false}}">立即购买</view>
+    <view class='btn' bindtap="free" wx:if="{{hasPay == 'true' ? false : true}}">免费领取</view>
+  </view>
+  <view class='use-time'>有效期至：{{expiryTime}}</view>
+  <view class='use'>使用条件：仅限酒店早餐用餐时间使用</view>
+  <view class='see-ticket' bindtap='ticket'><image src='../img/see_ticket.png' class='see_ticket'></image></view>
+  <view class='sign-img' wx:if="{{sign ? true : false}}">
+   <image src='../img/sign.png' class='signs' ></image>
+  </view>
+</view>

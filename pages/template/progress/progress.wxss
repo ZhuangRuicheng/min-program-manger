@@ -1,0 +1,44 @@
+/* pages/template/progress/progress.wxss */
+.progress{
+
+  padding-left: 136rpx;
+  display: flex;
+  text-align: center;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+  background-color: white;
+  margin-bottom: 30rpx;
+}
+.display{
+  display: flex;
+
+}
+.ordersImg{
+  width: 30rpx;
+  height: 35rpx;
+  margin-top: 20rpx;
+}
+.order{
+  background-color: #cccccc;
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 50%;
+}
+.orderText{
+  font-size: 26rpx;
+}
+.tr{
+  background-color: #cccccc;
+  height: 7rpx;
+  width: 70rpx;
+  margin-top: 35rpx;
+  margin-left: -8rpx;
+}
+.tr1{
+  margin-left: -18rpx;
+}
+.handleText{
+  margin-left: -15rpx;
+}

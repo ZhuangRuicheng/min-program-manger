@@ -1,0 +1,35 @@
+<!--pages/template/cuestControl/cuestControl.wxml-->
+<!-- 灯光弹出层 -->
+<template name="bright">
+<view class='brightBox' catchtouchmove="preventTouchMove">
+  <view class='bright-content'>
+    <view class='bright-header'>
+      <icon type='clear' size='20' bindtap='cancelBright' color='#ffffff'></icon>
+      <view class='bright-tr'>
+      <view class='img_bright'><image src='../img/bright_toast.png' class='bright-toast'></image></view>
+      <view class='bright-text'>灯光</view>
+      </view>
+      <view class='all-shut'>
+      <view class='shut1' bindtap='openOrShut' id='1'>
+      <view class='shut' hover-class='hover1' hover-stay-time='50'></view>
+      <view class='shut-text'>总关</view>
+      </view>
+      <view class='shut2' bindtap='openOrShut' id='0'>
+      <view class='shut' hover-class='hover2' hover-stay-time='50'></view>
+      <view class='shut-text'>总开</view>
+      </view>
+      </view>
+    </view>
+    <view class='bottom-css'>
+    <scroll-view scroll-y="true" class='bright-view' scroll-top="200rpx;">
+    <view class='bright-hh' wx:for="{{brightList}}" wx:key="key" data-id='{{item.deviceId}}' bindtap='signalBright' data-type='{{item.deviceType}}' data-code='{{item.status}}'>
+      <view class='birght-1'>
+      <image src="{{item.status == 0 ?'../img/birghtSubclass_s.png' : '../img/birghtSubclass_n.png'}}" class='birghtSubclass_s'></image>
+      <view class='text'>{{item.deviceName}}</view>
+      </view>
+      </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+</template>

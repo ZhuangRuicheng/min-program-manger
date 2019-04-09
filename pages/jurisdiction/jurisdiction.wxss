@@ -1,0 +1,77 @@
+/* pages/jurisdiction/jurisdiction.wxss */
+page{
+  background-color: rgba(15, 15, 26, 0.7);
+}
+.content{
+  margin: 245rpx 53rpx 0rpx 53rpx;
+  background-color: white;
+  padding-bottom: 60rpx;
+}
+.welcome{
+  padding-top: 64rpx;
+  font-size: 28rpx;
+  color: #333333;
+  text-align: center;
+}
+.hotel-name{
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  padding-top: 20rpx;
+}
+.tips{
+  font-size: 24rpx;
+  color: #ff3333;
+  padding: 36rpx 45rpx 40rpx 45rpx;
+  line-height: 45rpx;
+}
+.room-num{
+  padding-left: 55rpx;
+  display: flex;
+  
+}
+.room-title{
+  font-size: 30rpx;
+  color: #333333;
+  margin-right: 40rpx;
+  padding-top: 10rpx;
+}
+input{
+  width: 360rpx;
+  height: 56rpx;
+  border: 1rpx #dcdcdc solid;
+  border-radius: 6rpx;
+  font-size: 26rpx;
+}
+.custom-name{
+  display: flex;
+  padding-left: 55rpx;
+  margin-top: 24rpx;
+
+}
+.name-title{
+  font-size: 30rpx;
+  color: #333333;
+  margin-right: 67rpx;
+  padding-top: 10rpx;
+}
+.phone-title{
+  font-size: 30rpx;
+  color: #333333;
+  margin-right: 40rpx;
+  padding-top: 10rpx;
+}
+.btn{
+  text-align: center;
+}
+.submit-btn{
+  width: 300rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  color: white;
+  background-color: #ea5415;
+  border-radius: 16rpx;
+  line-height: 80rpx;
+  margin-top: 50rpx;
+}

@@ -1,0 +1,22 @@
+<!--pages/template/tabBar/tabBar.wxml-->
+<template name="tabbar">
+    <view class="tabbar_box" style="background-color:{{tabbar.backgroundColor}}; border-top-color:{{tabbar.borderStyle}}; {{tabbar.position == 'top' ? 'top:0' : 'bottom:0'}}">
+        <block wx:for="{{tabbar.list}}" wx:for-item="item" wx:key="index">
+            <navigator class="tabbar_nav" url="{{item.pagePath}}" style="color:{{item.selected ? tabbar.selectedColor : tabbar.color}};width:{{1/tabbar.list.length*100}}%" open-type="redirect">
+                <image class="tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}"></image>
+                <text>{{item.text}}</text>
+            </navigator>
+        </block>
+    </view>
+</template>
+<!-- 
+<template name="Invalid">
+    <view class="tabbar_box" style="background-color:{{Invalid.backgroundColor}}; border-top-color:{{Invalid.borderStyle}}; {{Invalid.position == 'top' ? 'top:0' : 'bottom:0'}}">
+        <block wx:for="{{Invalid.list}}" wx:for-item="item" wx:key="index">
+            <navigator class="tabbar_nav" url="{{item.pagePath}}" style="color:{{item.selected ? Invalid.selectedColor : Invalid.color}};width:{{1/Invalid.list.length*100}}%" open-type="redirect">
+                <image class="tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}"></image>
+                <text>{{item.text}}</text>
+            </navigator>
+        </block>
+    </view>
+</template> -->

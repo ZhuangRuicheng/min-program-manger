@@ -1,0 +1,17 @@
+<!--pages/person_Center/untying/untying.wxml-->
+<wxs module="queryNumber" src="../../../utils/query.wxs"></wxs>
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='个人信息' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+  <view class='title'>短信验证码已经发送至您的手机号码</view>
+  <view class='phoneNum'>{{queryNumber.phone(phoneNum)}}</view>
+  <view class='input-code'>
+    <input class='code' placeholder='请输入验证码' bindinput='inputCode' value='{{code}}'></input>
+  </view>
+  <view class='count-down'><text class='time' bindtap='getVerificationCode'>{{time}}</text><text wx:if="{{showTips?true:false}}">后重发</text></view>
+  <view class='btn'><button class='submit' bindtap='submitCode'>提交</button></view>
+  <!-- <view>验证码：{{num}}</view> -->
+</view>

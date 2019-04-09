@@ -1,0 +1,206 @@
+ <!--pages/template/template.wxml-->
+<template name='CHECKOUT'>
+    <view class='clearRoom' wx:for-index="index" wx:for-item="item" bindtap='checkOut' data-id='{{item.id}}'>
+    <view class='clearTitle'>
+      <image src='../img/checkout.png' class='Img'></image>
+       <view class='text'>退房</view>
+       <view class='state' wx-if="{{item.status == 'SUBMIT'?true:false}}">待受理</view>
+       <view class='state' wx-if="{{item.status == 'ACCEPT'?true:false}}">待完成</view>
+       <view class='state' wx-if="{{item.status == 'FINISH'?true:false}}">已完成</view>
+       <view class='state' wx-if="{{item.status == 'OVERDUE'?true:false}}">已过期</view>
+    </view>
+    <view class='allContent'>
+      <view class='content'>自助退房</view>
+      <view class='time'>{{item.createTime}}</view>
+    </view>
+      <view class='clearBottom'>
+       <view class='hotel'>{{item.hotelName}}</view>
+       <view class='room'>房间号:{{item.roomNum}}</view>
+    </view>
+    </view>
+   </template>
+
+   <!-- 打扫房间 -->
+   <template name='CLEAN_ROOM'>
+    <view class='clearRoom' wx:for-index="index" wx:for-item="item" bindtap='clearRoom' data-id='{{item.id}}'>
+    <view class='clearTitle'>
+      <image src='../img/clear.png' class='Img'></image>
+       <view class='text'>清扫房间</view>
+         <view class='state' wx-if="{{item.status == 'SUBMIT'?true:false}}">待受理</view>
+       <view class='state' wx-if="{{item.status == 'ACCEPT'?true:false}}">待完成</view>
+       <view class='state' wx-if="{{item.status == 'FINISH'?true:false}}">已完成</view>
+       <view class='state' wx-if="{{item.status == 'OVERDUE'?true:false}}">已过期</view>
+    </view>
+    <view class='allContent'>
+      <view class='content'>请即打扫</view>
+      <view class='time'>{{item.createTime}}</view>
+    </view>
+      <view class='clearBottom'>
+       <view class='hotel'>{{item.hotelName}}</view>
+       <view class='room'>房间号:{{item.roomNum}}</view>
+    </view>
+   </view>
+   </template>
+   <!-- vip -->
+    <template name='VIP'>
+    <view class='VIPBox' wx:for-index="index" wx:for-item="item" bindtap='VIP' data-id='{{item.id}}'>
+    <view class='clearTitle'>
+      <image src='../img/clear.png' class='Img'></image>
+       <view class='text'>办理会员</view>
+        <view class='state' wx-if="{{item.status == 'SUBMIT'?true:false}}">待受理</view>
+       <view class='state' wx-if="{{item.status == 'ACCEPT'?true:false}}">待完成</view>
+       <view class='state' wx-if="{{item.status == 'FINISH'?true:false}}">已完成</view>
+       <view class='state' wx-if="{{item.status == 'OVERDUE'?true:false}}">已过期</view>
+    </view>
+  <view class='contentTwo vipContent'>
+         <view class='type id'>会员类型:{{item.vipType}}</view>
+         <view class='add id'>会员姓名:{{item.customerName}}</view>
+         <view class='id'>身份证:{{item.idCard}}</view>
+         <view class='phone id'>手机号:{{item.telephone}}</view>
+          <view class='time VIPTime'>{{item.createTime}}</view>
+  </view>
+      <view class='clearBottom vipBottom'>
+       <view class='hotel'>{{item.hotelName}}</view>
+       <view class='room'>房间号:{{item.roomNum}}</view>
+    </view>
+    </view>
+   </template>
+
+   <!-- 自助续住 -->
+  <template name='CONTINUE_STAY'>
+    <view class='VIPBox' wx:for-index="index" wx:for-item="item" bindtap='continueStey' data-id='{{item.id}}'>
+    <view class='clearTitle'>
+      <image src='../img/house.png' class='Img'></image>
+       <view class='text'>自助续住</view>
+       <view class='state' wx-if="{{item.status == 'SUBMIT'?true:false}}">待受理</view>
+       <view class='state' wx-if="{{item.status == 'ACCEPT'?true:false}}">待完成</view>
+       <view class='state' wx-if="{{item.status == 'FINISH'?true:false}}">已完成</view>
+       <view class='state' wx-if="{{item.status == 'OVERDUE'?true:false}}">已过期</view>
+    </view>
+  <view class='contentTwo selfContentTwo'>
+         <view class='type'>续住：{{item.days}}晚</view>
+         <view class='add'>离开时间：{{item.leaveTime}}</view>
+          <view class='time liveTime'>{{item.createTime}}</view>
+  </view>
+      <view class='clearBottom steyBottom'>
+       <view class='hotel'>{{item.hotelName}}</view>
+       <view class='room'>房间号:{{item.roomNum}}</view>
+    </view>
+  </view>
+   </template>
+
+   <!-- 发票 -->
+     <template name='INVOICE'> 
+     <view class='VIPBox' wx:for-index="index" wx:for-item="item" bindtap='invoice' data-id='{{item.id}}'>
+    <view class='clearTitle'>
+      <image src='../img/invoice.png' class='Img'></image>
+       <view class='text'>预约发票</view>
+         <view class='state' wx-if="{{item.status == 'SUBMIT'?true:false}}">待受理</view>
+       <view class='state' wx-if="{{item.status == 'ACCEPT'?true:false}}">待完成</view>
+       <view class='state' wx-if="{{item.status == 'FINISH'?true:false}}">已完成</view>
+       <view class='state' wx-if="{{item.status == 'OVERDUE'?true:false}}">已过期</view>
+    </view>
+    <view class='contentTwo invoiceContentTwo'>
+       <view class='type'>发票类型：{{item.invoiceType}}</view>
+         <view class='add'>发票抬头：{{item.title}}</view>
+        <view class='time other'>{{item.createTime}}</view>
+    </view>
+     <view class='invoiceBottom'>
+       <view class='hotel'>{{item.hotelName}}</view>
+       <view class='room'>房间号:{{item.roomNum}}</view>
+    </view>
+  </view>
+   </template>
+
+   <!-- 经理在线 -->
+ <template name='FEEDBACK'> 
+  <view class='VIPBox' wx:key="key" bindtap='feedback' data-id='{{item.id}}'>
+    <view class='clearTitle'>
+      <image src='../img/online.png' class='online'></image>
+       <view class='text'>值班经理在线</view>
+       <view class='state' wx-if="{{item.status == 'SUBMIT'?true:false}}">待受理</view>
+       <view class='state' wx-if="{{item.status == 'ACCEPT'?true:false}}">待完成</view>
+       <view class='state' wx-if="{{item.status == 'FINISH'?true:false}}">已完成</view>
+       <view class='state' wx-if="{{item.status == 'OVERDUE'?true:false}}">已过期</view>
+    </view>
+    <view class='feedback'>
+    <view class='type feedbackContent'>反馈问题：{{item.content}}</view>
+    <view class='time feedbackTime'>{{item.createTime}}</view>
+    </view>
+    <view class='clearBottom feedbackBottom'>
+       <view class='hotel'>{{item.hotelName}}</view>
+       <view class='room'>房间号:{{item.roomNum}}</view>
+    </view>
+  </view>
+   </template>
+
+   <!-- 在线迷你吧 -->
+  <template name='MINI_BAR'> 
+  <view class='VIPBox' wx:for-index="index" wx:for-item="item" bindtap='StoreOrderInfo' data-id='{{item.id}}'>
+    <view class='clearTitle'>
+      <image src='../img/house.png' class='Img'></image>
+       <view class='text'>在线迷你吧</view>
+        <view class='state' wx-if="{{item.status == 'SUBMIT'?true:false}}">待受理</view>
+       <view class='state' wx-if="{{item.status == 'ACCEPT'?true:false}}">待完成</view>
+       <view class='state' wx-if="{{item.status == 'FINISH'?true:false}}">已完成</view>
+       <view class='state' wx-if="{{item.status == 'OVERDUE'?true:false}}">已过期</view>
+    </view>
+  <view class='contentTwo selfContentTwo'>
+         <view class='type'>{{item.orderInfo.firstProductName}} <text wx:if="{{item.orderInfo.quantity > 2?true:false}}" class='so-on'>等{{item.orderInfo.quantity}}件商品</text></view>
+         <view class='add'>合计：￥{{item.orderInfo.totalFee}}</view>
+          <view class='time liveTime'>{{item.createTime}}</view>
+  </view>
+      <view class='clearBottom steyBottom'>
+       <view class='hotel'>{{item.hotelName}}</view>
+       <view class='room'>房间号:{{item.roomNum}}</view>
+    </view>
+  </view>
+   </template>
+    <!-- 客房点餐 -->
+  <template name='MEAL'> 
+  <view class='VIPBox' wx:for-index="index" wx:for-item="item" bindtap='mealsDatails' data-id='{{item.id}}'>
+    <view class='clearTitle'>
+      <image src='../img/house.png' class='Img'></image>
+       <view class='text'>客房点餐</view>
+        <view class='state' wx-if="{{item.status == 'SUBMIT'?true:false}}">待受理</view>
+       <view class='state' wx-if="{{item.status == 'ACCEPT'?true:false}}">待完成</view>
+       <view class='state' wx-if="{{item.status == 'FINISH'?true:false}}">已完成</view>
+       <view class='state' wx-if="{{item.status == 'OVERDUE'?true:false}}">已过期</view>
+    </view>
+  <view class='contentTwo selfContentTwo'>
+         <view class='type'>{{item.orderInfo.firstProductName}} <text wx:if="{{item.orderInfo.quantity > 2?true:false}}" class='so-on'>等{{item.orderInfo.quantity}}件商品</text></view>
+         <view class='add'>合计：￥{{item.orderInfo.totalFee}}</view>
+          <view class='time liveTime'>{{item.createTime}}</view>
+  </view>
+      <view class='clearBottom steyBottom'>
+       <view class='hotel'>{{item.hotelName}}</view>
+       <view class='room'>房间号:{{item.roomNum}}</view>
+    </view>
+  </view>
+   </template>
+   <!-- 酒店预订 -->
+    <template name='hotelReservation'> 
+   <view class='VIPBox' wx:for-index="index" wx:for-item="item" bindtap='hotelReservation' data-id='{{item.id}}'>
+    <view class='clearTitle'>
+      <image src='../img/hotelReservationImg.png' class='Img'></image>
+       <view class='text'>酒店预订</view>
+       <view class='state' wx-if="{{item.status == 'SUBMIT'?true:false}}">待受理</view>
+       <view class='state' wx-if="{{item.status == 'ACCEPT'?true:false}}">待完成</view>
+       <view class='state' wx-if="{{item.status == 'FINISH'?true:false}}">已完成</view>
+       <view class='state' wx-if="{{item.status == 'OVERDUE'?true:false}}">已过期</view>
+        <view class='state' wx-if="{{item.status == 'CANCEL'?true:false}}">已取消</view>
+    </view>
+  <view class='hotelContent'>
+      <view class='bedType'>{{item.orderInfo.roomTypeName}}</view>
+         <view class='inTime'>入住时间：<text class='textColor'>{{item.orderInfo.startTime}}</text></view>
+         <view class='inTime' wx:if="{{item.orderInfo.roomUserType == 'DAY_ROOM'?true:false}}">离店时间：<text class='textColor'>{{item.orderInfo.endTime}}</text></view>
+         <view class='inTime'>房费：￥<text class='textColor'>{{!item.orderInfo.totalFee?'--':item.orderInfo.totalFee}}</text></view>
+         <view class='inTime'>状态：<text class='textColor'>{{!item.orderInfo.totalFee?'未支付':'已支付'}}</text></view>
+          <view class='time VIPTime'>{{item.createTime}}</view>
+  </view>
+      <view class='clearBottom vipBottom'>
+       <view class='hotel'>{{item.hotelName}}</view>
+       <view class='room'>房间号:--</view>
+    </view>
+    </view>
+</template>

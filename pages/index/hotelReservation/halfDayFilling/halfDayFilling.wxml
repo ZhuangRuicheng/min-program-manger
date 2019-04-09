@@ -1,0 +1,42 @@
+<!--pages/index/hotelReservation/halfDayFilling/halfDayFilling.wxml-->
+<import src="../../../template/hotelReservation/hotelReservation.wxml"/>
+<!-- 顶部导航栏 -->
+<view class='box-detail' style="padding-top:{{tabbarWidth <=568 ?tabbarHeight + 40:tabbarHeight + 45}}px;">
+<header-tabbar title='订单填写' show_bol='{{false}}' tabbarColor="{{tabbarColor}}" titleColor="{{titleColor}}"></header-tabbar> 
+</view>
+<!-- 顶部导航栏end -->
+<view class='box'>
+   <form bindsubmit="{{check?'depositFree':'formSubmit'}}" report-submit='true'>
+  <view class='header'>
+  <view class='headerCss'>
+    <view class='Title'>{{hotelName}}</view>
+    <view class='content'>
+      <view class='bedType'>{{name}}</view>
+        <view class='Time'>
+        <view class='clockText'>半日房 |</view>
+      <view class='checkIn'>入住 <text class='timeColor'>{{checkInStartTime}}</text><text class='half-time timeColor'>8：00-18：00</text></view>
+    </view>
+    </view>
+  </view>
+  </view>
+    <!-- 填写订单信息 -->
+  <template is="hotelReservation" data="{{roomNum,inputName,phoneNumber,price,check,index,array,ID,hasOpenVip}}"></template>
+    <!-- 填写订单信息 -->
+  </form>
+   <!-- 弹出层生成二维码 -->
+  <view class="container-column" wx:if="{{QrModalStatus}}">
+<view animation="{{animationData}}" class="container-column buydes-dialog-container">
+        <view class="container-column buydes-dialog-container-bottom">
+        <view class="popup">
+          <view class='ticketShow'>
+          <view class='text'>预订信息已提交！</view>
+          <view class='showContent'>稍后会有酒店服务人员与您核实信息</view>
+          <view class='showContent'>预计3分钟内受理,请稍候</view>
+       <button class='showBtn' bindtap="QRhideModal">好的</button>
+    </view>
+    </view>
+        </view>
+    </view>
+</view>
+</view>
+

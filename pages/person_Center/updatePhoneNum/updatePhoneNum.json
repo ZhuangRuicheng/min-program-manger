@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "header-tabbar": "../../component/headerTabbar"
+  },
+  "navigationBarTitleText": "切换手机号"
+}
